@@ -1,0 +1,6 @@
+{
+  "name": "Garden Now — Lawn Care & Landscaping",
+  "description": "Professional lawn care, grounds maintenance, and custom landscaping services for residential and commercial properties with instant WhatsApp quotes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

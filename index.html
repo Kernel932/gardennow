@@ -88,8 +88,9 @@
   .center .section-sub{margin-left:auto;margin-right:auto;}
 
   /* ---------- TOP BAR ---------- */
-  .topbar{background:var(--green-900);color:#cfe4d5;font-size:.83rem;padding:9px 0;}
-  .topbar .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;}
+  .topbar{background:#4e9232;color:#cfe4d5;font-size:.83rem;padding:9px 0;}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;width:100%;max-width:100%;margin:0;padding:0 24px;}
+  .topbar .wrap > span:first-child{text-align:left;margin-right:auto;margin-left:0;justify-self:flex-start;}
   .topbar strong{color:var(--lime);}
 
   /* ---------- NAV ---------- */
@@ -97,7 +98,8 @@
     position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);
     backdrop-filter:blur(10px);border-bottom:1px solid #e6e9e6;
   }
-  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px;}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:16px;width:100%;max-width:100%;margin:0;padding:0 24px 0 0;background:url('/backgroundbarra.png') no-repeat left center / auto 100%;}
+  .nav-logo-wrap{display:flex;align-items:center;justify-content:flex-start;height:84px;max-height:84px;width:267px;min-width:267px;margin-left:0;margin-right:auto;padding-left:0;text-align:left;}
   .logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.22rem;color:var(--green-900);letter-spacing:-.02em;}
   .logo .mark{
     width:38px;height:38px;border-radius:12px;
@@ -106,9 +108,14 @@
     box-shadow:0 6px 16px rgba(43,122,69,.35);
   }
   .logo small{display:block;font-size:.62rem;font-weight:700;letter-spacing:.18em;color:var(--green-600);text-transform:uppercase;}
+
+  /* 30% larger logo in header */
+  header.nav .logo{gap:14px;font-size:1.58rem;}
+  header.nav .logo .mark{width:50px;height:50px;border-radius:15px;font-size:1.5rem;box-shadow:0 8px 20px rgba(43,122,69,.35);}
+  header.nav .logo small{font-size:.81rem;}
   nav.links{display:flex;gap:26px;font-weight:600;font-size:.93rem;color:#33463a;}
   nav.links a:hover{color:var(--green-600);}
-  .nav-right{display:flex;align-items:center;gap:14px;}
+  .nav-right{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin-left:auto;}
 
   /* language switcher */
   .lang{
@@ -133,17 +140,38 @@
   .hero{
     position:relative;color:#fff;padding:0;overflow:hidden;
     background:
-      radial-gradient(1100px 520px at 78% 18%, rgba(168,217,75,.22), transparent 60%),
-      linear-gradient(120deg,#0f2a19 0%,#1b4c2c 48%,#256b3c 100%);
+      linear-gradient(110deg, rgba(6, 26, 13, 0.90) 0%, rgba(9, 36, 18, 0.80) 46%, rgba(14, 48, 24, 0.52) 78%, rgba(6, 22, 11, 0.88) 100%),
+      url('/jardim.jpg') center center / cover no-repeat;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
   }
-  .hero-inner{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;padding:96px 0 104px;}
-  .hero h1{font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.08;letter-spacing:-.03em;margin-bottom:20px;}
+  .hero-inner{
+    display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;
+    padding:80px 0 88px;
+  }
+  .hero h1{font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.08;letter-spacing:-.03em;margin-bottom:20px;text-shadow:0 2px 14px rgba(0,0,0,.5);}
   .hero h1 em{font-style:normal;color:var(--lime);}
-  .hero p.lead{color:#c9dfd0;font-size:1.1rem;max-width:540px;margin-bottom:30px;}
+  .hero p.lead{color:#d6ebd9;font-size:1.1rem;max-width:540px;margin-bottom:30px;text-shadow:0 1px 8px rgba(0,0,0,.5);}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px;}
-  .hero-stats{display:flex;gap:40px;flex-wrap:wrap;padding-top:26px;border-top:1px solid rgba(255,255,255,.18);}
+  .hero-stats{display:flex;gap:40px;flex-wrap:wrap;padding-top:26px;border-top:1px solid rgba(255,255,255,.24);text-shadow:0 1px 6px rgba(0,0,0,.4);}
   .hero-stats b{display:block;font-size:1.7rem;color:var(--lime);letter-spacing:-.02em;}
-  .hero-stats span{font-size:.82rem;color:#a9c6b3;font-weight:600;}
+  .hero-stats span{font-size:.82rem;color:#bfe0ca;font-weight:600;}
+
+  .lawn-card{
+    margin-top:26px;padding:12px 16px;background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);border:1.5px solid rgba(255,255,255,.25);
+    border-radius:16px;display:flex;align-items:center;gap:14px;
+    box-shadow:0 8px 24px rgba(0,0,0,.18);max-width:540px;
+  }
+  .lawn-card-img{
+    width:76px;height:76px;border-radius:12px;object-fit:cover;
+    box-shadow:0 4px 14px rgba(0,0,0,.3);border:2px solid rgba(255,255,255,.45);
+    flex-shrink:0;transition:.22s;
+  }
+  .lawn-card:hover .lawn-card-img{transform:scale(1.05);}
+  .lawn-card-info strong{display:block;font-size:.88rem;color:#fff;line-height:1.3;}
+  .lawn-card-info span{display:block;font-size:.76rem;color:var(--lime);font-weight:700;margin-top:3px;}
 
   .quote-card{background:#fff;color:var(--ink);border-radius:22px;padding:30px;box-shadow:var(--shadow-lg);}
   .quote-card h3{font-size:1.3rem;color:var(--green-900);letter-spacing:-.02em;margin-bottom:6px;display:flex;align-items:center;gap:9px;}
@@ -193,7 +221,7 @@
   .card a.more:hover{gap:11px;}
 
   /* ---------- SEGMENT SECTION ---------- */
-  .segments{background:var(--green-900);color:#fff;}
+  .segments{background:#092f17;color:#fff;}
   .segments .section-title{color:#fff;}
   .segments .section-sub{color:#a9c6b3;}
   .tabs{display:flex;gap:10px;margin:34px 0 26px;flex-wrap:wrap;}
@@ -228,7 +256,7 @@
   .town.mut{color:#9fb0a5;background:#f1f5f2;font-weight:600;}
 
   /* ---------- TESTIMONIALS ---------- */
-  .testi{background:var(--sand);}
+  .testi{background-color:#b4e1b7;}
   .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:46px;}
   .tcard{background:#fff;border-radius:var(--radius);padding:30px;border:1px solid #e9e4d7;box-shadow:0 4px 14px rgba(20,49,31,.05);display:flex;flex-direction:column;}
   .stars{color:#e8b529;letter-spacing:2px;margin-bottom:14px;font-size:1rem;}
@@ -274,13 +302,13 @@
   @media(max-width:1080px){nav.links{gap:18px;font-size:.88rem;}}
   @media(max-width:980px){
     section{padding:64px 0;}
-    .hero-inner{grid-template-columns:1fr;gap:44px;padding:64px 0 72px;}
+    .hero-inner{grid-template-columns:1fr;gap:44px;padding:60px 0 68px;}
     .panel-grid,.area-grid{grid-template-columns:1fr;gap:34px;}
     .fcols{grid-template-columns:1fr 1fr;}
     nav.links{display:none;}
     .burger{display:block;}
     nav.links.open{
-      display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;
+      display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;
       background:#fff;padding:22px 24px;gap:18px;border-bottom:1px solid #e6e9e6;box-shadow:var(--shadow);
     }
   }
@@ -303,20 +331,19 @@
 <body>
 
 <!-- TOP BAR -->
-<div class="topbar">
-  <div class="wrap">
-    <span data-i18n="topBar">Locally owned &amp; operated · Licensed &amp; fully insured</span>
-    <span data-i18n="topBarPhone">Free on-site assessment · Call <strong>(555) 014-7788</strong></span>
+<div class="topbar" style="background-color:#092f17;">
+  <div class="wrap" style="width:100%;max-width:100%;margin:0;padding:0 24px;display:flex;justify-content:space-between;align-items:center;">
+    <span data-i18n="topBar" style="text-align:left;margin-left:0;margin-right:auto;justify-self:flex-start;">Local company. Completely secure</span>
+    <span data-i18n="topBarPhone">Free on-site assessment · Call <strong>(407) 914-1712</strong></span>
   </div>
 </div>
 
 <!-- NAV -->
 <header class="nav">
-  <div class="wrap">
-    <a href="#" class="logo">
-      <span class="mark">🌿</span>
-      <span>Garden Now<small data-i18n="logoTag">Grounds Care</small></span>
-    </a>
+  <div class="wrap" style="background-color: #2cb3cb; background: #2cb3cb url('/backgroundbarra4.png') no-repeat left center / auto 100%; width: 100%;">
+    <div class="nav-logo-wrap">
+      <img src="/LogoGarden3.png" alt="Garden Now" width="267" height="84" style="display:block;max-width:100%;height:auto;">
+    </div>
     <nav class="links" id="navLinks">
       <a href="#services" data-i18n="navServices">Services</a>
       <a href="#who" data-i18n="navRes">Residential</a>
@@ -325,8 +352,6 @@
       <a href="#faq" data-i18n="navFaq">FAQs</a>
     </nav>
     <div class="nav-right">
-      <div class="phone">(555) 014-7788<span data-i18n="phoneHours">Mon–Sat 7am–6pm</span></div>
-
       <!-- LANGUAGE SWITCHER -->
       <div class="lang" role="group" aria-label="Language / Idioma">
         <span class="globe" aria-hidden="true">🌐</span>
@@ -335,7 +360,7 @@
       </div>
 
       <!-- WHATSAPP (replaces "Get a Quote") -->
-      <a href="https://wa.me/15550147788" target="_blank" rel="noopener" class="btn btn-wa nav-wa wa-link" aria-label="WhatsApp">
+      <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="btn btn-wa nav-wa wa-link" aria-label="WhatsApp" style="background-color: #092f17;">
         <svg class="wa-ico" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
         <span class="wa-label" data-i18n="navWa">WhatsApp</span>
       </a>
@@ -346,17 +371,13 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" style="background: linear-gradient(110deg, rgba(6, 26, 13, 0.90) 0%, rgba(9, 36, 18, 0.80) 46%, rgba(14, 48, 24, 0.52) 78%, rgba(6, 22, 11, 0.88) 100%), url('/jardim.jpg') center center / cover no-repeat;">
   <div class="wrap hero-inner">
     <div>
-      <p class="eyebrow" style="color:var(--lime)" data-i18n="heroEyebrow">Lawn Care &amp; Landscaping</p>
-      <h1 data-i18n="heroTitle">Grounds that look <em>taken care of</em> — every single week.</h1>
+      <p class="eyebrow" style="color:var(--lime);font-size:40px;" data-i18n="heroEyebrow">Landscaping</p>
+      <h1 data-i18n="heroTitle">Aqui, a sua grama é sempre <em>mais verde</em> que a do vizinho!</h1>
       <p class="lead" data-i18n="heroLead">From weekly mowing and clean edges to full landscape design, irrigation, and hardscape builds. One crew, one schedule, no surprises.</p>
       <div class="hero-cta">
-        <a href="https://wa.me/15550147788" target="_blank" rel="noopener" class="btn btn-wa wa-link">
-          <svg class="wa-ico" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-          <span data-i18n="heroCta1">Chat on WhatsApp</span>
-        </a>
         <a href="#services" class="btn btn-ghost" data-i18n="heroCta2">See What We Do</a>
       </div>
       <div class="hero-stats">
@@ -381,7 +402,7 @@
           </div>
           <div class="field">
             <label for="fphone" data-i18n="lblPhone">Phone</label>
-            <input id="fphone" type="tel" data-i18n-ph="phPhone" placeholder="(555) 000-0000">
+            <input id="fphone" type="tel" data-i18n-ph="phPhone" placeholder="(407) 914-1712">
           </div>
         </div>
         <div class="field">
@@ -418,7 +439,7 @@
         </button>
         <p class="form-note" data-i18n="formNote">No obligation. We never sell your information.</p>
         <div class="form-ok" id="formOk" data-i18n="formOk">✓ Opening WhatsApp… if nothing happens, tap the button below.</div>
-        <a id="waOut" class="btn btn-wa wa-out" target="_blank" rel="noopener" href="https://wa.me/15550147788">
+        <a id="waOut" class="btn btn-wa wa-out" target="_blank" rel="noopener" href="https://wa.me/14079141712">
           <svg class="wa-ico" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
           <span data-i18n="waOut">Open WhatsApp in a new tab</span>
         </a>
@@ -426,19 +447,6 @@
     </div>
   </div>
 </section>
-
-<!-- TRUST BAR -->
-<div class="trust">
-  <div class="wrap">
-    <p data-i18n="trustText">Built on a simple promise: show up on time, do it right, leave it clean.</p>
-    <div class="badges">
-      <span class="badge"><i>🛡️</i> <span data-i18n="badge1">Licensed &amp; Insured</span></span>
-      <span class="badge"><i>🌱</i> <span data-i18n="badge2">Eco-Conscious Products</span></span>
-      <span class="badge"><i>⭐</i> <span data-i18n="badge3">Satisfaction Guaranteed</span></span>
-      <span class="badge"><i>📍</i> <span data-i18n="badge4">Locally Owned</span></span>
-    </div>
-  </div>
-</div>
 
 <!-- SERVICES -->
 <section id="services">
@@ -452,32 +460,32 @@
         <div class="ic">🚜</div>
         <h3 data-i18n="card1h">Lawn &amp; Grounds Maintenance</h3>
         <p data-i18n="card1p">Weekly or biweekly mowing, crisp edging, blowing, and a clean-up pass so the property always looks finished.</p>
-        <a href="https://wa.me/15550147788" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
       </article>
       <article class="card">
         <div class="ic">📐</div>
         <h3 data-i18n="card2h">Landscape Design &amp; Install</h3>
         <p data-i18n="card2p">Planting plans, sod, mulch beds, and flowering color matched to your region, light, and soil.</p>
-        <a href="https://wa.me/15550147788" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
       </article>
       <article class="card">
         <div class="ic">💧</div>
         <h3 data-i18n="card3h">Irrigation Services</h3>
         <p data-i18n="card3p">Smart-timer installs, zone repairs, and seasonal start-ups and blow-outs that keep water where it belongs.</p>
-        <a href="https://wa.me/15550147788" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
       </article>
       <article class="card">
         <div class="ic">🌷</div>
         <h3 data-i18n="card4h">Flower &amp; Garden Beds</h3>
         <p data-i18n="card4p">Weeding, edging, mulching, and seasonal color rotations that keep beds sharp instead of shaggy.</p>
-        <a href="https://wa.me/15550147788" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
       </article>
     </div>
   </div>
 </section>
 
 <!-- SEGMENTS -->
-<section class="segments" id="who">
+<section class="segments" id="who" style="background-color: #092f17;">
   <div class="wrap">
     <p class="eyebrow" style="color:var(--lime)" data-i18n="segEyebrow">Who We Serve</p>
     <h2 class="section-title" data-i18n="segTitle">Tailored plans for homes and businesses</h2>
@@ -538,42 +546,22 @@
 
 <!-- SERVICE AREA -->
 <section id="areas">
-  <div class="wrap">
-    <div class="area-grid">
-      <div>
-        <p class="eyebrow" data-i18n="areaEyebrow">Service Area</p>
-        <h2 class="section-title" data-i18n="areaTitle">Serving the metro and surrounding towns</h2>
-        <p class="section-sub" data-i18n="areaSub">Don't see your town? Call us — we add routes regularly and often take on neighboring areas.</p>
-        <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap">
-          <a href="https://wa.me/15550147788" target="_blank" rel="noopener" class="btn btn-wa wa-link">
-            <svg class="wa-ico" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-            <span data-i18n="areaCta1">Message on WhatsApp</span>
-          </a>
-          <a href="tel:5550147788" class="btn btn-ghost" style="color:var(--green-700);border-color:#b9d0c1" data-i18n="areaCta2">Call (555) 014-7788</a>
-        </div>
-      </div>
-      <div class="map-box">
-        <div class="map-grid">
-          <div class="town">Ashford</div>
-          <div class="town">Bexley</div>
-          <div class="town">Cedar Park</div>
-          <div class="town">Dover Heights</div>
-          <div class="town">Eastvale</div>
-          <div class="town">Fairmount</div>
-          <div class="town">Glenwood</div>
-          <div class="town">Harborview</div>
-          <div class="town">Ironwood</div>
-          <div class="town mut">Kingsport</div>
-          <div class="town">Lakeside</div>
-          <div class="town mut">Millbrook</div>
-        </div>
-      </div>
+  <div class="wrap center">
+    <p class="eyebrow" data-i18n="areaEyebrow">Service Area</p>
+    <h2 class="section-title" data-i18n="areaTitle">Serving the metro and surrounding towns</h2>
+    <p class="section-sub" data-i18n="areaSub">Don't see your town? Call us — we add routes regularly and often take on neighboring areas.</p>
+    <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+      <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="btn btn-wa wa-link">
+        <svg class="wa-ico" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        <span data-i18n="areaCta1">Message on WhatsApp</span>
+      </a>
+      <a href="tel:4079141712" class="btn btn-ghost" style="color:var(--green-700);border-color:#b9d0c1" data-i18n="areaCta2">Call (407) 914-1712</a>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testi">
+<section class="testi" style="background-color: #b4e1b7;">
   <div class="wrap center">
     <p class="eyebrow" data-i18n="testiEyebrow">Reviews</p>
     <h2 class="section-title" data-i18n="testiTitle">What neighbors say</h2>
@@ -629,24 +617,13 @@
   </div>
 </section>
 
-<!-- CTA BAND -->
-<section class="cta-band">
-  <div class="wrap">
-    <h2 data-i18n="ctaTitle">Ready for a yard you don't think about?</h2>
-    <p data-i18n="ctaText">Free on-site assessment. No contracts, no pressure — just message us.</p>
-    <a href="https://wa.me/15550147788" target="_blank" rel="noopener" class="btn btn-wa-light wa-link">
-      <svg class="wa-ico" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-      <span data-i18n="ctaBtn">Chat on WhatsApp</span>
-    </a>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="fcols">
       <div>
-        <a href="#" class="logo"><span class="mark">🌿</span><span>Garden Now<small data-i18n="logoTag">Grounds Care</small></span></a>
+        <a href="#" class="logo"><span class="mark">🌿</span><span>Garden Now<small data-i18n="logoTag">Landscaping</small></span></a>
         <p style="max-width:280px" data-i18n="footAbout">Full-service lawn care and landscaping for homes and businesses across the metro area.</p>
       </div>
       <div>
@@ -672,13 +649,13 @@
         <h4 data-i18n="footContact">Contact</h4>
         <ul>
           <li>
-            <a href="https://wa.me/15550147788" class="wa-link" target="_blank" rel="noopener">
+            <a href="https://wa.me/14079141712" class="wa-link" target="_blank" rel="noopener">
               <svg class="wa-ico-inline" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
               <span data-i18n="footWa">WhatsApp</span>
             </a>
           </li>
-          <li><a href="tel:5550147788">(555) 014-7788</a></li>
-          <li><a href="mailto:hello@gardennow.example">hello@gardennow.example</a></li>
+          <li><a href="tel:4079141712">(407) 914-1712</a></li>
+          <li><a href="mailto:gardennowlandscape@gmail.com">gardennowlandscape@gmail.com</a></li>
           <li data-i18n="phoneHours">Mon–Sat 7am–6pm</li>
           <li data-i18n="badge1">Licensed &amp; Insured</li>
         </ul>
@@ -692,7 +669,7 @@
 </footer>
 
 <!-- FLOATING WHATSAPP -->
-<a class="wa-fab wa-link" href="https://wa.me/15550147788" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a class="wa-fab wa-link" href="https://wa.me/14079141712" target="_blank" rel="noopener" aria-label="WhatsApp">
   <span class="ring"></span>
   <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
   <span class="tip" data-i18n="fabTip">Chat on WhatsApp</span>
@@ -700,30 +677,32 @@
 
 <script>
 /* ============ CONFIG ============ */
-const WA_NUMBER = '15550147788'; // <-- troque pelo seu número, formato internacional sem "+"
+const WA_NUMBER = '14079141712'; // <-- troque pelo seu número, formato internacional sem "+"
 
 /* ============ i18n dictionary ============ */
 const I18N = {
   en: {
-    topBar:"Locally owned & operated · Licensed & fully insured",
-    topBarPhone:'Free on-site assessment · Call <strong>(555) 014-7788</strong>',
-    logoTag:"Grounds Care",
+    topBar:"Local company. Completely secure",
+    topBarPhone:'Free on-site assessment · Call <strong>(407) 914-1712</strong>',
+    logoTag:"Landscaping",
     navServices:"Services", navRes:"Residential", navCom:"Commercial",
     navAreas:"Service Area", navFaq:"FAQs",
     navWa:"WhatsApp", fabTip:"Chat on WhatsApp",
     waText:"Hi! I'd like a quote for my property.",
     waFormIntro:"New request from the website:",
     phoneHours:"Mon–Sat 7am–6pm",
-    heroEyebrow:"Lawn Care & Landscaping",
-    heroTitle:'Grounds that look <em>taken care of</em> — every single week.',
+    heroEyebrow:"Landscaping",
+    heroTitle:'Here, your lawn is always <em>greener</em> than the neighbor\'s!',
     heroLead:"From weekly mowing and clean edges to full landscape design, irrigation, and hardscape builds. One crew, one schedule, no surprises.",
     heroCta1:"Chat on WhatsApp", heroCta2:"See What We Do",
     stat1:"Years in business", stat2:"Properties serviced", stat3:"Average rating",
+    lawnTag:"Lush striped turf with uniform precision cut",
+    lawnSub:"100% focused on grass health, density & clean stripes",
     formTitle:"Message us on WhatsApp",
     formHint:"Fill this in and we'll open WhatsApp with your message ready to send.",
     lblName:"Name", lblPhone:"Phone", lblEmail:"Email", lblProp:"Property",
     lblService:"Service", lblMsg:"Anything else?",
-    phName:"Jane Rivera", phPhone:"(555) 000-0000", phEmail:"you@email.com",
+    phName:"Jane Rivera", phPhone:"(407) 914-1712", phEmail:"you@email.com",
     phMsg:"Corner lot, about a quarter acre, need weekly mowing…",
     optResidential:"Residential", optCommercial:"Commercial",
     svcMaintenance:"Lawn & Grounds Maintenance",
@@ -776,7 +755,7 @@ const I18N = {
     areaEyebrow:"Service Area",
     areaTitle:"Serving the metro and surrounding towns",
     areaSub:"Don't see your town? Call us — we add routes regularly and often take on neighboring areas.",
-    areaCta1:"Message on WhatsApp", areaCta2:"Call (555) 014-7788",
+    areaCta1:"Message on WhatsApp", areaCta2:"Call (407) 914-1712",
     testiEyebrow:"Reviews", testiTitle:"What neighbors say",
     testi1p:'"Same crew every week, always on time, and they actually edge the walkway instead of just blowing clippings at it. It\'s a small thing that makes a big difference."',
     testi1s:"Ashford · Weekly mowing",
@@ -806,20 +785,22 @@ const I18N = {
     footRights:"© 2026 Garden Now Grounds Care. All rights reserved."
   },
   pt: {
-    topBar:"Empresa local · Licenciada e totalmente segurada",
-    topBarPhone:'Avaliação gratuita no local · Ligue <strong>(555) 014-7788</strong>',
-    logoTag:"Cuidado de Jardins",
+    topBar:"Empresa local · Totalmente segura",
+    topBarPhone:'Avaliação gratuita no local · Ligue <strong>(407) 914-1712</strong>',
+    logoTag:"Landscaping",
     navServices:"Serviços", navRes:"Residencial", navCom:"Comercial",
     navAreas:"Área de Atendimento", navFaq:"Perguntas",
     navWa:"WhatsApp", fabTip:"Fale no WhatsApp",
     waText:"Olá! Gostaria de um orçamento para o meu imóvel.",
     waFormIntro:"Nova solicitação pelo site:",
     phoneHours:"Seg–Sáb 7h–18h",
-    heroEyebrow:"Corte de Grama & Paisagismo",
-    heroTitle:'Jardins que parecem <em>bem cuidados</em> — toda semana.',
+    heroEyebrow:"Landscaping",
+    heroTitle:'Aqui, a sua grama é sempre <em>mais verde</em> que a do vizinho!',
     heroLead:"Do corte semanal e acabamento nas bordas ao projeto completo de paisagismo, irrigação e áreas de pedra. Uma equipe, uma agenda, sem surpresas.",
     heroCta1:"Falar no WhatsApp", heroCta2:"Ver o que fazemos",
     stat1:"Anos de mercado", stat2:"Imóveis atendidos", stat3:"Avaliação média",
+    lawnTag:"Gramado denso com corte listrado e uniforme",
+    lawnSub:"Foco total na saúde, densidade e acabamento da grama",
     formTitle:"Fale conosco no WhatsApp",
     formHint:"Preencha e abriremos o WhatsApp com sua mensagem pronta para enviar.",
     lblName:"Nome", lblPhone:"Telefone", lblEmail:"E-mail", lblProp:"Tipo de imóvel",
@@ -877,7 +858,7 @@ const I18N = {
     areaEyebrow:"Área de Atendimento",
     areaTitle:"Atendemos a região metropolitana e cidades vizinhas",
     areaSub:"Não encontrou sua cidade? Ligue — adicionamos rotas com frequência e costumamos atender regiões próximas.",
-    areaCta1:"Falar no WhatsApp", areaCta2:"Ligue (555) 014-7788",
+    areaCta1:"Falar no WhatsApp", areaCta2:"Ligue (407) 914-1712",
     testiEyebrow:"Avaliações", testiTitle:"O que dizem os vizinhos",
     testi1p:'"Mesma equipe toda semana, sempre pontual, e eles realmente fazem a borda do caminho em vez de só soprar os restos. É um detalhe que faz muita diferença."',
     testi1s:"Ashford · Corte semanal",
@@ -912,6 +893,7 @@ let waSent = false;
 
 /* ============ language switching ============ */
 function setLang(lang){
+  try { localStorage.setItem('site_lang', lang); } catch(e){}
   const dict = I18N[lang] || I18N.en;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const key = el.getAttribute('data-i18n');
@@ -982,8 +964,15 @@ document.getElementById('quoteForm').addEventListener('submit', e => {
   try { window.open(url, '_blank'); } catch(err){ /* sandbox blocks popups */ }
 });
 
-/* default = English */
-setLang('en');
+/* initial language */
+const initialLang = (function() {
+  try {
+    const saved = localStorage.getItem('site_lang');
+    if (saved && I18N[saved]) return saved;
+  } catch(e){}
+  return (navigator.language && navigator.language.toLowerCase().startsWith('pt')) ? 'pt' : 'en';
+})();
+setLang(initialLang);
 </script>
 </body>
 </html>
