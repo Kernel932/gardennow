@@ -61,7 +61,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
   };
 
   return (
-    <section className="relative overflow-hidden text-white py-12 lg:py-20 bg-[linear-gradient(110deg,rgba(6,26,13,0.90)_0%,rgba(9,36,18,0.80)_46%,rgba(14,48,24,0.52)_78%,rgba(6,22,11,0.88)_100%),url('/jardim.jpg')] bg-cover bg-center bg-no-repeat">
+    <section className="relative overflow-hidden text-white py-12 lg:py-20 bg-[linear-gradient(110deg,rgba(6,26,13,0.90)_0%,rgba(9,36,18,0.80)_46%,rgba(14,48,24,0.52)_78%,rgba(6,22,11,0.88)_100%),url('src/assets/images/jardim.jpg')] bg-cover bg-center bg-no-repeat">
       <div className="relative max-w-7xl mx-auto px-6 py-4 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           {/* Left Column: Value Proposition & Social Proof */}
