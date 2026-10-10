@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, MessageCircle, ArrowRight, ShieldCheck, Check } from 'lucide-react';
+import { MessageCircle, ArrowRight, ShieldCheck, Check } from 'lucide-react';
 import { Language } from '../types';
 import { translations, WHATSAPP_NUMBER } from '../i18n/translations';
 
@@ -81,13 +81,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white border-b border-[#e5eae6]">
+    <section id="services" className="py-20 bg-[#E8EFDF] border-b border-[#d4decb]" style={{ backgroundColor: '#E8EFDF' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#2b7a45] mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>{t.svcEyebrow}</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#14311f] font-display">
             {t.svcTitle}
           </h2>

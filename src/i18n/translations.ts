@@ -3,7 +3,7 @@ export const DISPLAY_PHONE = '(407) 914-1712';
 
 export const translations = {
   en: {
-    topBar: "Local company. Completely secure",
+    topBar: "Irrigation & landscape . Orlando Metro",
     topBarPhone: "Free on-site assessment · Call",
     phoneHours: "Mon–Sat 7am–6pm",
     logoTag: "Landscaping",
@@ -17,11 +17,11 @@ export const translations = {
     navWa: "WhatsApp",
     fabTip: "Chat on WhatsApp",
     
-    heroEyebrow: "Landscaping",
+    heroEyebrow: "Irrigation & landscape . Orlando Metro",
     heroTitlePrefix: "Grounds that look ",
     heroTitleHighlight: "taken care of",
     heroTitleSuffix: " — every single week.",
-    heroLead: "From weekly mowing and razor-sharp edges to complete landscape design, smart irrigation, and custom stone hardscapes. One dedicated crew, one reliable schedule, no surprises.",
+    heroLead: "From simple repairs to the installation of complex irrigation systems, we take care of your garden's landscaping.",
     heroCta1: "Chat on WhatsApp",
     heroCta2: "Calculate Estimate",
     stat1: "Years in business",
@@ -46,7 +46,7 @@ export const translations = {
     
     svcMaintenance: "Lawn & Grounds Maintenance",
     svcDesign: "Landscape Design & Installation",
-    svcIrrigation: "Irrigation Systems & Care",
+    svcIrrigation: "Irrigation Installation & Maintenance",
     svcBeds: "Flower & Garden Beds",
     svcHardscape: "Hardscape & Stone Patios",
     svcSnow: "Commercial Snow & Winter",
@@ -66,7 +66,7 @@ export const translations = {
     
     svcEyebrow: "What We Do",
     svcTitle: "Complete grounds care, under one trusted roof",
-    svcSub: "One skilled team handles the mowing, trimming, garden beds, automated watering, and custom stone installations — so you never have to juggle multiple contractors.",
+    svcSub: "Areas without irrigation, dry and lifeless grass, and a garden lacking visibility—all of this calls for a professional. Count on us!",
     cardMore: "Book this on WhatsApp",
     
     beforeAfterEyebrow: "Proven Craftsmanship",
@@ -185,7 +185,7 @@ export const translations = {
   },
   
   pt: {
-    topBar: "Empresa local · Totalmente segura",
+    topBar: "Irrigation & landscape . Orlando Metro",
     topBarPhone: "Avaliação gratuita no local · Ligue",
     phoneHours: "Seg–Sáb 7h–18h",
     logoTag: "Landscaping",
@@ -199,11 +199,11 @@ export const translations = {
     navWa: "WhatsApp",
     fabTip: "Falar no WhatsApp",
     
-    heroEyebrow: "Landscaping",
+    heroEyebrow: "Irrigation & landscape . Orlando Metro",
     heroTitlePrefix: "Jardins que parecem ",
     heroTitleHighlight: "impecáveis e bem cuidados",
     heroTitleSuffix: " — toda semana.",
-    heroLead: "Do corte semanal e acabamento milimétrico nas bordas ao projeto completo de paisagismo, irrigação inteligente e áreas externas de pedra. Uma equipe dedicada, uma agenda confiável, sem surpresas.",
+    heroLead: "De simples reparos à instalação de sistemas complexos de irrigação, cuidamos do paisagismo do seu jardim.",
     heroCta1: "Falar no WhatsApp",
     heroCta2: "Simular Orçamento",
     stat1: "Anos de mercado",
@@ -228,7 +228,7 @@ export const translations = {
     
     svcMaintenance: "Manutenção de Grama & Jardim",
     svcDesign: "Projeto & Instalação de Paisagismo",
-    svcIrrigation: "Sistemas & Manutenção de Irrigação",
+    svcIrrigation: "Instalação e Manutenção de Irrigação",
     svcBeds: "Canteiros de Flores & Cobertura",
     svcHardscape: "Pisos de Pedra & Áreas Gourmet",
     svcSnow: "Manutenção de Inverno & Neve",
@@ -248,7 +248,7 @@ export const translations = {
     
     svcEyebrow: "O Que Fazemos",
     svcTitle: "Cuidado completo para o seu jardim, em um só lugar",
-    svcSub: "Uma única equipe experiente cuida da poda, do corte, dos canteiros, do sistema de rega e das reformas em pedra — sem você ter que gerenciar vários prestadores.",
+    svcSub: "Zonas sem irrigação, grama seca e sem vida e um jardim sem visibilidade, tudo isto requer um profissional, conte com a gente!",
     cardMore: "Pedir orçamento no WhatsApp",
     
     beforeAfterEyebrow: "Resultados Reais",

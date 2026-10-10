@@ -25,7 +25,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white border-b border-[#e5eae6]">
+    <section id="faq" className="py-20 bg-[#E8EFDF] border-b border-[#d4decb]" style={{ backgroundColor: '#E8EFDF' }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#2b7a45] mb-3">

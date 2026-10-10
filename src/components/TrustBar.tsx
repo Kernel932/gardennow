@@ -11,7 +11,7 @@ export const TrustBar: React.FC<TrustBarProps> = ({ lang }) => {
   const t = translations[lang];
 
   return (
-    <div className="bg-[#f4f2ea] border-y border-[#e5e0d3] py-6 px-4">
+    <div className="bg-[#E8EFDF] border-y border-[#d4decb] py-6 px-4" style={{ backgroundColor: '#E8EFDF' }}>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <p className="text-sm md:text-base font-bold text-[#14311f] text-center md:text-left max-w-md">
           {t.trustText}

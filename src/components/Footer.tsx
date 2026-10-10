@@ -11,7 +11,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
   const t = translations[lang];
 
   return (
-    <footer className="bg-[#0f2417] text-[#a9c6b3] pt-16 pb-12 border-t border-[#1c3a26]">
+    <footer className="text-[#d6ebd9] pt-16 pb-12 border-t border-[#00382a]" style={{ background: 'linear-gradient(135deg, #007D5D 0%, #004332 100%)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           {/* Col 1: Brand Wordmark */}

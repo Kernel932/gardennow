@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { MapPin, Search, CheckCircle2, MessageCircle, Phone } from 'lucide-react';
+import { MapPin, Search, CheckCircle2 } from 'lucide-react';
 import { Language, TownRoute } from '../types';
-import { translations, WHATSAPP_NUMBER, DISPLAY_PHONE } from '../i18n/translations';
+import { translations } from '../i18n/translations';
 
 interface ServiceAreaSectionProps {
   lang: Language;
@@ -33,7 +33,7 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ lang }) 
   );
 
   return (
-    <section id="areas" className="py-20 bg-white border-b border-[#e5eae6]">
+    <section id="areas" className="py-20 bg-[#E8EFDF] border-b border-[#d4decb]" style={{ backgroundColor: '#E8EFDF' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Description & Search */}
@@ -82,31 +82,6 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ lang }) 
               <div className="text-xs text-[#2b7a45] font-semibold">
                 Scheduled Crew Service: <span className="font-bold">{selectedTown.activeDays}</span>
               </div>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-4 pt-2">
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                  lang === 'pt'
-                    ? `Olá! Gostaria de verificar a disponibilidade de atendimento para o meu imóvel na região de ${selectedTown.name}.`
-                    : `Hi! I would like to check service availability for my property in the ${selectedTown.name} area.`
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25d366] hover:bg-[#1eb857] text-white px-6 py-3.5 rounded-full font-bold text-sm shadow-sm transition-all hover:-translate-y-0.5"
-              >
-                <MessageCircle className="w-4 h-4 fill-white" />
-                <span>{t.areaCta1}</span>
-              </a>
-
-              <a
-                href="tel:5550147788"
-                className="inline-flex items-center gap-2 bg-[#f0f4f1] hover:bg-[#e4ece6] text-[#14311f] px-6 py-3.5 rounded-full font-bold text-sm transition-colors border border-[#dce5df]"
-              >
-                <Phone className="w-4 h-4 text-[#2b7a45]" />
-                <span>{DISPLAY_PHONE}</span>
-              </a>
             </div>
           </div>
 

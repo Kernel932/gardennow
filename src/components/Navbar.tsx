@@ -30,10 +30,10 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onOpenWhatsAppModal }) => 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#e5eae6] transition-all">
       <div 
-        className="w-full max-w-full mx-0 pl-0 pr-4 sm:pr-6 h-20 flex items-center justify-between gap-6 bg-[#2cb3cb]"
+        className="w-full max-w-full mx-0 pl-0 pr-4 sm:pr-6 h-20 flex items-center justify-between gap-6 bg-[#DED3BC]"
         style={{
-          backgroundColor: '#2cb3cb',
-          backgroundImage: "url('/backgroundbarra4.png')",
+          backgroundColor: '#DED3BC',
+          backgroundImage: "url('/backgroundbarra6.png')",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'left center',
           backgroundSize: 'auto 100%',
@@ -42,12 +42,12 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onOpenWhatsAppModal }) => 
         {/* Logo container with uploaded image without alterations */}
         <div className="flex items-center justify-start h-20 w-[267px] min-w-[267px] shrink-0 mr-auto text-left pl-0 ml-0">
           <img
-            src="/LogoGarden3.png"
+            src="/LogoGarden4.png"
             alt="Garden Now"
             width={267}
             height={84}
             referrerPolicy="no-referrer"
-            className="max-h-full max-w-full h-auto w-auto object-contain block"
+            className="max-h-full max-w-full h-auto w-auto object-contain block bg-transparent"
           />
         </div>
 
@@ -76,17 +76,6 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onOpenWhatsAppModal }) => 
             <span className="text-[10px] text-[#5d6a60] uppercase tracking-wider font-bold">
               {t.phoneHours}
             </span>
-          </a>
-
-          <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${defaultWaMessage}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ backgroundColor: '#092f17' }}
-            className="inline-flex items-center gap-2 bg-[#092f17] hover:bg-[#062010] text-white px-4 py-2.5 rounded-full font-bold text-sm shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 whitespace-nowrap"
-          >
-            <MessageCircle className="w-4 h-4 fill-white" />
-            <span>{t.navWa}</span>
           </a>
 
           {/* Mobile menu trigger */}

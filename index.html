@@ -14,7 +14,8 @@
     --sand:#f6f3ea;
     --ink:#1c241f;
     --muted:#5d6a60;
-    --white:#ffffff;
+    --white:#E8EFDF;
+    --site-bg:#E8EFDF;
     --wa:#25D366;
     --wa-dark:#1eb857;
     --radius:16px;
@@ -26,7 +27,7 @@
   body{
     font-family:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;
     color:var(--ink);
-    background:var(--white);
+    background:#E8EFDF;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
@@ -95,8 +96,8 @@
 
   /* ---------- NAV ---------- */
   header.nav{
-    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);
-    backdrop-filter:blur(10px);border-bottom:1px solid #e6e9e6;
+    position:sticky;top:0;z-index:50;background:rgba(232,239,223,.96);
+    backdrop-filter:blur(10px);border-bottom:1px solid #d3ded0;
   }
   .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:16px;width:100%;max-width:100%;margin:0;padding:0 24px 0 0;background:url('/backgroundbarra.png') no-repeat left center / auto 100%;}
   .nav-logo-wrap{display:flex;align-items:center;justify-content:flex-start;height:84px;max-height:84px;width:267px;min-width:267px;margin-left:0;margin-right:auto;padding-left:0;text-align:left;}
@@ -147,8 +148,8 @@
     background-repeat:no-repeat;
   }
   .hero-inner{
-    display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;
-    padding:80px 0 88px;
+    max-width:840px;
+    padding:88px 0 96px;
   }
   .hero h1{font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.08;letter-spacing:-.03em;margin-bottom:20px;text-shadow:0 2px 14px rgba(0,0,0,.5);}
   .hero h1 em{font-style:normal;color:var(--lime);}
@@ -197,7 +198,7 @@
   .wa-out{display:none;width:100%;justify-content:center;margin-top:10px;}
 
   /* ---------- TRUST BAR ---------- */
-  .trust{background:var(--sand);padding:34px 0;border-bottom:1px solid #e8e4d8;}
+  .trust{background:#E8EFDF;padding:34px 0;border-bottom:1px solid #d8e2cd;}
   .trust .wrap{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;}
   .trust p{font-weight:800;color:var(--green-900);font-size:.95rem;}
   .badges{display:flex;gap:32px;flex-wrap:wrap;align-items:center;}
@@ -331,18 +332,18 @@
 <body>
 
 <!-- TOP BAR -->
-<div class="topbar" style="background-color:#092f17;">
+<div class="topbar" style="background: linear-gradient(90deg, #007D5D 0%, #004332 100%);">
   <div class="wrap" style="width:100%;max-width:100%;margin:0;padding:0 24px;display:flex;justify-content:space-between;align-items:center;">
-    <span data-i18n="topBar" style="text-align:left;margin-left:0;margin-right:auto;justify-self:flex-start;">Local company. Completely secure</span>
-    <span data-i18n="topBarPhone">Free on-site assessment · Call <strong>(407) 914-1712</strong></span>
+    <span data-i18n="topBar" style="font-size:16px;color:#E8EFDF;font-family:'Futura Md BT','Futura',sans-serif;text-align:left;margin-left:0;margin-right:auto;justify-self:flex-start;">Irrigation &amp; landscape . Orlando Metro</span>
+    <span data-i18n="topBarPhone" style="color:#E8EFDF;font-family:'Futura Md BT','Futura',sans-serif;">Free on-site assessment · Call <strong style="color:#ffdc00;">(407) 914-1712</strong></span>
   </div>
 </div>
 
 <!-- NAV -->
 <header class="nav">
-  <div class="wrap" style="background-color: #2cb3cb; background: #2cb3cb url('public/backgroundbarra4.png') no-repeat left center / auto 100%; width: 100%;">
+  <div class="wrap" style="background-color: #DED3BC; background: #DED3BC url('/backgroundbarra6.png') no-repeat left center / auto 100%; width: 100%;">
     <div class="nav-logo-wrap">
-      <img src="public/LogoGarden3.png" alt="Garden Now" width="267" height="84" style="display:block;max-width:100%;height:auto;">
+      <img src="/LogoGarden4.png" alt="Garden Now" width="267" height="84" style="display:block;max-width:100%;height:auto;background:transparent;">
     </div>
     <nav class="links" id="navLinks">
       <a href="#services" data-i18n="navServices">Services</a>
@@ -359,26 +360,22 @@
         <button type="button" class="lang-btn" data-lang="pt">PT</button>
       </div>
 
-      <!-- WHATSAPP (replaces "Get a Quote") -->
-      <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="btn btn-wa nav-wa wa-link" aria-label="WhatsApp" style="background-color: #092f17;">
-        <svg class="wa-ico" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-        <span class="wa-label" data-i18n="navWa">WhatsApp</span>
-      </a>
-
       <button class="burger" id="burger" aria-label="Menu">☰</button>
     </div>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero" style="background: linear-gradient(110deg, rgba(6, 26, 13, 0.90) 0%, rgba(9, 36, 18, 0.80) 46%, rgba(14, 48, 24, 0.52) 78%, rgba(6, 22, 11, 0.88) 100%), url('public/jardim.jpg') center center / cover no-repeat;">
+<section class="hero" style="background: linear-gradient(to right, rgba(6, 26, 13, 0.92) 0%, rgba(6, 26, 13, 0.82) 35%, rgba(6, 26, 13, 0.40) 60%, rgba(6, 26, 13, 0) 82%), url('/manssao.jpg') center center / cover no-repeat;">
   <div class="wrap hero-inner">
     <div>
-      <p class="eyebrow" style="color:var(--lime);font-size:40px;" data-i18n="heroEyebrow">Landscaping</p>
       <h1 data-i18n="heroTitle">Aqui, a sua grama é sempre <em>mais verde</em> que a do vizinho!</h1>
-      <p class="lead" data-i18n="heroLead">From weekly mowing and clean edges to full landscape design, irrigation, and hardscape builds. One crew, one schedule, no surprises.</p>
-      <div class="hero-cta">
-        <a href="#services" class="btn btn-ghost" data-i18n="heroCta2">See What We Do</a>
+      <p class="lead" data-i18n="heroLead" style="color: #ffffff;">From simple repairs to the installation of complex irrigation systems, we take care of your garden's landscaping.</p>
+      <div style="margin: 28px 0 34px;">
+        <a href="#quote" class="btn btn-wa" style="background-color: #007054; font-size: 1.05rem; padding: 15px 32px; box-shadow: 0 6px 20px rgba(0,0,0,0.3);">
+          <svg class="wa-ico" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+          <span data-i18n="heroCta1">Send on WhatsApp</span>
+        </a>
       </div>
       <div class="hero-stats">
         <div><b>15+</b><span data-i18n="stat1">Years in business</span></div>
@@ -386,9 +383,48 @@
         <div><b>4.9★</b><span data-i18n="stat3">Average rating</span></div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- CONTACT CARD (sends via WhatsApp) -->
-    <div class="quote-card" id="quote">
+<!-- SERVICES -->
+<section id="services" style="background-color: #E8EFDF;">
+  <div class="wrap center">
+    <h2 class="section-title" data-i18n="svcTitle">Complete grounds care, under one roof</h2>
+    <p class="section-sub" data-i18n="svcSub">Areas without irrigation, dry and lifeless grass, and a garden lacking visibility—all of this calls for a professional. Count on us!</p>
+
+    <div class="grid-4" style="text-align:left">
+      <article class="card">
+        <div class="ic">🚜</div>
+        <h3 data-i18n="card1h">Lawn &amp; Grounds Maintenance</h3>
+        <p data-i18n="card1p">Weekly or biweekly mowing, crisp edging, blowing, and a clean-up pass so the property always looks finished.</p>
+        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+      </article>
+      <article class="card">
+        <div class="ic">📐</div>
+        <h3 data-i18n="card2h">Landscape Design &amp; Install</h3>
+        <p data-i18n="card2p">Planting plans, sod, mulch beds, and flowering color matched to your region, light, and soil.</p>
+        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+      </article>
+      <article class="card">
+        <div class="ic">💧</div>
+        <h3 data-i18n="card3h">Instalação e Manutenção de Irrigação</h3>
+        <p data-i18n="card3p">Smart-timer installs, zone repairs, and seasonal start-ups and blow-outs that keep water where it belongs.</p>
+        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+      </article>
+      <article class="card">
+        <div class="ic">🌷</div>
+        <h3 data-i18n="card4h">Flower &amp; Garden Beds</h3>
+        <p data-i18n="card4p">Weeding, edging, mulching, and seasonal color rotations that keep beds sharp instead of shaggy.</p>
+        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE FORM SECTION (Fixed below Services component) -->
+<section id="quote-section" style="background-color: #E8EFDF; padding: 20px 0 80px;">
+  <div class="wrap" style="max-width: 680px; margin: 0 auto; padding: 0 20px;">
+    <div class="quote-card" id="quote" style="background: #ffffff; border-radius: 24px; padding: 36px 32px; box-shadow: 0 12px 36px rgba(0,0,0,0.06); border: 1.5px solid #d4ded0;">
       <h3>
         <svg class="wa-ico" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
         <span data-i18n="formTitle">Message us on WhatsApp</span>
@@ -433,7 +469,7 @@
           <label for="fmsg" data-i18n="lblMsg">Anything else?</label>
           <textarea id="fmsg" data-i18n-ph="phMsg" placeholder="Corner lot, about a quarter acre, need weekly mowing…"></textarea>
         </div>
-        <button type="submit" class="btn btn-wa" id="submitBtn">
+        <button type="submit" class="btn btn-wa" id="submitBtn" style="background-color: #007054;">
           <svg class="wa-ico" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
           <span id="submitLabel" data-i18n="formSubmit">Send on WhatsApp</span>
         </button>
@@ -448,44 +484,8 @@
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="wrap center">
-    <p class="eyebrow" data-i18n="svcEyebrow">What We Do</p>
-    <h2 class="section-title" data-i18n="svcTitle">Complete grounds care, under one roof</h2>
-    <p class="section-sub" data-i18n="svcSub">One team handles the mowing, the beds, the watering, and the build-outs — so you're not juggling three different contractors.</p>
-
-    <div class="grid-4" style="text-align:left">
-      <article class="card">
-        <div class="ic">🚜</div>
-        <h3 data-i18n="card1h">Lawn &amp; Grounds Maintenance</h3>
-        <p data-i18n="card1p">Weekly or biweekly mowing, crisp edging, blowing, and a clean-up pass so the property always looks finished.</p>
-        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
-      </article>
-      <article class="card">
-        <div class="ic">📐</div>
-        <h3 data-i18n="card2h">Landscape Design &amp; Install</h3>
-        <p data-i18n="card2p">Planting plans, sod, mulch beds, and flowering color matched to your region, light, and soil.</p>
-        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
-      </article>
-      <article class="card">
-        <div class="ic">💧</div>
-        <h3 data-i18n="card3h">Irrigation Services</h3>
-        <p data-i18n="card3p">Smart-timer installs, zone repairs, and seasonal start-ups and blow-outs that keep water where it belongs.</p>
-        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
-      </article>
-      <article class="card">
-        <div class="ic">🌷</div>
-        <h3 data-i18n="card4h">Flower &amp; Garden Beds</h3>
-        <p data-i18n="card4p">Weeding, edging, mulching, and seasonal color rotations that keep beds sharp instead of shaggy.</p>
-        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- SEGMENTS -->
-<section class="segments" id="who" style="background-color: #092f17;">
+<section class="segments" id="who" style="background: linear-gradient(135deg, #007D5D 0%, #004332 100%);">
   <div class="wrap">
     <p class="eyebrow" style="color:var(--lime)" data-i18n="segEyebrow">Who We Serve</p>
     <h2 class="section-title" data-i18n="segTitle">Tailored plans for homes and businesses</h2>
@@ -545,26 +545,21 @@
 </section>
 
 <!-- SERVICE AREA -->
-<section id="areas">
+<section id="areas" style="background-color: #E8EFDF;">
   <div class="wrap center">
     <p class="eyebrow" data-i18n="areaEyebrow">Service Area</p>
     <h2 class="section-title" data-i18n="areaTitle">Serving the metro and surrounding towns</h2>
     <p class="section-sub" data-i18n="areaSub">Don't see your town? Call us — we add routes regularly and often take on neighboring areas.</p>
-    <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
-      <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="btn btn-wa wa-link">
-        <svg class="wa-ico" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-        <span data-i18n="areaCta1">Message on WhatsApp</span>
-      </a>
-      <a href="tel:4079141712" class="btn btn-ghost" style="color:var(--green-700);border-color:#b9d0c1" data-i18n="areaCta2">Call (407) 914-1712</a>
-    </div>
+  </div>
+</section>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testi" style="background-color: #b4e1b7;">
+<section class="testi" style="background: linear-gradient(135deg, #007D5D 0%, #004332 100%);">
   <div class="wrap center">
-    <p class="eyebrow" data-i18n="testiEyebrow">Reviews</p>
-    <h2 class="section-title" data-i18n="testiTitle">What neighbors say</h2>
+    <p class="eyebrow" data-i18n="testiEyebrow" style="color: #ffffff;">Reviews</p>
+    <h2 class="section-title" data-i18n="testiTitle" style="color: #ffc900;">What neighbors say</h2>
     <div class="grid-3" style="text-align:left">
       <div class="tcard">
         <div class="stars">★★★★★</div>
@@ -586,7 +581,7 @@
 </section>
 
 <!-- FAQ -->
-<section id="faq">
+<section id="faq" style="background-color: #E8EFDF;">
   <div class="wrap center">
     <p class="eyebrow" data-i18n="faqEyebrow">Questions</p>
     <h2 class="section-title" data-i18n="faqTitle">Frequently asked</h2>
@@ -619,7 +614,7 @@
 
 
 <!-- FOOTER -->
-<footer>
+<footer style="background: linear-gradient(135deg, #007D5D 0%, #004332 100%);">
   <div class="wrap">
     <div class="fcols">
       <div>
@@ -682,8 +677,8 @@ const WA_NUMBER = '14079141712'; // <-- troque pelo seu número, formato interna
 /* ============ i18n dictionary ============ */
 const I18N = {
   en: {
-    topBar:"Local company. Completely secure",
-    topBarPhone:'Free on-site assessment · Call <strong>(407) 914-1712</strong>',
+    topBar:"Irrigation & landscape . Orlando Metro",
+    topBarPhone:'Free on-site assessment · Call <strong style="color:#ffdc00;">(407) 914-1712</strong>',
     logoTag:"Landscaping",
     navServices:"Services", navRes:"Residential", navCom:"Commercial",
     navAreas:"Service Area", navFaq:"FAQs",
@@ -691,9 +686,9 @@ const I18N = {
     waText:"Hi! I'd like a quote for my property.",
     waFormIntro:"New request from the website:",
     phoneHours:"Mon–Sat 7am–6pm",
-    heroEyebrow:"Landscaping",
+    heroEyebrow:"Irrigation & landscape . Orlando Metro",
     heroTitle:'Here, your lawn is always <em>greener</em> than the neighbor\'s!',
-    heroLead:"From weekly mowing and clean edges to full landscape design, irrigation, and hardscape builds. One crew, one schedule, no surprises.",
+    heroLead:"From simple repairs to the installation of complex irrigation systems, we take care of your garden's landscaping.",
     heroCta1:"Chat on WhatsApp", heroCta2:"See What We Do",
     stat1:"Years in business", stat2:"Properties serviced", stat3:"Average rating",
     lawnTag:"Lush striped turf with uniform precision cut",
@@ -718,12 +713,12 @@ const I18N = {
     badge3:"Satisfaction Guaranteed", badge4:"Locally Owned",
     svcEyebrow:"What We Do",
     svcTitle:"Complete grounds care, under one roof",
-    svcSub:"One team handles the mowing, the beds, the watering, and the build-outs — so you're not juggling three different contractors.",
+    svcSub:"Areas without irrigation, dry and lifeless grass, and a garden lacking visibility—all of this calls for a professional. Count on us!",
     card1h:"Lawn & Grounds Maintenance",
     card1p:"Weekly or biweekly mowing, crisp edging, blowing, and a clean-up pass so the property always looks finished.",
     card2h:"Landscape Design & Install",
     card2p:"Planting plans, sod, mulch beds, and flowering color matched to your region, light, and soil.",
-    card3h:"Irrigation Services",
+    card3h:"Irrigation Installation & Maintenance",
     card3p:"Smart-timer installs, zone repairs, and seasonal start-ups and blow-outs that keep water where it belongs.",
     card4h:"Flower & Garden Beds",
     card4p:"Weeding, edging, mulching, and seasonal color rotations that keep beds sharp instead of shaggy.",
@@ -785,8 +780,8 @@ const I18N = {
     footRights:"© 2026 Garden Now Grounds Care. All rights reserved."
   },
   pt: {
-    topBar:"Empresa local · Totalmente segura",
-    topBarPhone:'Avaliação gratuita no local · Ligue <strong>(407) 914-1712</strong>',
+    topBar:"Irrigation & landscape . Orlando Metro",
+    topBarPhone:'Avaliação gratuita no local · Ligue <strong style="color:#ffdc00;">(407) 914-1712</strong>',
     logoTag:"Landscaping",
     navServices:"Serviços", navRes:"Residencial", navCom:"Comercial",
     navAreas:"Área de Atendimento", navFaq:"Perguntas",
@@ -794,9 +789,9 @@ const I18N = {
     waText:"Olá! Gostaria de um orçamento para o meu imóvel.",
     waFormIntro:"Nova solicitação pelo site:",
     phoneHours:"Seg–Sáb 7h–18h",
-    heroEyebrow:"Landscaping",
+    heroEyebrow:"Irrigation & landscape . Orlando Metro",
     heroTitle:'Aqui, a sua grama é sempre <em>mais verde</em> que a do vizinho!',
-    heroLead:"Do corte semanal e acabamento nas bordas ao projeto completo de paisagismo, irrigação e áreas de pedra. Uma equipe, uma agenda, sem surpresas.",
+    heroLead:"De simples reparos à instalação de sistemas complexos de irrigação, cuidamos do paisagismo do seu jardim.",
     heroCta1:"Falar no WhatsApp", heroCta2:"Ver o que fazemos",
     stat1:"Anos de mercado", stat2:"Imóveis atendidos", stat3:"Avaliação média",
     lawnTag:"Gramado denso com corte listrado e uniforme",
@@ -821,12 +816,12 @@ const I18N = {
     badge3:"Satisfação Garantida", badge4:"Empresa Local",
     svcEyebrow:"O que fazemos",
     svcTitle:"Cuidado completo do jardim, em um só lugar",
-    svcSub:"Uma equipe cuida do corte, dos canteiros, da rega e das obras — para você não ter que gerenciar três prestadores diferentes.",
+    svcSub:"Zonas sem irrigação, grama seca e sem vida e um jardim sem visibilidade, tudo isto requer um profissional, conte com a gente!",
     card1h:"Manutenção de Grama & Jardim",
     card1p:"Corte semanal ou quinzenal, bordas bem feitas, sopro e limpeza final para o imóvel parecer sempre impecável.",
     card2h:"Projeto & Instalação de Paisagismo",
     card2p:"Plantio planejado, grama em placas, canteiros com cobertura vegetal e cores escolhidas para o seu clima, luz e solo.",
-    card3h:"Serviços de Irrigação",
+    card3h:"Instalação e Manutenção de Irrigação",
     card3p:"Instalação de temporizadores inteligentes, conserto de setores e acionamento e desligamento sazonais que mantêm a água onde deve ficar.",
     card4h:"Canteiros & Flores",
     card4p:"Capina, delimitação, cobertura vegetal e trocas sazonais de cor que mantêm os canteiros bem desenhados.",

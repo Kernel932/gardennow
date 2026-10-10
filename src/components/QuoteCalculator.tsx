@@ -72,7 +72,7 @@ export const QuoteCalculator: React.FC<QuoteCalculatorProps> = ({ lang }) => {
   };
 
   return (
-    <section id="calculator" className="py-20 bg-[#fafaf7] border-b border-[#e5eae6]">
+    <section id="calculator" className="py-20 bg-[#E8EFDF] border-b border-[#d4decb]" style={{ backgroundColor: '#E8EFDF' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#2b7a45] mb-3">

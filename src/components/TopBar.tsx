@@ -12,14 +12,14 @@ export const TopBar: React.FC<TopBarProps> = ({ lang, onLanguageChange }) => {
   const t = translations[lang];
 
   return (
-    <div className="bg-[#092f17] text-white text-xs py-2 px-4 sm:px-6 border-b border-[#062010] w-full" style={{ backgroundColor: '#092f17' }}>
+    <div className="text-white text-xs py-2 px-4 sm:px-6 border-b border-[#00382a] w-full" style={{ background: 'linear-gradient(90deg, #007D5D 0%, #004332 100%)' }}>
       <div className="w-full max-w-full mx-0 flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-4 flex-wrap mr-auto justify-start text-left">
           <span 
-            className="flex items-center gap-1.5 font-medium text-left mr-auto justify-start"
-            style={{ textAlign: 'left', marginLeft: 0, marginRight: 'auto' }}
+            className="flex items-center gap-1.5 font-medium text-left mr-auto justify-start text-[#E8EFDF] text-[16px]"
+            style={{ textAlign: 'left', marginLeft: 0, marginRight: 'auto', color: '#E8EFDF', fontFamily: "'Futura Md BT', 'Futura', sans-serif", fontSize: '16px' }}
           >
-            <ShieldCheck className="w-3.5 h-3.5 text-[#a8d94b]" />
+            <ShieldCheck className="w-3.5 h-3.5 text-[#E8EFDF]" />
             {t.topBar}
           </span>
           <span className="hidden md:flex items-center gap-1.5 text-[#a9c6b3]">
@@ -34,7 +34,7 @@ export const TopBar: React.FC<TopBarProps> = ({ lang, onLanguageChange }) => {
             className="flex items-center gap-1.5 text-white hover:text-[#a8d94b] transition-colors font-semibold"
           >
             <Phone className="w-3.5 h-3.5 text-[#a8d94b]" />
-            <span>{t.topBarPhone} <strong className="text-[#a8d94b]">{DISPLAY_PHONE}</strong></span>
+            <span style={{ color: '#E8EFDF', fontFamily: "'Futura Md BT', 'Futura', sans-serif" }}>{t.topBarPhone} <strong className="text-[#ffdc00]" style={{ color: '#ffdc00' }}>{DISPLAY_PHONE}</strong></span>
           </a>
 
           {/* Language Switcher */}

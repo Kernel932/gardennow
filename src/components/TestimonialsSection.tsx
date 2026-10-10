@@ -38,14 +38,14 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ lang }
   ];
 
   return (
-    <section className="py-20 bg-[#b4e1b7] border-b border-[#e5e0d3]">
+    <section className="py-20 border-b border-[#00382a]" style={{ background: 'linear-gradient(135deg, #007D5D 0%, #004332 100%)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#2b7a45] mb-3">
-            <MessageSquareQuote className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-white mb-3" style={{ color: '#ffffff' }}>
+            <MessageSquareQuote className="w-3.5 h-3.5 text-white" />
             <span>{t.testiEyebrow}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#14311f] font-display">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#ffc900] font-display" style={{ color: '#ffc900' }}>
             {t.testiTitle}
           </h2>
         </div>
