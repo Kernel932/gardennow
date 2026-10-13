@@ -36,9 +36,10 @@ export interface QuoteFormData {
   name: string;
   phone: string;
   email: string;
-  propertyType: 'Residential' | 'Commercial';
-  serviceType: string;
-  lotSize: string;
-  frequency: string;
+  propertyType: 'residential' | 'commercial' | 'Residential' | 'Commercial';
+  service: string;
+  serviceType?: string;
+  lotSize?: string;
+  frequency?: string;
   notes: string;
 }

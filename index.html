@@ -206,20 +206,63 @@
   .badge i{font-style:normal;font-size:1.15rem;}
 
   /* ---------- SERVICE CARDS ---------- */
-  .grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:24px;margin-top:48px;}
-  .card{background:#fff;border:1px solid #e7ebe8;border-radius:var(--radius);padding:30px 26px;transition:.26s;position:relative;overflow:hidden;}
-  .card:before{
-    content:"";position:absolute;inset:0 0 auto 0;height:4px;
-    background:linear-gradient(90deg,var(--green-500),var(--lime));
-    transform:scaleX(0);transform-origin:left;transition:.3s;
+  .grid-4{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;margin-top:36px;}
+  .card{
+    background:#14311f;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:20px;
+    padding:26px 22px;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    position:relative;
+    overflow:hidden;
+    min-height:340px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 10px 28px rgba(0,0,0,.15);
   }
-  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#d3e0d7;}
-  .card:hover:before{transform:scaleX(1);}
-  .card .ic{width:52px;height:52px;border-radius:14px;background:#edf6ef;color:var(--green-600);display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px;}
-  .card h3{font-size:1.12rem;color:var(--green-900);margin-bottom:9px;letter-spacing:-.01em;}
-  .card p{font-size:.93rem;color:var(--muted);margin-bottom:16px;}
-  .card a.more{font-size:.86rem;font-weight:800;color:var(--green-600);display:inline-flex;gap:6px;align-items:center;}
-  .card a.more:hover{gap:11px;}
+  .card:before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(6, 26, 13, 0.22) 0%, rgba(6, 26, 13, 0.72) 46%, rgba(6, 26, 13, 0.96) 100%);
+    transition:background .3s ease;
+    z-index:1;
+  }
+  .card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 36px rgba(0,0,0,.25);
+    border-color:rgba(168,217,75,.45);
+  }
+  .card:hover:before{
+    background:linear-gradient(180deg, rgba(6, 26, 13, 0.12) 0%, rgba(6, 26, 13, 0.64) 42%, rgba(6, 26, 13, 0.98) 100%);
+  }
+  .card-inner{
+    position:relative;
+    z-index:2;
+  }
+  .card .ic{
+    width:48px;height:48px;border-radius:14px;
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,0.3);
+    color:#fff;display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+  }
+  .card h3{
+    font-size:1.22rem;color:#ffffff;margin-bottom:8px;font-weight:800;letter-spacing:-.01em;
+    text-shadow:0 2px 8px rgba(0,0,0,0.8);
+  }
+  .card p{
+    font-size:.9rem;color:#e8f0e9;line-height:1.45;margin-bottom:16px;
+    text-shadow:0 1px 6px rgba(0,0,0,0.85);
+  }
+  .card a.more{
+    font-size:.88rem;font-weight:800;color:var(--lime);display:inline-flex;gap:6px;align-items:center;
+    text-shadow:0 1px 4px rgba(0,0,0,0.7);
+    transition:gap .2s ease, color .2s ease;
+  }
+  .card a.more:hover{gap:10px;color:#ffffff;}
 
   /* ---------- SEGMENT SECTION ---------- */
   .segments{background:#092f17;color:#fff;}
@@ -343,7 +386,7 @@
 <header class="nav">
   <div class="wrap" style="background-color: #DED3BC; background: #DED3BC url('public/backgroundbarra6.png') no-repeat left center / auto 100%; width: 100%;">
     <div class="nav-logo-wrap">
-      <img src="public/LogoGarden4.png" alt="Garden Now" width="267" height="84" style="display:block;max-width:100%;height:auto;background:transparent;">
+      <img src="/LogoGarden4.png" alt="Garden Now" width="267" height="84" style="display:block;max-width:100%;height:auto;background:transparent;">
     </div>
     <nav class="links" id="navLinks">
       <a href="#services" data-i18n="navServices">Services</a>
@@ -369,9 +412,10 @@
 <section class="hero" style="background: linear-gradient(to right, rgba(6, 26, 13, 0.92) 0%, rgba(6, 26, 13, 0.82) 35%, rgba(6, 26, 13, 0.40) 60%, rgba(6, 26, 13, 0) 82%), url('public/manssao.jpg') center center / cover no-repeat;">
   <div class="wrap hero-inner">
     <div>
-      <h1 data-i18n="heroTitle">Aqui, a sua grama é sempre <em>mais verde</em> que a do vizinho!</h1>
-      <p class="lead" data-i18n="heroLead" style="color: #ffffff;">From simple repairs to the installation of complex irrigation systems, we take care of your garden's landscaping.</p>
-      <div style="margin: 28px 0 34px;">
+      <h1 data-i18n="heroTitle">Beautiful outdoor spaces. <em>Designed to last.</em></h1>
+      <p class="lead" data-i18n="heroLead" style="color: #ffffff;">We design and install landscaping, irrigation, drainage, synthetic turf, and outdoor improvements for homes and businesses in Orlando, Florida.</p>
+      <p class="hero-callout" data-i18n="heroCallout" style="font-family: Arial, sans-serif; font-weight: bold; font-size: 28.6px; color: #ffffff; margin-top: 18px; margin-bottom: 4px; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Solicite uma avaliação gratuita !!</p>
+      <div style="margin: 22px 0 34px;">
         <a href="#quote" class="btn btn-wa" style="background-color: #007054; font-size: 1.05rem; padding: 15px 32px; box-shadow: 0 6px 20px rgba(0,0,0,0.3);">
           <svg class="wa-ico" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
           <span data-i18n="heroCta1">Send on WhatsApp</span>
@@ -389,33 +433,82 @@
 <!-- SERVICES -->
 <section id="services" style="background-color: #E8EFDF;">
   <div class="wrap center">
-    <h2 class="section-title" data-i18n="svcTitle">Complete grounds care, under one roof</h2>
-    <p class="section-sub" data-i18n="svcSub">Areas without irrigation, dry and lifeless grass, and a garden lacking visibility—all of this calls for a professional. Count on us!</p>
+    <h2 class="section-title" data-i18n="svcTitle">Do planejamento à execução, cuidamos de cada detalhe para transformar o espaço externo da sua propriedade.</h2>
+    <p class="section-sub" data-i18n="svcSub">Na Garden Now Landscaping, projetamos e transformamos áreas externas para que sejam mais bonitas, funcionais e valorizadas. Oferecemos paisagismo, grama sintética, irrigação inteligente, drenagem, iluminação de jardim, pavers e outras melhorias externas, sempre com planejamento e execução profissional.</p>
+    <h3 class="section-header-highlight" data-i18n="svcSolutionsTitle" style="font-size: 1.6rem; font-weight: 800; color: #14311f; margin-top: 28px; margin-bottom: 24px; letter-spacing: -0.02em;">Soluções para transformar, proteger e valorizar seu imóvel</h3>
 
     <div class="grid-4" style="text-align:left">
-      <article class="card">
-        <div class="ic">🚜</div>
-        <h3 data-i18n="card1h">Lawn &amp; Grounds Maintenance</h3>
-        <p data-i18n="card1p">Weekly or biweekly mowing, crisp edging, blowing, and a clean-up pass so the property always looks finished.</p>
-        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+      <!-- Card 1 -->
+      <article class="card" style="background-image:url('/svc_lawn.jpg')">
+        <div class="card-inner">
+          <div class="ic">🚜</div>
+          <h3 data-i18n="card1h">Paisagismo e reformas externas</h3>
+          <p data-i18n="card1p">Weekly or biweekly mowing, crisp edging, blowing, and a clean-up pass so the property always looks finished.</p>
+          <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+        </div>
       </article>
-      <article class="card">
-        <div class="ic">📐</div>
-        <h3 data-i18n="card2h">Landscape Design &amp; Install</h3>
-        <p data-i18n="card2p">Planting plans, sod, mulch beds, and flowering color matched to your region, light, and soil.</p>
-        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+      <!-- Card 2 -->
+      <article class="card" style="background-image:url('/svc_landscape.jpg')">
+        <div class="card-inner">
+          <div class="ic">📐</div>
+          <h3 data-i18n="card2h">Landscape Design &amp; Install</h3>
+          <p data-i18n="card2p">Planting plans, sod, mulch beds, and flowering color matched to your region, light, and soil.</p>
+          <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+        </div>
       </article>
-      <article class="card">
-        <div class="ic">💧</div>
-        <h3 data-i18n="card3h">Instalação e Manutenção de Irrigação</h3>
-        <p data-i18n="card3p">Smart-timer installs, zone repairs, and seasonal start-ups and blow-outs that keep water where it belongs.</p>
-        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+      <!-- Card 3 -->
+      <article class="card" style="background-image:url('/svc_irrigation.jpg')">
+        <div class="card-inner">
+          <div class="ic">💧</div>
+          <h3 data-i18n="card3h">Smart Irrigation Systems</h3>
+          <p data-i18n="card3p">Smart-timer installs, zone repairs, and seasonal start-ups and blow-outs that keep water where it belongs.</p>
+          <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+        </div>
       </article>
-      <article class="card">
-        <div class="ic">🌷</div>
-        <h3 data-i18n="card4h">Flower &amp; Garden Beds</h3>
-        <p data-i18n="card4p">Weeding, edging, mulching, and seasonal color rotations that keep beds sharp instead of shaggy.</p>
-        <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+      <!-- Card 4 -->
+      <article class="card" style="background-image:url('/svc_beds.jpg')">
+        <div class="card-inner">
+          <div class="ic">🌷</div>
+          <h3 data-i18n="card4h">Flower &amp; Garden Beds</h3>
+          <p data-i18n="card4p">Weeding, edging, mulching, and seasonal color rotations that keep beds sharp instead of shaggy.</p>
+          <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+        </div>
+      </article>
+      <!-- Card 5 -->
+      <article class="card" style="background-image:url('/svc_turf.jpg')">
+        <div class="card-inner">
+          <div class="ic">🌱</div>
+          <h3 data-i18n="card5h">Synthetic Turf Installation</h3>
+          <p data-i18n="card5p">Low-maintenance, hyper-realistic artificial grass designed for drought resistance, pets, and year-round perfection.</p>
+          <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+        </div>
+      </article>
+      <!-- Card 6 -->
+      <article class="card" style="background-image:url('/svc_drainage.jpg')">
+        <div class="card-inner">
+          <div class="ic">🌧️</div>
+          <h3 data-i18n="card6h">Drainage &amp; Erosion Control</h3>
+          <p data-i18n="card6p">French drains, catch basins, downspout extensions, and grading solutions that eliminate standing water and protect foundations.</p>
+          <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+        </div>
+      </article>
+      <!-- Card 7 -->
+      <article class="card" style="background-image:url('/svc_lighting.jpg')">
+        <div class="card-inner">
+          <div class="ic">💡</div>
+          <h3 data-i18n="card7h">Landscape &amp; Accent Lighting</h3>
+          <p data-i18n="card7p">Low-voltage LED pathway, spotlight, and architectural accent lighting that makes your property glow with nighttime elegance.</p>
+          <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+        </div>
+      </article>
+      <!-- Card 8 -->
+      <article class="card" style="background-image:url('/svc_pavers.jpg')">
+        <div class="card-inner">
+          <div class="ic">🧱</div>
+          <h3 data-i18n="card8h">Pavers, Patios &amp; Hardscaping</h3>
+          <p data-i18n="card8p">High-quality driveway pavers, patio extensions, retaining walls, and custom walkways built to last in Florida soils.</p>
+          <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
+        </div>
       </article>
     </div>
   </div>
@@ -687,8 +780,9 @@ const I18N = {
     waFormIntro:"New request from the website:",
     phoneHours:"Mon–Sat 7am–6pm",
     heroEyebrow:"Irrigation & landscape . Orlando Metro",
-    heroTitle:'Here, your lawn is always <em>greener</em> than the neighbor\'s!',
-    heroLead:"From simple repairs to the installation of complex irrigation systems, we take care of your garden's landscaping.",
+    heroTitle:'Beautiful outdoor spaces. <em>Designed to last.</em>',
+    heroLead:"We design and install landscaping, irrigation, drainage, synthetic turf, and outdoor improvements for homes and businesses in Orlando, Florida.",
+    heroCallout:"Request a free assessment !!",
     heroCta1:"Chat on WhatsApp", heroCta2:"See What We Do",
     stat1:"Years in business", stat2:"Properties serviced", stat3:"Average rating",
     lawnTag:"Lush striped turf with uniform precision cut",
@@ -712,9 +806,10 @@ const I18N = {
     badge1:"Licensed & Insured", badge2:"Eco-Conscious Products",
     badge3:"Satisfaction Guaranteed", badge4:"Locally Owned",
     svcEyebrow:"What We Do",
-    svcTitle:"Complete grounds care, under one roof",
-    svcSub:"Areas without irrigation, dry and lifeless grass, and a garden lacking visibility—all of this calls for a professional. Count on us!",
-    card1h:"Lawn & Grounds Maintenance",
+    svcTitle:"From planning to execution, we take care of every detail to transform your property's outdoor space.",
+    svcSub:"At Garden Now Landscaping, we design and transform outdoor spaces to make them more beautiful, functional, and valuable. We provide landscaping, synthetic turf, smart irrigation, drainage, landscape lighting, pavers, and other outdoor improvements, always with professional planning and execution.",
+    svcSolutionsTitle:"Solutions to transform, protect, and enhance your property",
+    card1h:"Landscaping & Outdoor Improvements",
     card1p:"Weekly or biweekly mowing, crisp edging, blowing, and a clean-up pass so the property always looks finished.",
     card2h:"Landscape Design & Install",
     card2p:"Planting plans, sod, mulch beds, and flowering color matched to your region, light, and soil.",
@@ -722,6 +817,14 @@ const I18N = {
     card3p:"Smart-timer installs, zone repairs, and seasonal start-ups and blow-outs that keep water where it belongs.",
     card4h:"Flower & Garden Beds",
     card4p:"Weeding, edging, mulching, and seasonal color rotations that keep beds sharp instead of shaggy.",
+    card5h:"Synthetic Turf Installation",
+    card5p:"Low-maintenance, hyper-realistic artificial grass designed for drought resistance, pets, and year-round perfection.",
+    card6h:"Drainage & Erosion Control",
+    card6p:"French drains, catch basins, downspout extensions, and grading solutions that eliminate standing water and protect foundations.",
+    card7h:"Landscape & Accent Lighting",
+    card7p:"Low-voltage LED pathway, spotlight, and architectural accent lighting that makes your property glow with nighttime elegance.",
+    card8h:"Pavers, Patios & Hardscaping",
+    card8p:"High-quality driveway pavers, patio extensions, retaining walls, and custom walkways built to last in Florida soils.",
     cardMore:"Learn more →",
     segEyebrow:"Who We Serve",
     segTitle:"Tailored plans for homes and businesses",
@@ -790,8 +893,9 @@ const I18N = {
     waFormIntro:"Nova solicitação pelo site:",
     phoneHours:"Seg–Sáb 7h–18h",
     heroEyebrow:"Irrigation & landscape . Orlando Metro",
-    heroTitle:'Aqui, a sua grama é sempre <em>mais verde</em> que a do vizinho!',
-    heroLead:"De simples reparos à instalação de sistemas complexos de irrigação, cuidamos do paisagismo do seu jardim.",
+    heroTitle:'Belos espaços ao ar livre. <em>Feitos para durar.</em>',
+    heroLead:"Projetamos e instalamos paisagismo, irrigação, drenagem, grama sintética e melhorias para áreas externas em residências e empresas em Orlando, Flórida.",
+    heroCallout:"Solicite uma avaliação gratuita !!",
     heroCta1:"Falar no WhatsApp", heroCta2:"Ver o que fazemos",
     stat1:"Anos de mercado", stat2:"Imóveis atendidos", stat3:"Avaliação média",
     lawnTag:"Gramado denso com corte listrado e uniforme",
@@ -815,8 +919,9 @@ const I18N = {
     badge1:"Licenciada e Segurada", badge2:"Produtos Eco-Conscientes",
     badge3:"Satisfação Garantida", badge4:"Empresa Local",
     svcEyebrow:"O que fazemos",
-    svcTitle:"Cuidado completo do jardim, em um só lugar",
-    svcSub:"Zonas sem irrigação, grama seca e sem vida e um jardim sem visibilidade, tudo isto requer um profissional, conte com a gente!",
+    svcTitle:"Do planejamento à execução, cuidamos de cada detalhe para transformar o espaço externo da sua propriedade.",
+    svcSub:"Na Garden Now Landscaping, projetamos e transformamos áreas externas para que sejam mais bonitas, funcionais e valorizadas. Oferecemos paisagismo, grama sintética, irrigação inteligente, drenagem, iluminação de jardim, pavers e outras melhorias externas, sempre com planejamento e execução profissional.",
+    svcSolutionsTitle:"Soluções para transformar, proteger e valorizar seu imóvel",
     card1h:"Manutenção de Grama & Jardim",
     card1p:"Corte semanal ou quinzenal, bordas bem feitas, sopro e limpeza final para o imóvel parecer sempre impecável.",
     card2h:"Projeto & Instalação de Paisagismo",
@@ -825,6 +930,14 @@ const I18N = {
     card3p:"Instalação de temporizadores inteligentes, conserto de setores e acionamento e desligamento sazonais que mantêm a água onde deve ficar.",
     card4h:"Canteiros & Flores",
     card4p:"Capina, delimitação, cobertura vegetal e trocas sazonais de cor que mantêm os canteiros bem desenhados.",
+    card5h:"Grama Sintética Premium",
+    card5p:"Grama artificial hiper-realista e de baixa manutenção, resistente ao clima da Flórida, ideal para pets e áreas de lazer.",
+    card6h:"Drenagem & Escoamento",
+    card6p:"Drenos franceses, caixas de retenção e nivelamento para eliminar água empoçada e proteger as fundações da sua propriedade.",
+    card7h:"Iluminação de Paisagismo",
+    card7p:"Sistemas em LED de baixa voltagem para destacar caminhos, plantas nobres e detalhes arquitetônicos à noite.",
+    card8h:"Pavers, Pátios & Calçadas",
+    card8p:"Assentamento de pavers para calçadas, pátios, entradas de garagem e muros de contenção feitos com máxima durabilidade.",
     cardMore:"Saiba mais →",
     segEyebrow:"Para quem atendemos",
     segTitle:"Planos sob medida para residências e empresas",

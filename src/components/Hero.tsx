@@ -30,8 +30,21 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
             {t.heroTitleSuffix}
           </h1>
 
-          <p className="text-lg sm:text-xl text-white leading-relaxed max-w-2xl mb-8 font-normal" style={{ color: '#ffffff' }}>
+          <p className="text-lg sm:text-xl text-white leading-relaxed max-w-2xl mb-4 font-normal" style={{ color: '#ffffff' }}>
             {t.heroLead}
+          </p>
+
+          {/* Callout */}
+          <p 
+            className="text-white mb-6 tracking-tight flex items-center gap-2"
+            style={{ 
+              color: '#ffffff',
+              fontFamily: 'Arial, sans-serif',
+              fontWeight: 'bold',
+              fontSize: '28.6px'
+            }}
+          >
+            <span>{t.heroCallout}</span>
           </p>
 
           {/* CTAs */}

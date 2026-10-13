@@ -90,6 +90,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
           <p className="mt-4 text-base sm:text-lg text-[#5d6a60]">
             {t.svcSub}
           </p>
+          <h3 className="mt-8 text-2xl sm:text-3xl font-extrabold tracking-tight text-[#14311f] font-display">
+            {t.svcSolutionsTitle}
+          </h3>
         </div>
 
         {/* Bento Grid layout */}
