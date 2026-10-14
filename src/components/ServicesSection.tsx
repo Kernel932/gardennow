@@ -17,8 +17,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
       tag: '01',
       title: t.svcMaintenance,
       description: lang === 'pt'
-        ? 'Corte regular, delimitação milimétrica das bordas em calçadas e canteiros, desobstrução com soprador profissional e conferência de portões fechados.'
-        : 'Weekly or bi-weekly mowing, razor-sharp perimeter edging, blowing of all paved areas, and secure gate lock checks after every single visit.',
+        ? 'Planejamento e transformação de áreas externas com seleção de plantas, composição de canteiros, gramados naturais ou sintéticos, pedras decorativas e outros elementos paisagísticos.'
+        : 'Comprehensive planning and outdoor space transformation featuring curated plant selection, custom garden beds, natural sod or artificial turf, decorative stones, and tailored landscape elements.',
       features: lang === 'pt'
         ? ['Equipamentos afiados diariamente', 'Padrão uniforme de corte com listras', 'Remoção limpa de aparas e resíduos']
         : ['Daily-sharpened commercial blades', 'Clean estate striping pattern', 'Zero clippings left in mulch beds'],

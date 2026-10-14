@@ -45,10 +45,10 @@ export const translations = {
     optResidential: "Residential",
     optCommercial: "Commercial",
     
-    svcMaintenance: "Lawn & Grounds Maintenance",
-    svcDesign: "Landscape Design & Installation",
-    svcIrrigation: "Irrigation Installation & Maintenance",
-    svcBeds: "Flower & Garden Beds",
+    svcMaintenance: "Landscaping & Outdoor Renovations",
+    svcDesign: "Pavers & Paving",
+    svcIrrigation: "Smart Irrigation",
+    svcBeds: "Drainage Solutions",
     svcHardscape: "Hardscape & Stone Patios",
     svcSnow: "Commercial Snow & Winter",
     
@@ -98,7 +98,7 @@ export const translations = {
     calcCta: "Lock In This Estimate on WhatsApp",
     
     segEyebrow: "Who We Serve",
-    segTitle: "Tailored schedules for private homes and business properties",
+    segTitle: "Irrigation, Drainage & Property Protection",
     segSub: "The property demands and compliance requirements are distinct, so we deploy specialized teams for each.",
     tabRes: "Residential Homes",
     tabCom: "Commercial & HOAs",
@@ -229,10 +229,10 @@ export const translations = {
     optResidential: "Residencial",
     optCommercial: "Comercial",
     
-    svcMaintenance: "Manutenção de Grama & Jardim",
-    svcDesign: "Projeto & Instalação de Paisagismo",
-    svcIrrigation: "Instalação e Manutenção de Irrigação",
-    svcBeds: "Canteiros de Flores & Cobertura",
+    svcMaintenance: "Paisagismo e reformas externas",
+    svcDesign: "Pavers e pavimentação",
+    svcIrrigation: "Irrigação inteligente",
+    svcBeds: "Soluções de drenagem",
     svcHardscape: "Pisos de Pedra & Áreas Gourmet",
     svcSnow: "Manutenção de Inverno & Neve",
     
@@ -282,7 +282,7 @@ export const translations = {
     calcCta: "Garantir Este Preço no WhatsApp",
     
     segEyebrow: "Para Quem Trabalhamos",
-    segTitle: "Planos sob medida para residências e empresas",
+    segTitle: "Irrigação, drenagem e proteção do imóvel",
     segSub: "As exigências técnicas e operacionais são diferentes, por isso temos equipes e maquinários dedicados para cada perfil.",
     tabRes: "Casas & Chácaras",
     tabCom: "Empresas & Condomínios",

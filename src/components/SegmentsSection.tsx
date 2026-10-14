@@ -15,9 +15,6 @@ export const SegmentsSection: React.FC<SegmentsSectionProps> = ({ lang }) => {
     <section id="who" className="py-20 text-white" style={{ background: 'linear-gradient(135deg, #007D5D 0%, #004332 100%)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#a8d94b] mb-3">
-            <span>{t.segEyebrow}</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-display">
             {t.segTitle}
           </h2>
