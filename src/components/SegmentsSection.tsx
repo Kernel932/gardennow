@@ -56,7 +56,7 @@ export const SegmentsSection: React.FC<SegmentsSectionProps> = ({ lang }) => {
           {activeTab === 'residential' ? (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start animate-fade-in">
               <div className="lg:col-span-7 space-y-6">
-                <p className="text-base sm:text-lg text-[#cfe4d5] leading-relaxed">
+                <p className="text-base sm:text-lg leading-relaxed font-bold text-white" style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', color: '#ffffff' }}>
                   {t.resP}
                 </p>
 
@@ -128,7 +128,7 @@ export const SegmentsSection: React.FC<SegmentsSectionProps> = ({ lang }) => {
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start animate-fade-in">
               <div className="lg:col-span-7 space-y-6">
-                <p className="text-base sm:text-lg text-[#cfe4d5] leading-relaxed">
+                <p className="text-base sm:text-lg leading-relaxed font-bold text-white" style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', color: '#ffffff' }}>
                   {t.comP}
                 </p>
 
