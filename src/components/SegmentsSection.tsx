@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Building2, CheckCircle2, MessageCircle, Clock, ShieldCheck, Camera, FileText } from 'lucide-react';
+import { Home, Building2, CheckCircle2, MessageCircle, ShieldCheck, Camera, FileText } from 'lucide-react';
 import { Language } from '../types';
 import { translations, WHATSAPP_NUMBER } from '../i18n/translations';
 
@@ -54,8 +54,8 @@ export const SegmentsSection: React.FC<SegmentsSectionProps> = ({ lang }) => {
         {/* Tab Panels */}
         <div className="mt-12">
           {activeTab === 'residential' ? (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start animate-fade-in">
-              <div className="lg:col-span-7 space-y-6">
+            <div className="max-w-3xl mx-auto animate-fade-in">
+              <div className="space-y-6">
                 <p className="text-base sm:text-lg leading-relaxed font-bold text-white" style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', color: '#ffffff' }}>
                   {t.resP}
                 </p>
@@ -83,45 +83,8 @@ export const SegmentsSection: React.FC<SegmentsSectionProps> = ({ lang }) => {
                     className="inline-flex items-center gap-2 bg-[#25d366] hover:bg-[#1eb857] text-white px-6 py-3.5 rounded-full font-bold text-sm shadow-md transition-all hover:-translate-y-0.5"
                   >
                     <MessageCircle className="w-4 h-4 fill-white" />
-                    <span>{lang === 'pt' ? 'Solicitar Plano Residencial' : 'Get Residential Plan Quote'}</span>
+                    <span>{lang === 'pt' ? 'Solicitar Orçamento' : 'Get a Quote'}</span>
                   </a>
-                </div>
-              </div>
-
-              {/* Plan Card */}
-              <div className="lg:col-span-5 bg-white/5 border border-white/15 rounded-3xl p-6 sm:p-8 backdrop-blur-sm">
-                <h3 className="text-xl font-bold text-white font-display mb-6 flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-[#a8d94b]" />
-                  <span>{t.resPlanTitle}</span>
-                </h3>
-
-                <div className="space-y-6 text-sm">
-                  <div className="border-b border-white/10 pb-4">
-                    <span className="block font-bold text-white mb-1">
-                      {t.resPlan1b}
-                    </span>
-                    <span className="text-xs text-[#a9c6b3]">
-                      {t.resPlan1s}
-                    </span>
-                  </div>
-
-                  <div className="border-b border-white/10 pb-4">
-                    <span className="block font-bold text-white mb-1">
-                      {t.resPlan2b}
-                    </span>
-                    <span className="text-xs text-[#a9c6b3]">
-                      {t.resPlan2s}
-                    </span>
-                  </div>
-
-                  <div>
-                    <span className="block font-bold text-white mb-1">
-                      {t.resPlan3b}
-                    </span>
-                    <span className="text-xs text-[#a9c6b3]">
-                      {t.resPlan3s}
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
