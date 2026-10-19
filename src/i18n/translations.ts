@@ -3,7 +3,7 @@ export const DISPLAY_PHONE = '(407) 914-1712';
 
 export const translations = {
   en: {
-    topBar: "Irrigation & landscape . Orlando Metro",
+    topBar: "Landscaping, Hardscape, Irrigation, and Garden Lighting",
     topBarPhone: "Free on-site assessment · Call",
     phoneHours: "Mon–Sat 7am–6pm",
     logoTag: "Landscaping",
@@ -207,7 +207,7 @@ export const translations = {
   },
   
   pt: {
-    topBar: "Irrigation & landscape . Orlando Metro",
+    topBar: "Paisagismo, Elementos Estruturais Externos, Irrigação e iluminação de Jardim",
     topBarPhone: "Avaliação gratuita no local · Ligue",
     phoneHours: "Seg–Sáb 7h–18h",
     logoTag: "Landscaping",
