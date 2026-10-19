@@ -36,7 +36,7 @@ export interface QuoteFormData {
   name: string;
   phone: string;
   email: string;
-  propertyType: 'residential' | 'commercial' | 'Residential' | 'Commercial';
+  propertyType: 'owned' | 'rented' | 'residential' | 'commercial' | string;
   service: string;
   serviceType?: string;
   lotSize?: string;

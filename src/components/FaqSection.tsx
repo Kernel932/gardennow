@@ -49,6 +49,9 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
           <p className="mt-3 text-base sm:text-lg text-[#dcefe1] max-w-xl mx-auto leading-relaxed">
             {t.transformSub}
           </p>
+          <p className="mt-4 text-xs sm:text-sm font-bold tracking-wide uppercase text-[#a8d94b]">
+            {t.transformFeatures}
+          </p>
           <div className="mt-7 flex flex-wrap justify-center gap-4">
             <a
               href="https://wa.me/16145550192?text=Ol%C3%A1!%20Gostaria%20de%20transformar%20meu%20espa%C3%A7o%20externo."

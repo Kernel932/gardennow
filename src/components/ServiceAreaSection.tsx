@@ -11,18 +11,18 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ lang }) 
   const t = translations[lang];
 
   const towns: TownRoute[] = [
-    { name: 'Ashford', activeDays: 'Tuesday & Friday', isPopular: true, status: 'active' },
-    { name: 'Bexley', activeDays: 'Monday & Thursday', isPopular: true, status: 'active' },
-    { name: 'Cedar Park', activeDays: 'Wednesday & Saturday', status: 'active' },
-    { name: 'Dover Heights', activeDays: 'Tuesday & Friday', status: 'active' },
-    { name: 'Eastvale', activeDays: 'Monday & Thursday', status: 'active' },
-    { name: 'Fairmount', activeDays: 'Wednesday & Friday', status: 'active' },
-    { name: 'Glenwood', activeDays: 'Daily Metro Route', isPopular: true, status: 'active' },
-    { name: 'Harborview', activeDays: 'Tuesday & Thursday', status: 'active' },
-    { name: 'Ironwood', activeDays: 'Monday & Wednesday', status: 'active' },
-    { name: 'Kingsport', activeDays: 'Bi-Weekly Route', status: 'expanding' },
-    { name: 'Lakeside', activeDays: 'Tuesday & Friday', isPopular: true, status: 'active' },
-    { name: 'Millbrook', activeDays: 'Weekly Regional Route', status: 'expanding' },
+    { name: 'Winter Garden', activeDays: 'Monday & Thursday', isPopular: true, status: 'active' },
+    { name: 'Windermere', activeDays: 'Tuesday & Friday', isPopular: true, status: 'active' },
+    { name: 'Downtown Orlando', activeDays: 'Daily Metro Route', isPopular: true, status: 'active' },
+    { name: 'Lake Nona', activeDays: 'Wednesday & Saturday', isPopular: true, status: 'active' },
+    { name: 'Hunter’s Creek', activeDays: 'Tuesday & Friday', isPopular: true, status: 'active' },
+    { name: 'Dr. Phillips', activeDays: 'Monday & Thursday', status: 'active' },
+    { name: 'Celebration', activeDays: 'Wednesday & Friday', status: 'active' },
+    { name: 'Winter Park', activeDays: 'Daily Metro Route', isPopular: true, status: 'active' },
+    { name: 'Baldwin Park', activeDays: 'Tuesday & Thursday', status: 'active' },
+    { name: 'Maitland', activeDays: 'Monday & Wednesday', status: 'active' },
+    { name: 'Ocoee', activeDays: 'Weekly Regional Route', status: 'expanding' },
+    { name: 'Clermont', activeDays: 'Bi-Weekly Route', status: 'expanding' },
   ];
 
   const [search, setSearch] = useState('');
@@ -46,7 +46,7 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ lang }) 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#14311f] font-display">
                 {t.areaTitle}
               </h2>
-              <p className="mt-4 text-base sm:text-lg text-[#5d6a60]">
+              <p className="mt-4 text-[18px] max-w-[793px] text-[#5d6a60] leading-relaxed">
                 {t.areaSub}
               </p>
             </div>

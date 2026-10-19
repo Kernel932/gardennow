@@ -14,8 +14,8 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({ lang }) => {
     name: '',
     phone: '',
     email: '',
-    propertyType: 'residential',
-    service: 'mowing',
+    propertyType: 'owned',
+    service: t.svcDesign,
     notes: '',
   });
 
@@ -23,8 +23,8 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({ lang }) => {
 
   const previewMessage =
     lang === 'pt'
-      ? `Olá! Gostaria de um orçamento gratuito para meu imóvel.\n• Nome: ${formData.name || '(Seu nome)'}\n• Imóvel: ${formData.propertyType === 'residential' ? 'Residencial' : 'Comercial'}\n• Serviço: ${formData.service}\n• Telefone: ${formData.phone || '(Seu telefone)'}\n${formData.notes ? `• Detalhes: ${formData.notes}` : ''}`
-      : `Hello! I would like a free estimate for my property.\n• Name: ${formData.name || '(Your name)'}\n• Property: ${formData.propertyType === 'residential' ? 'Residential' : 'Commercial'}\n• Service: ${formData.service}\n• Phone: ${formData.phone || '(Your phone)'}\n${formData.notes ? `• Notes: ${formData.notes}` : ''}`;
+      ? `Olá! Gostaria de um orçamento gratuito para meu imóvel.\n• Nome: ${formData.name || '(Seu nome)'}\n• Imóvel: ${formData.propertyType === 'rented' ? 'Alugado' : 'Próprio'}\n• Serviço: ${formData.service}\n• Telefone: ${formData.phone || '(Seu telefone)'}\n${formData.notes ? `• Detalhes: ${formData.notes}` : ''}`
+      : `Hello! I would like a free estimate for my property.\n• Name: ${formData.name || '(Your name)'}\n• Property: ${formData.propertyType === 'rented' ? 'Rented' : 'Owned'}\n• Service: ${formData.service}\n• Phone: ${formData.phone || '(Your phone)'}\n${formData.notes ? `• Notes: ${formData.notes}` : ''}`;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -103,17 +103,18 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({ lang }) => {
                   {t.lblProp}
                 </label>
                 <select
+                  id="ftype"
                   value={formData.propertyType}
                   onChange={(e) =>
                     setFormData({
                       ...formData,
-                      propertyType: e.target.value as 'residential' | 'commercial',
+                      propertyType: e.target.value,
                     })
                   }
                   className="w-full px-3.5 py-2.5 rounded-xl border border-[#d8deda] focus:border-[#2b7a45] focus:ring-2 focus:ring-[#2b7a45]/20 text-sm bg-[#fafbfa]"
                 >
-                  <option value="residential">{t.optResidential}</option>
-                  <option value="commercial">{t.optCommercial}</option>
+                  <option value="owned">{t.optResidential}</option>
+                  <option value="rented">{t.optCommercial}</option>
                 </select>
               </div>
 
@@ -122,16 +123,16 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({ lang }) => {
                   {t.lblService}
                 </label>
                 <select
+                  id="fsvc"
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-xl border border-[#d8deda] focus:border-[#2b7a45] focus:ring-2 focus:ring-[#2b7a45]/20 text-sm bg-[#fafbfa]"
                 >
-                  <option>{t.svcMaintenance}</option>
                   <option>{t.svcDesign}</option>
                   <option>{t.svcIrrigation}</option>
+                  <option>{t.svcLighting}</option>
                   <option>{t.svcBeds}</option>
                   <option>{t.svcHardscape}</option>
-                  <option>{t.svcSnow}</option>
                 </select>
               </div>
             </div>

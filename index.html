@@ -381,9 +381,9 @@
 
 <!-- NAV -->
 <header class="nav">
-  <div class="wrap" style="background-color: #DED3BC; background: #DED3BC url('public/backgroundbarra6.png') no-repeat left center / auto 100%; width: 100%;">
+  <div class="wrap" style="background-color: #e8efdf; background: #e8efdf url('/backgroundbarra7.png') no-repeat left center / auto 100%; width: 100%;">
     <div class="nav-logo-wrap">
-      <img src="/LogoGarden4.png" alt="Garden Now" width="267" height="84" style="display:block;max-width:100%;height:auto;background:transparent;">
+      <img src="/LogoGarden5.png" alt="Garden Now" width="267" height="84" style="display:block;max-width:100%;height:auto;background:transparent;">
     </div>
     <nav class="links" id="navLinks">
       <a href="#services" data-i18n="navServices">Services</a>
@@ -531,24 +531,23 @@
           <div class="field">
             <label for="ftype" data-i18n="lblProp">Property</label>
             <select id="ftype">
-              <option data-i18n="optResidential">Residential</option>
-              <option data-i18n="optCommercial">Commercial</option>
+              <option data-i18n="optResidential">Próprio</option>
+              <option data-i18n="optCommercial">Alugado</option>
             </select>
           </div>
           <div class="field">
             <label for="fsvc" data-i18n="lblService">Service</label>
             <select id="fsvc">
-              <option data-i18n="svcMaintenance">Lawn &amp; Grounds Maintenance</option>
               <option data-i18n="svcDesign">Landscape Design &amp; Installation</option>
               <option data-i18n="svcIrrigation">Irrigation</option>
+              <option data-i18n="svcLighting">Landscape Lighting</option>
               <option data-i18n="svcBeds">Flower &amp; Garden Beds</option>
               <option data-i18n="svcHardscape">Hardscape / Patios</option>
-              <option data-i18n="svcSnow">Snow &amp; Ice</option>
             </select>
           </div>
         </div>
         <div class="field">
-          <label for="fmsg" data-i18n="lblMsg">Anything else?</label>
+          <label for="fmsg" data-i18n="lblMsg">Nos conte brevemente sobre o Serviço</label>
           <textarea id="fmsg" data-i18n-ph="phMsg" placeholder="Corner lot, about a quarter acre, need weekly mowing…"></textarea>
         </div>
         <button type="submit" class="btn btn-wa" id="submitBtn" style="background-color: #007054;">
@@ -621,8 +620,8 @@
 <section id="areas" style="background-color: #E8EFDF;">
   <div class="wrap center">
     <p class="eyebrow" data-i18n="areaEyebrow">Service Area</p>
-    <h2 class="section-title" data-i18n="areaTitle">Atendemos a região metropolitana e cidades vizinhas em Orlando.</h2>
-    <p class="section-sub" data-i18n="areaSub">Don't see your town? Call us — we add routes regularly and often take on neighboring areas.</p>
+    <h2 class="section-title" data-i18n="areaTitle">Atendemos o Centro de Orlando e comunidades vizinhas.</h2>
+    <p class="section-sub" data-i18n="areaSub" style="font-size:18px;max-width:793px;width:100%;margin-left:auto;margin-right:auto;font-weight:600;color:var(--green-800);letter-spacing:0.01em;">Winter Garden • Windermere • Downtown Orlando • Lake Nona • Hunter’s Creek</p>
   </div>
 </section>
 
@@ -694,7 +693,8 @@
     <!-- TRANSFORM YOUR OUTDOOR SPACE AREA -->
     <div style="margin-top: 48px; background: linear-gradient(135deg, #007D5D 0%, #004332 100%); border-radius: 20px; padding: 48px 32px; text-align: center; color: #fff; box-shadow: 0 12px 30px rgba(0, 67, 50, 0.15);">
       <h3 style="font-size: clamp(1.6rem, 3.2vw, 2.3rem); font-weight: 800; letter-spacing: -0.01em; color: #fff; margin-bottom: 12px; text-transform: uppercase;" data-i18n="transformTitle">TRANSFORME SEU ESPAÇO EXTERNO</h3>
-      <p style="font-size: 1.05rem; color: #dcefe1; max-width: 580px; margin: 0 auto 26px; line-height: 1.6;" data-i18n="transformSub">Conte-nos sobre seu projeto e descubra a solução ideal para sua propriedade.</p>
+      <p style="font-size: 1.05rem; color: #dcefe1; max-width: 580px; margin: 0 auto 16px; line-height: 1.6;" data-i18n="transformSub">Conte-nos sobre seu projeto e descubra a solução ideal para sua propriedade.</p>
+      <p style="font-size: 0.9rem; font-weight: 700; color: #a8d94b; letter-spacing: 0.03em; margin: 0 auto 24px; text-transform: uppercase;" data-i18n="transformFeatures">Solicite uma avaliação gratuita • Ligue para nós • Envie uma mensagem</p>
       <a href="https://wa.me/16145550192?text=Ol%C3%A1!%20Gostaria%20de%20transformar%20meu%20espa%C3%A7o%20externo." target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 10px; background-color: #a8d94b; color: #14311f; font-weight: 800; font-size: 1rem; padding: 14px 32px; border-radius: 9999px; text-decoration: none; transition: transform 0.2s, background-color 0.2s;" data-i18n="transformBtn">Falar no WhatsApp</a>
     </div>
   </div>
@@ -785,13 +785,14 @@ const I18N = {
     formTitle:"Message us on WhatsApp",
     formHint:"Fill this in and we'll open WhatsApp with your message ready to send.",
     lblName:"Name", lblPhone:"Phone", lblEmail:"Email", lblProp:"Property",
-    lblService:"Service", lblMsg:"Anything else?",
+    lblService:"Service", lblMsg:"Tell us briefly about the service",
     phName:"Jane Rivera", phPhone:"(407) 914-1712", phEmail:"you@email.com",
     phMsg:"Corner lot, about a quarter acre, need weekly mowing…",
-    optResidential:"Residential", optCommercial:"Commercial",
+    optResidential:"Owned", optCommercial:"Rented",
     svcMaintenance:"Lawn & Grounds Maintenance",
     svcDesign:"Landscape Design & Installation",
-    svcIrrigation:"Irrigation", svcBeds:"Flower & Garden Beds",
+    svcIrrigation:"Irrigation", svcLighting:"Landscape Lighting",
+    svcBeds:"Flower & Garden Beds",
     svcHardscape:"Hardscape / Patios", svcSnow:"Snow & Ice",
     formSubmit:"Send on WhatsApp", formNote:"No obligation. We never sell your information.",
     formOk:"✓ Opening WhatsApp… if nothing happens, tap the button below.",
@@ -846,8 +847,8 @@ const I18N = {
     comPlan2b:"Fixed monthly billing", comPlan2s:"One invoice, no change orders for routine work",
     comPlan3b:"24/7 winter line", comPlan3s:"Storm response during snow events",
     areaEyebrow:"Service Area",
-    areaTitle:"Serving Greater Orlando and Neighboring Communities.",
-    areaSub:"Don't see your town? Call us — we add routes regularly and often take on neighboring areas.",
+    areaTitle:"Serving Downtown Orlando and Neighboring Communities.",
+    areaSub:"Winter Garden • Windermere • Downtown Orlando • Lake Nona • Hunter’s Creek",
     areaCta1:"Message on WhatsApp", areaCta2:"Call (407) 914-1712",
     testiEyebrow:"Reviews", testiTitle:"Synthetic Turf Installation",
     turfIntro:"Transform your outdoor living space with premium synthetic turf: a beautiful, resilient, and practical solution for a vibrant green lawn all year round, without the constant maintenance of natural grass. Ideal for residential properties, commercial facilities, HOAs, recreation areas, pet play spaces, and athletic greens.",
@@ -887,6 +888,7 @@ const I18N = {
     ctaBtn:"Chat on WhatsApp",
     transformTitle:"TRANSFORM YOUR OUTDOOR SPACE",
     transformSub:"Tell us about your project and discover the ideal solution for your property.",
+    transformFeatures:"Request a Free Assessment • Call Us • Send a Message",
     transformBtn:"Chat on WhatsApp",
     footAbout:"Full-service lawn care and landscaping for homes and businesses across the metro area.",
     footServices:"Services", footS1:"Lawn Maintenance", footS2:"Landscape Design",
@@ -915,13 +917,14 @@ const I18N = {
     formTitle:"Fale conosco no WhatsApp",
     formHint:"Preencha e abriremos o WhatsApp com sua mensagem pronta para enviar.",
     lblName:"Nome", lblPhone:"Telefone", lblEmail:"E-mail", lblProp:"Tipo de imóvel",
-    lblService:"Serviço", lblMsg:"Mais alguma coisa?",
+    lblService:"Serviço", lblMsg:"Nos conte brevemente sobre o Serviço",
     phName:"Ana Ribeiro", phPhone:"(11) 90000-0000", phEmail:"voce@email.com",
     phMsg:"Terreno de esquina, cerca de 1.000 m², preciso de corte semanal…",
-    optResidential:"Residencial", optCommercial:"Comercial",
+    optResidential:"Próprio", optCommercial:"Alugado",
     svcMaintenance:"Manutenção de Grama & Jardim",
     svcDesign:"Projeto & Instalação de Paisagismo",
-    svcIrrigation:"Irrigação", svcBeds:"Canteiros & Flores",
+    svcIrrigation:"Irrigação", svcLighting:"Iluminação",
+    svcBeds:"Canteiros & Flores",
     svcHardscape:"Pedras / Pisos Externos", svcSnow:"Neve & Gelo",
     formSubmit:"Enviar no WhatsApp", formNote:"Sem compromisso. Nunca vendemos seus dados.",
     formOk:"✓ Abrindo o WhatsApp… se nada acontecer, toque no botão abaixo.",
@@ -976,8 +979,8 @@ const I18N = {
     comPlan2b:"Fatura mensal fixa", comPlan2s:"Uma nota, sem custos extras para serviços de rotina",
     comPlan3b:"Plantão de inverno 24/7", comPlan3s:"Resposta a tempestades durante nevascas",
     areaEyebrow:"Área de Atendimento",
-    areaTitle:"Atendemos a região metropolitana e cidades vizinhas em Orlando.",
-    areaSub:"Não encontrou sua cidade? Ligue — adicionamos rotas com frequência e costumamos atender regiões próximas.",
+    areaTitle:"Atendemos o Centro de Orlando e comunidades vizinhas.",
+    areaSub:"Winter Garden • Windermere • Downtown Orlando • Lake Nona • Hunter’s Creek",
     areaCta1:"Falar no WhatsApp", areaCta2:"Ligue (407) 914-1712",
     testiEyebrow:"Avaliações", testiTitle:"Instalação de grama sintética",
     turfIntro:"Transforme seu espaço externo com grama sintética de alta qualidade: uma alternativa bonita, resistente e prática para quem deseja um gramado verde durante todo o ano, sem a manutenção constante da grama natural. A solução é indicada para residências, empresas, condomínios, áreas de lazer, espaços para animais de estimação e áreas esportivas.",
@@ -1017,6 +1020,7 @@ const I18N = {
     ctaBtn:"Falar no WhatsApp",
     transformTitle:"TRANSFORME SEU ESPAÇO EXTERNO",
     transformSub:"Conte-nos sobre seu projeto e descubra a solução ideal para sua propriedade.",
+    transformFeatures:"Solicite uma avaliação gratuita • Ligue para nós • Envie uma mensagem",
     transformBtn:"Falar no WhatsApp",
     footAbout:"Serviços completos de corte de grama e paisagismo para residências e empresas em toda a região metropolitana.",
     footServices:"Serviços", footS1:"Manutenção de Grama", footS2:"Paisagismo",
