@@ -46,28 +46,43 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <a href="#svc-landscaping" className="hover:text-white transition-colors">
                   {t.footS1}
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <a href="#svc-pavers" className="hover:text-white transition-colors">
                   {t.footS2}
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <a href="#svc-irrigation" className="hover:text-white transition-colors">
                   {t.footS3}
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <a href="#svc-drainage" className="hover:text-white transition-colors">
                   {t.footS4}
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <a href="#svc-turf" className="hover:text-white transition-colors">
                   {t.footS5}
+                </a>
+              </li>
+              <li>
+                <a href="#svc-structures" className="hover:text-white transition-colors">
+                  {t.footS6}
+                </a>
+              </li>
+              <li>
+                <a href="#svc-lighting" className="hover:text-white transition-colors">
+                  {t.footS7}
+                </a>
+              </li>
+              <li>
+                <a href="#svc-retaining-walls" className="hover:text-white transition-colors">
+                  {t.footS8}
                 </a>
               </li>
             </ul>
@@ -80,18 +95,18 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#who" className="hover:text-white transition-colors">
-                  {t.navRes}
+                <a href="#" className="hover:text-white transition-colors">
+                  {t.navHome}
                 </a>
               </li>
               <li>
-                <a href="#who" className="hover:text-white transition-colors">
-                  {t.navCom}
+                <a href="#services-solutions" className="hover:text-white transition-colors">
+                  {t.navServices}
                 </a>
               </li>
               <li>
-                <a href="#transformations" className="hover:text-white transition-colors">
-                  {t.navBeforeAfter}
+                <a href="#quote" className="hover:text-white transition-colors">
+                  {t.navContact}
                 </a>
               </li>
               <li>
@@ -100,8 +115,8 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-white transition-colors">
-                  {t.navFaq}
+                <a href="#about" className="hover:text-white transition-colors">
+                  {t.navAbout}
                 </a>
               </li>
             </ul>

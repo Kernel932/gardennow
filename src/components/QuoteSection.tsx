@@ -38,7 +38,7 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({ lang }) => {
   return (
     <section id="quote-section" className="py-16 bg-[#E8EFDF] border-b border-[#d4decb]" style={{ backgroundColor: '#E8EFDF' }}>
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
-        <div id="quote" className="bg-white text-[#1c241f] rounded-3xl p-6 sm:p-10 shadow-lg border border-[#d4decb] relative">
+        <div id="quote" className="bg-white text-[#1c241f] rounded-3xl p-6 sm:p-10 shadow-lg border border-[#d4decb] relative scroll-mt-28">
           <div className="flex items-center gap-3.5 mb-2">
             <div className="w-12 h-12 rounded-full bg-[#25d366]/15 flex items-center justify-center shrink-0">
               <MessageCircle className="w-6 h-6 text-[#25d366] fill-[#25d366]" />
