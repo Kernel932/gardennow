@@ -260,6 +260,132 @@
     margin-top:auto;
   }
   .card a.more:hover{gap:10px;color:#ffffff;}
+  #svc-landscaping{
+    text-align:center;
+  }
+  #svc-landscaping:before,
+  #svc-landscaping:hover:before{
+    background:rgba(0, 0, 0, 0.10);
+  }
+  #svc-landscaping .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-landscaping a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-landscaping h3,
+  #svc-landscaping p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  #svc-pavers{
+    text-align:center;
+  }
+  #svc-pavers:before,
+  #svc-pavers:hover:before{
+    background:rgba(0, 0, 0, 0.10);
+  }
+  #svc-pavers .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-pavers a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-pavers h3,
+  #svc-pavers p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  #svc-irrigation{
+    text-align:center;
+  }
+  #svc-irrigation:before,
+  #svc-irrigation:hover:before{
+    background:rgba(0, 0, 0, 0.40);
+  }
+  #svc-irrigation .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-irrigation a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-irrigation h3,
+  #svc-irrigation p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  #svc-drainage{
+    text-align:center;
+  }
+  #svc-drainage:before,
+  #svc-drainage:hover:before{
+    background:rgba(0, 0, 0, 0.10);
+  }
+  #svc-drainage .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-drainage a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-drainage h3,
+  #svc-drainage p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  #svc-structures{
+    text-align:center;
+  }
+  #svc-structures:before,
+  #svc-structures:hover:before{
+    background:rgba(0, 0, 0, 0.30);
+  }
+  #svc-structures .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-structures a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-structures h3,
+  #svc-structures p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  #svc-lighting{
+    text-align:center;
+  }
+  #svc-lighting:before,
+  #svc-lighting:hover:before{
+    background:rgba(0, 0, 0, 0.10);
+  }
+  #svc-lighting .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-lighting a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-lighting h3,
+  #svc-lighting p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
 
   /* ---------- SEGMENT SECTION ---------- */
   .segments{background:#092f17;color:#fff;}
@@ -345,6 +471,12 @@
     section{padding:64px 0;}
     .hero-inner{grid-template-columns:1fr;gap:44px;padding:60px 0 68px;}
     .panel-grid,.area-grid{grid-template-columns:1fr;gap:34px;}
+    .tab-panel .map-box{
+      width:100% !important;
+      max-width:520px !important;
+      height:clamp(220px, 50vw, 360px) !important;
+      margin:0 auto;
+    }
     .fcols{grid-template-columns:1fr 1fr;}
     nav.links{display:none;}
     .burger{display:block;}
@@ -366,6 +498,23 @@
     .wa-fab{width:54px;height:54px;right:16px;bottom:16px;}
     .wa-fab svg{width:28px;height:28px;}
     .wa-fab .tip{display:none;}
+    .segments{padding:44px 0;}
+    .tabs{display:flex;gap:8px;margin:22px 0 20px;width:100%;}
+    .tab{flex:1 1 auto;text-align:center;padding:11px 12px;font-size:0.84rem;min-width:0;letter-spacing:0.02em;}
+    .panel-grid{gap:24px;}
+    .panel-copy p{font-size:0.92rem;line-height:1.5;margin-bottom:16px;}
+    .checklist{gap:11px;}
+    .checklist li{font-size:0.88rem;line-height:1.45;gap:10px;}
+    .checklist li:before{flex:0 0 20px;height:20px;font-size:0.75rem;}
+    .tab-panel .map-box{
+      width:100% !important;
+      max-width:100% !important;
+      height:clamp(200px, 56vw, 290px) !important;
+      border-radius:14px;
+    }
+  }
+  @media(max-width:400px){
+    .tab{padding:9px 8px;font-size:0.76rem;}
   }
 </style>
 </head>
@@ -436,32 +585,32 @@
 
     <div class="grid-4" style="text-align:left">
       <!-- Card 1 -->
-      <article class="card" id="svc-landscaping" style="background-image:url('/svc_lawn.jpg'); scroll-margin-top: 100px;">
-        <div class="card-inner">
+      <article class="card" id="svc-landscaping" style="background-image:url('public/Paisagismoereformasexternas.png'); scroll-margin-top: 100px; text-align: center;">
+        <div class="card-inner" style="align-items: center; text-align: center; justify-content: center;">
           <h3 data-i18n="card1h">Paisagismo e reformas externas</h3>
           <p data-i18n="card1p">Planejamento e transformação de áreas externas com seleção de plantas, composição de canteiros, gramados naturais ou sintéticos, pedras decorativas e outros elementos paisagísticos.</p>
           <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
         </div>
       </article>
       <!-- Card 2 -->
-      <article class="card" id="svc-pavers" style="background-image:url('/svc_landscape.jpg'); scroll-margin-top: 100px;">
-        <div class="card-inner">
+      <article class="card" id="svc-pavers" style="background-image:url('public/Paversepavimentação.png'); scroll-margin-top: 100px; text-align: center;">
+        <div class="card-inner" style="align-items: center; text-align: center; justify-content: center;">
           <h3 data-i18n="card2h">Pavers e pavimentação</h3>
           <p data-i18n="card2p">Instalação de pavers em entradas de veículos, calçadas, pátios e áreas de convivência, com composição durável e acabamento profissional.</p>
           <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
         </div>
       </article>
       <!-- Card 3 -->
-      <article class="card" id="svc-irrigation" style="background-image:url('/svc_irrigation.jpg'); scroll-margin-top: 100px;">
-        <div class="card-inner">
+      <article class="card" id="svc-irrigation" style="background-image:url('public/Irrigacaointeligente.png'); scroll-margin-top: 100px; text-align: center;">
+        <div class="card-inner" style="align-items: center; text-align: center; justify-content: center;">
           <h3 data-i18n="card3h">Irrigação inteligente</h3>
           <p data-i18n="card3p">Projeto, instalação, atualização e reparo de sistemas conforme o solo, as plantas e a exposição solar, incluindo controladores, sensores de chuva, aspersores, válvulas e irrigação por gotejamento.</p>
           <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
         </div>
       </article>
       <!-- Card 4 -->
-      <article class="card" id="svc-drainage" style="background-image:url('/svc_beds.jpg'); scroll-margin-top: 100px;">
-        <div class="card-inner">
+      <article class="card" id="svc-drainage" style="background-image:url('public/Solucoesdedrenagem.png'); scroll-margin-top: 100px; text-align: center;">
+        <div class="card-inner" style="align-items: center; text-align: center; justify-content: center;">
           <h3 data-i18n="card4h">Soluções de drenagem</h3>
           <p data-i18n="card4p">Soluções subterrâneas e superficiais para controlar alagamentos e erosão, incluindo drenos franceses, tubulações, caixas coletoras, canaletas, poços de infiltração, drenagem de telhados e correção de áreas alagadas.</p>
           <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
@@ -476,16 +625,16 @@
         </div>
       </article>
       <!-- Card 6 -->
-      <article class="card" id="svc-structures" style="background-image:url('/svc_drainage.jpg'); scroll-margin-top: 100px;">
-        <div class="card-inner">
+      <article class="card" id="svc-structures" style="background-image:url('public/Telascalhaseestruturas.png'); scroll-margin-top: 100px; text-align: center;">
+        <div class="card-inner" style="align-items: center; text-align: center; justify-content: center;">
           <h3 data-i18n="card6h">Telas, calhas e estruturas externas</h3>
           <p data-i18n="card6p">Instalação e melhorias em áreas teladas, além de calhas e estruturas para direcionar a água da chuva e proporcionar mais conforto e proteção.</p>
           <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
         </div>
       </article>
       <!-- Card 7 -->
-      <article class="card" id="svc-lighting" style="background-image:url('/svc_lighting.jpg'); scroll-margin-top: 100px;">
-        <div class="card-inner">
+      <article class="card" id="svc-lighting" style="background-image:url('public/Iluminacaom.png'); scroll-margin-top: 100px; text-align: center;">
+        <div class="card-inner" style="align-items: center; text-align: center; justify-content: center;">
           <h3 data-i18n="card7h">Iluminação de jardim</h3>
           <p data-i18n="card7p">Projetos de iluminação externa para valorizar plantas, caminhos, entradas e áreas de convivência, unindo segurança, funcionalidade e beleza.</p>
           <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
@@ -572,12 +721,12 @@
     <p class="section-sub" data-i18n="segSub">Além da transformação visual, a Garden Now Landscaping oferece soluções técnicas para manter o paisagismo saudável, controlar a água e proteger a propriedade em todas as estações.</p>
 
     <div class="tabs">
-      <button class="tab active" data-tab="res" data-i18n="tabRes">Irrigação.</button>
-      <button class="tab" data-tab="com" data-i18n="tabCom">Drenagem.</button>
+      <button class="tab active" data-tab="res" data-i18n="tabRes">IRRIGAÇÃO</button>
+      <button class="tab" data-tab="com" data-i18n="tabCom">DRENAGEM</button>
     </div>
 
     <div class="tab-panel active" id="res">
-      <div class="panel-grid" style="grid-template-columns: 1fr; max-width: 860px; margin: 0 auto;">
+      <div class="panel-grid">
         <div class="panel-copy">
           <p data-i18n="resP" style="font-family: Arial, sans-serif; font-weight: bold; color: #ffffff;">Proteja, valorize e aproveite melhor sua propriedade com uma solução planejada para o seu espaço.</p>
           <ul class="checklist">
@@ -587,6 +736,9 @@
             <li data-i18n="resL4">Irrigação por gotejamento para canteiros, árvores e arbustos, direcionando a água às raízes.</li>
             <li data-i18n="resL5">Inspeção e ajustes sazonais, com regulagem de aspersores e programação dos controladores conforme o clima.</li>
           </ul>
+        </div>
+        <div class="map-box" style="background:rgba(255,255,255,.06) url('public/Irrigação.png') center center / cover no-repeat;border-color:rgba(255,255,255,.14);width:520px;max-width:100%;height:360px;padding:0;overflow:hidden;">
+          <img src="public/Irrigação.png" alt="Irrigação Inteligente" style="width:100%;height:100%;object-fit:cover;display:block;" />
         </div>
       </div>
     </div>
@@ -603,13 +755,8 @@
             <li data-i18n="comL5">Correção de áreas alagadas para melhorar o escoamento e eliminar água parada.</li>
           </ul>
         </div>
-        <div class="map-box" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)">
-          <h3 style="color:#fff;margin-bottom:12px;font-size:1.1rem" data-i18n="comPlanTitle">Why property managers stay</h3>
-          <ul class="checklist" style="gap:16px">
-            <li><span><b style="color:#fff" data-i18n="comPlan1b">Documented visits</b><br><span style="font-size:.86rem;color:#a9c6b3" data-i18n="comPlan1s">Photos and service logs after every stop</span></span></li>
-            <li><span><b style="color:#fff" data-i18n="comPlan2b">Fixed monthly billing</b><br><span style="font-size:.86rem;color:#a9c6b3" data-i18n="comPlan2s">One invoice, no change orders for routine work</span></span></li>
-            <li><span><b style="color:#fff" data-i18n="comPlan3b">24/7 winter line</b><br><span style="font-size:.86rem;color:#a9c6b3" data-i18n="comPlan3s">Storm response during snow events</span></span></li>
-          </ul>
+        <div class="map-box" style="background:rgba(255,255,255,.06) url('public/drenagem2.png') center center / cover no-repeat;border-color:rgba(255,255,255,.14);width:520px;max-width:100%;height:360px;padding:0;overflow:hidden;">
+          <img src="public/drenagem2.png" alt="Soluções de Drenagem" style="width:100%;height:100%;object-fit:cover;display:block;" />
         </div>
       </div>
     </div>
@@ -828,7 +975,7 @@ const I18N = {
     segEyebrow:"Who We Serve",
     segTitle:"Irrigation, Drainage & Property Protection",
     segSub:"Beyond visual transformation, Garden Now Landscaping provides engineered solutions to keep your landscape healthy, manage water flow, and protect your property in all seasons.",
-    tabRes:"Irrigation.", tabCom:"Drainage.",
+    tabRes:"IRRIGATION", tabCom:"DRAINAGE",
     resP:"Protect, enhance, and enjoy your property with a custom-engineered solution tailored to your space.",
     resL1:"Irrigation design and installation tailored to soil type, plant varieties, and sun exposure.",
     resL2:"Smart irrigation featuring modern controllers, rain sensors, and water-saving conservation technology.",
@@ -968,7 +1115,7 @@ const I18N = {
     segEyebrow:"Para quem atendemos",
     segTitle:"Irrigação, drenagem e proteção do imóvel",
     segSub:"Além da transformação visual, a Garden Now Landscaping oferece soluções técnicas para manter o paisagismo saudável, controlar a água e proteger a propriedade em todas as estações.",
-    tabRes:"Irrigação.", tabCom:"Drenagem.",
+    tabRes:"IRRIGAÇÃO", tabCom:"DRENAGEM",
     resP:"Proteja, valorize e aproveite melhor sua propriedade com uma solução planejada para o seu espaço.",
     resL1:"Projeto e instalação de irrigação conforme o solo, as plantas e a exposição solar.",
     resL2:"Irrigação inteligente com controladores, sensores de chuva e tecnologia para reduzir o desperdício.",

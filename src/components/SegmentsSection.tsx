@@ -54,8 +54,8 @@ export const SegmentsSection: React.FC<SegmentsSectionProps> = ({ lang }) => {
         {/* Tab Panels */}
         <div className="mt-12">
           {activeTab === 'residential' ? (
-            <div className="max-w-3xl mx-auto animate-fade-in">
-              <div className="space-y-6">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start animate-fade-in">
+              <div className="lg:col-span-7 space-y-6">
                 <p className="text-base sm:text-lg leading-relaxed font-bold text-white" style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', color: '#ffffff' }}>
                   {t.resP}
                 </p>
@@ -86,6 +86,14 @@ export const SegmentsSection: React.FC<SegmentsSectionProps> = ({ lang }) => {
                     <span>{lang === 'pt' ? 'Solicitar Orçamento' : 'Get a Quote'}</span>
                   </a>
                 </div>
+              </div>
+
+              <div className="lg:col-span-5 bg-white/5 border border-white/15 rounded-3xl p-1.5 backdrop-blur-sm overflow-hidden h-[360px] max-w-[520px] w-full">
+                <img
+                  src="public/Irrigação.png"
+                  alt="Irrigação Inteligente"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
             </div>
           ) : (

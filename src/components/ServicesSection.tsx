@@ -23,6 +23,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['Seleção de espécies resistentes', 'Composição botânica personalizada', 'Acabamento refinado e pedras nobres']
         : ['Curated zone-hardy plantings', 'Custom botanical architecture', 'Decorative stones and sod grooming'],
       badge: lang === 'pt' ? 'Planejamento & Execução' : 'Design & Build',
+      image: 'public/Paisagismoereformasexternas.png',
     },
     {
       id: 'svc-pavers',
@@ -36,6 +37,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['Base compactada de alta resistência', 'Garantia estrutural de assentamento', 'Design personalizado para cada espaço']
         : ['Compacted high-load base', 'Settling warranty protection', 'Custom pattern and border layouts'],
       badge: lang === 'pt' ? 'Pavimentação' : 'Hardscape & Pavers',
+      image: 'public/Paversepavimentação.png',
     },
     {
       id: 'svc-irrigation',
@@ -49,6 +51,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['Economia de até 35% de água', 'Controladores inteligentes com Wi-Fi', 'Calibração precisa por setor']
         : ['Up to 35% water conservation', 'Smart Wi-Fi controllers & weather sensors', 'Precision zone calibration'],
       badge: lang === 'pt' ? 'Eficiência Hídrica' : 'Smart Irrigation',
+      image: 'public/Irrigacaointeligente.png',
     },
     {
       id: 'svc-drainage',
@@ -62,6 +65,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['Drenos franceses e caixas coletoras', 'Drenagem de calhas e telhados', 'Eliminação de pontos de alagamento']
         : ['French drains & catch basins', 'Downspout redirection', 'Standing water elimination'],
       badge: lang === 'pt' ? 'Proteção de Solo' : 'Drainage Engineering',
+      image: 'public/Solucoesdedrenagem.png',
     },
     {
       id: 'svc-turf',
@@ -88,6 +92,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['Proteção contra insetos e folhas', 'Calhas contínuas sem emendas', 'Mais conforto na área externa']
         : ['Screen enclosure maintenance', 'Seamless gutter installation', 'Weather & debris protection'],
       badge: lang === 'pt' ? 'Estruturas' : 'Screens & Gutters',
+      image: 'public/Telascalhaseestruturas.png',
     },
     {
       id: 'svc-lighting',
@@ -101,6 +106,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['LEDs de baixo consumo e longa vida útil', 'Destaque arquitetônico e botânico', 'Maior segurança para sua família']
         : ['Low-voltage architectural LEDs', 'Pathway & botanical uplighting', 'Enhanced property security'],
       badge: lang === 'pt' ? 'Iluminação' : 'Accent Lighting',
+      image: 'public/Iluminacaom.png',
     },
     {
       id: 'svc-retaining-walls',
