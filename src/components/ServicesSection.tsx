@@ -79,6 +79,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['Gramado verde o ano todo', 'Drenagem ultra-rápida e sem lama', 'Seguro para crianças e pets']
         : ['Lush evergreen look year-round', 'Rapid permeable drainage', 'Pet & child friendly turf'],
       badge: lang === 'pt' ? 'Zero Manutenção' : 'Synthetic Turf',
+      image: 'public/gramasintetica.png',
     },
     {
       id: 'svc-structures',
@@ -92,7 +93,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['Proteção contra insetos e folhas', 'Calhas contínuas sem emendas', 'Mais conforto na área externa']
         : ['Screen enclosure maintenance', 'Seamless gutter installation', 'Weather & debris protection'],
       badge: lang === 'pt' ? 'Estruturas' : 'Screens & Gutters',
-      image: 'public/Telascalhaseestruturas.png',
+      image: 'public/estrutexter.png',
     },
     {
       id: 'svc-lighting',
@@ -120,6 +121,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['Blocos e pedras de alta durabilidade', 'Nivelamento e aproveitamento de espaço', 'Drenagem integrada para alívio de pressão']
         : ['Engineered concrete & natural stone', 'Slope stabilization & terracing', 'Integrated weep hole drainage'],
       badge: lang === 'pt' ? 'Estrutural' : 'Retaining Walls',
+      image: 'public/muroconten.png',
     },
   ];
 

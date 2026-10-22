@@ -344,12 +344,24 @@
   #svc-drainage p{
     text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
   }
+  #svc-turf:before,
+  #svc-turf:hover:before{
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity:1;
+    display:block;
+  }
+  #svc-turf h3,
+  #svc-turf p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
   #svc-structures{
     text-align:center;
   }
   #svc-structures:before,
   #svc-structures:hover:before{
-    background:rgba(0, 0, 0, 0.30);
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity:1;
+    display:block;
   }
   #svc-structures .card-inner{
     align-items:center;
@@ -386,6 +398,29 @@
   #svc-lighting p{
     text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
   }
+  #svc-retaining-walls{
+    text-align:center;
+  }
+  #svc-retaining-walls:before,
+  #svc-retaining-walls:hover:before{
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity:1;
+    display:block;
+  }
+  #svc-retaining-walls .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-retaining-walls a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-retaining-walls h3,
+  #svc-retaining-walls p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
 
   /* ---------- SEGMENT SECTION ---------- */
   .segments{background:#092f17;color:#fff;}
@@ -409,6 +444,47 @@
     content:"✓";flex:0 0 24px;height:24px;border-radius:50%;
     background:rgba(168,217,75,.18);color:var(--lime);
     display:grid;place-items:center;font-size:.8rem;font-weight:900;
+  }
+  .checklist li.turf-img-slot{
+    display:block;
+    padding:0;
+    margin-top:14px;
+  }
+  .checklist li.turf-img-slot:before{
+    display:none !important;
+    content:"" !important;
+  }
+  #turf-adv-image-box{
+    width:100%;
+    max-width:540px;
+    height:300px;
+    box-sizing:border-box;
+    border-radius:16px;
+    background:rgba(255,255,255,.06);
+    border:1.5px dashed rgba(255,255,255,.24);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  #turf-adv-image-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  @media(max-width:980px){
+    #turf-adv-image-box{
+      max-width:100% !important;
+      height:clamp(200px, 46vw, 300px) !important;
+    }
+  }
+  @media(max-width:620px){
+    #turf-adv-image-box{
+      max-width:100% !important;
+      height:clamp(180px, 52vw, 260px) !important;
+      border-radius:14px;
+    }
   }
 
   /* ---------- SERVICE AREA ---------- */
@@ -617,7 +693,7 @@
         </div>
       </article>
       <!-- Card 5 -->
-      <article class="card" id="svc-turf" style="background-image:url('/svc_turf.jpg'); scroll-margin-top: 100px;">
+      <article class="card" id="svc-turf" style="background-image:url('public/gramasintetica.png'); scroll-margin-top: 100px;">
         <div class="card-inner">
           <h3 data-i18n="card5h">Instalação de grama sintética</h3>
           <p data-i18n="card5p">Instalação profissional para jardins, quintais, piscinas, condomínios, áreas para animais de estimação e espaços esportivos, com beleza, praticidade e baixa manutenção.</p>
@@ -625,7 +701,7 @@
         </div>
       </article>
       <!-- Card 6 -->
-      <article class="card" id="svc-structures" style="background-image:url('public/Telascalhaseestruturas.png'); scroll-margin-top: 100px; text-align: center;">
+      <article class="card" id="svc-structures" style="background-image:url('public/estrutexter.png'); scroll-margin-top: 100px; text-align: center;">
         <div class="card-inner" style="align-items: center; text-align: center; justify-content: center;">
           <h3 data-i18n="card6h">Telas, calhas e estruturas externas</h3>
           <p data-i18n="card6p">Instalação e melhorias em áreas teladas, além de calhas e estruturas para direcionar a água da chuva e proporcionar mais conforto e proteção.</p>
@@ -641,8 +717,8 @@
         </div>
       </article>
       <!-- Card 8 -->
-      <article class="card" id="svc-retaining-walls" style="background-image:url('/svc_pavers.jpg'); scroll-margin-top: 100px;">
-        <div class="card-inner">
+      <article class="card" id="svc-retaining-walls" style="background-image:url('public/muroconten.png'); scroll-margin-top: 100px; text-align: center;">
+        <div class="card-inner" style="align-items: center; text-align: center; justify-content: center;">
           <h3 data-i18n="card8h">Muros de contenção</h3>
           <p data-i18n="card8p">Construção de estruturas para estabilizar o terreno, controlar desníveis e aproveitar melhor os espaços externos.</p>
           <a href="https://wa.me/14079141712" target="_blank" rel="noopener" class="more wa-link" data-i18n="cardMore">Learn more →</a>
@@ -778,15 +854,24 @@
     <h2 class="section-title" data-i18n="testiTitle" style="color: #ffffff; text-align: left;">Instalação de grama sintética</h2>
     <p class="section-sub" data-i18n="turfIntro" style="font-family: Arial, sans-serif; font-weight: normal; color: #a9c6b3; max-width: 900px; margin: 18px 0 0; font-size: 1.05rem; line-height: 1.65; text-align: left;">Transforme seu espaço externo com grama sintética de alta qualidade: uma alternativa bonita, resistente e prática para quem deseja um gramado verde durante todo o ano, sem a manutenção constante da grama natural. A solução é indicada para residências, empresas, condomínios, áreas de lazer, espaços para animais de estimação e áreas esportivas.</p>
     <h3 class="section-title" data-i18n="turfAdvantagesTitle" style="color: #ffffff; text-align: left; font-size: clamp(1.4rem, 2.5vw, 1.85rem); font-weight: 800; margin-top: 36px; margin-bottom: 16px; font-family: 'Cabinet Grotesk', system-ui, sans-serif; letter-spacing: -0.02em;">Vantagens da grama sintética</h3>
-    <ul class="checklist" style="text-align: left; max-width: 900px; margin-top: 14px;">
+    <ul class="checklist" style="text-align: left; width: 650px; max-width: 100%; margin-top: 14px;">
       <li data-i18n="turfAdv1">Baixa manutenção: reduz a necessidade de corte, irrigação e fertilização.</li>
       <li data-i18n="turfAdv2">Beleza durante todo o ano, com aparência verde e uniforme e resistência aos raios UV.</li>
       <li data-i18n="turfAdv3">Economia de água em comparação com gramados naturais irrigados.</li>
       <li data-i18n="turfAdv4">Durabilidade para áreas de circulação, lazer e uso frequente.</li>
       <li data-i18n="turfAdv5">Versatilidade para jardins, piscinas, áreas para animais de estimação e espaços esportivos.</li>
+      <li class="turf-img-slot">
+        <div class="map-box" id="turf-adv-image-box">
+          <div style="text-align:center;color:rgba(255,255,255,0.45);font-size:0.9rem;padding:20px;">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 8px;display:block;opacity:0.6;"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+            <span style="font-size:0.82rem;font-weight:600;letter-spacing:0.02em;display:block;color:rgba(255,255,255,0.5);">Área para Imagem</span>
+            <span style="font-size:0.75rem;opacity:0.7;display:block;margin-top:2px;">(540 x 300px · Responsivo)</span>
+          </div>
+        </div>
+      </li>
     </ul>
     <h3 class="section-title" data-i18n="turfProcessTitle" style="color: #ffffff; text-align: left; font-size: clamp(1.4rem, 2.5vw, 1.85rem); font-weight: 800; margin-top: 40px; margin-bottom: 16px; font-family: 'Cabinet Grotesk', system-ui, sans-serif; letter-spacing: -0.02em;">Como é o Processo de instalação?</h3>
-    <ol class="num-steps" style="list-style: none; display: flex; flex-direction: column; gap: 14px; text-align: left; max-width: 900px; margin-top: 14px; padding: 0;">
+    <ol class="num-steps" style="list-style: none; display: flex; flex-direction: column; gap: 14px; text-align: left; width: 680px; max-width: 100%; margin-top: 14px; padding: 0;">
       <li style="display: flex; align-items: flex-start; gap: 12px; font-size: .95rem; color: #d1e4d7;">
         <span style="width: 20px; height: 20px; border-radius: 50%; background: #e8efdf; color: #004332; font-size: .75rem; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">1</span>
         <span data-i18n="turfStep1">Avaliação do local - Análise da área e definição da melhor solução.</span>

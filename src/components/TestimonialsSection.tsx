@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Image as ImageIcon } from 'lucide-react';
 import { Language } from '../types';
 import { translations, WHATSAPP_NUMBER } from '../i18n/translations';
 
@@ -29,7 +29,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ lang }
           >
             {t.turfAdvantagesTitle}
           </h3>
-          <ul className="space-y-3.5 pt-2">
+          <ul className="space-y-3.5 pt-2" style={{ width: '650px', maxWidth: '100%' }}>
             {[t.turfAdv1, t.turfAdv2, t.turfAdv3, t.turfAdv4, t.turfAdv5].map((item, idx) => (
               <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-[#e2f0e7]">
                 <span className="w-5 h-5 rounded-full bg-[#a8d94b]/20 text-[#a8d94b] flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
@@ -38,6 +38,20 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ lang }
                 <span>{item}</span>
               </li>
             ))}
+            {/* Área para Imagem */}
+            <li className="pt-2 list-none" style={{ listStyle: 'none' }}>
+              <div
+                id="turf-adv-image-box"
+                className="w-full max-w-[540px] h-[300px] rounded-2xl bg-white/5 border-1.5 border-dashed border-white/25 flex items-center justify-center overflow-hidden transition-all"
+                style={{ width: '100%', maxWidth: '540px', height: '300px' }}
+              >
+                <div className="text-center text-white/45 p-5">
+                  <ImageIcon className="w-10 h-10 mx-auto mb-2 opacity-60" />
+                  <span className="text-xs font-semibold tracking-wide block text-white/50">Área para Imagem</span>
+                  <span className="text-[11px] opacity-70 block mt-0.5">(540 x 300px · Responsivo)</span>
+                </div>
+              </div>
+            </li>
           </ul>
           <h3
             className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-display text-left pt-6"
@@ -45,7 +59,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ lang }
           >
             {t.turfProcessTitle}
           </h3>
-          <ol className="space-y-3.5 pt-2">
+          <ol className="space-y-3.5 pt-2" style={{ width: '680px', maxWidth: '100%' }}>
             {[
               { num: 1, text: t.turfStep1 },
               { num: 2, text: t.turfStep2 },
