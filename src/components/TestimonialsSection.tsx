@@ -23,36 +23,37 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ lang }
           >
             {t.turfIntro}
           </p>
-          <h3
-            className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-display text-left pt-3"
-            style={{ color: '#ffffff', textAlign: 'left' }}
-          >
-            {t.turfAdvantagesTitle}
-          </h3>
-          <ul className="space-y-3.5 pt-2" style={{ width: '650px', maxWidth: '100%' }}>
-            {[t.turfAdv1, t.turfAdv2, t.turfAdv3, t.turfAdv4, t.turfAdv5].map((item, idx) => (
-              <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-[#e2f0e7]">
-                <span className="w-5 h-5 rounded-full bg-[#a8d94b]/20 text-[#a8d94b] flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
-                  ✓
-                </span>
-                <span>{item}</span>
-              </li>
-            ))}
-            {/* Área para Imagem */}
-            <li className="pt-2 list-none" style={{ listStyle: 'none' }}>
-              <div
-                id="turf-adv-image-box"
-                className="w-full max-w-[540px] h-[300px] rounded-2xl bg-white/5 border-1.5 border-dashed border-white/25 flex items-center justify-center overflow-hidden transition-all"
-                style={{ width: '100%', maxWidth: '540px', height: '300px' }}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start pt-4">
+            <div>
+              <h3
+                className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-display text-left"
+                style={{ color: '#ffffff', textAlign: 'left' }}
               >
-                <div className="text-center text-white/45 p-5">
-                  <ImageIcon className="w-10 h-10 mx-auto mb-2 opacity-60" />
-                  <span className="text-xs font-semibold tracking-wide block text-white/50">Área para Imagem</span>
-                  <span className="text-[11px] opacity-70 block mt-0.5">(540 x 300px · Responsivo)</span>
-                </div>
-              </div>
-            </li>
-          </ul>
+                {t.turfAdvantagesTitle}
+              </h3>
+              <ul className="space-y-3.5 pt-4">
+                {[t.turfAdv1, t.turfAdv2, t.turfAdv3, t.turfAdv4, t.turfAdv5].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-[#e2f0e7]">
+                    <span className="w-5 h-5 rounded-full bg-[#a8d94b]/20 text-[#a8d94b] flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+                      ✓
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div
+              id="turf-adv-image-box"
+              className="w-full max-w-[520px] h-[360px] rounded-2xl bg-white/5 border border-white/15 overflow-hidden transition-all mx-auto lg:mx-0"
+              style={{ width: '100%', maxWidth: '520px', height: '360px' }}
+            >
+              <img
+                src="public/instalgramasintetica.png"
+                alt={lang === 'pt' ? 'Vantagens da Grama Sintética' : 'Synthetic Turf Advantages'}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
           <h3
             className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-display text-left pt-6"
             style={{ color: '#ffffff', textAlign: 'left' }}

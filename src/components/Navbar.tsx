@@ -32,21 +32,22 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onOpenWhatsAppModal }) => 
         className="w-full max-w-full mx-0 pl-0 pr-4 sm:pr-6 h-20 flex items-center justify-between gap-6 bg-[#e8efdf]"
         style={{
           backgroundColor: '#e8efdf',
-          backgroundImage: "url('public/backgroundbarra7.png')",
+          backgroundImage: "url('public/backgroundbarra9.png')",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'left center',
           backgroundSize: 'auto 100%',
         }}
       >
         {/* Logo container with uploaded image without alterations */}
-        <div className="flex items-center justify-start h-20 w-[267px] min-w-[267px] shrink-0 mr-auto text-left pl-0 ml-0">
+        <div className="flex items-center justify-start h-20 w-[267px] min-w-[267px] shrink-0 mr-auto text-left pl-0 ml-0 bg-transparent" style={{ background: 'transparent' }}>
           <img
-            src="public/LogoGarden5.png"
+            src="public/LogoGarden7.png"
             alt="Garden Now"
             width={267}
             height={84}
             referrerPolicy="no-referrer"
             className="max-h-full max-w-full h-auto w-auto object-contain block bg-transparent"
+            style={{ background: 'transparent', backgroundColor: 'transparent' }}
           />
         </div>
 

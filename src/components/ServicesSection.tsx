@@ -37,7 +37,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['Base compactada de alta resistência', 'Garantia estrutural de assentamento', 'Design personalizado para cada espaço']
         : ['Compacted high-load base', 'Settling warranty protection', 'Custom pattern and border layouts'],
       badge: lang === 'pt' ? 'Pavimentação' : 'Hardscape & Pavers',
-      image: 'public/Paversepavimentação.png',
+      image: 'public/Paverspavimentacao2.png',
     },
     {
       id: 'svc-irrigation',
@@ -93,7 +93,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['Proteção contra insetos e folhas', 'Calhas contínuas sem emendas', 'Mais conforto na área externa']
         : ['Screen enclosure maintenance', 'Seamless gutter installation', 'Weather & debris protection'],
       badge: lang === 'pt' ? 'Estruturas' : 'Screens & Gutters',
-      image: 'public/estrutexter.png',
+      image: 'public/telascalhas.png',
     },
     {
       id: 'svc-lighting',
