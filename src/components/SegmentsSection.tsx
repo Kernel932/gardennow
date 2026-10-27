@@ -90,7 +90,7 @@ export const SegmentsSection: React.FC<SegmentsSectionProps> = ({ lang }) => {
 
               <div className="lg:col-span-5 bg-white/5 border border-white/15 rounded-3xl p-1.5 backdrop-blur-sm overflow-hidden h-[360px] max-w-[520px] w-full">
                 <img
-                  src="public/Irrigação.png"
+                  src="public/Irrigacao3.png"
                   alt="Irrigação Inteligente"
                   className="w-full h-full object-cover rounded-2xl"
                 />

@@ -23,26 +23,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['Seleção de espécies resistentes', 'Composição botânica personalizada', 'Acabamento refinado e pedras nobres']
         : ['Curated zone-hardy plantings', 'Custom botanical architecture', 'Decorative stones and sod grooming'],
       badge: lang === 'pt' ? 'Planejamento & Execução' : 'Design & Build',
-      image: 'public/Paisagismoereformasexternas.png',
-    },
-    {
-      id: 'svc-pavers',
-      span: 'lg:col-span-6',
-      tag: '02',
-      title: lang === 'pt' ? 'Pavers e Pavimentação' : 'Pavers & Paving',
-      description: lang === 'pt'
-        ? 'Instalação de pavers em entradas de veículos, calçadas, pátios e áreas de convivência, com composição durável e acabamento profissional.'
-        : 'Paver installation for driveways, walkways, patios, and outdoor living areas, featuring durable base construction and professional craftsmanship.',
-      features: lang === 'pt'
-        ? ['Base compactada de alta resistência', 'Garantia estrutural de assentamento', 'Design personalizado para cada espaço']
-        : ['Compacted high-load base', 'Settling warranty protection', 'Custom pattern and border layouts'],
-      badge: lang === 'pt' ? 'Pavimentação' : 'Hardscape & Pavers',
-      image: 'public/Paverspavimentacao2.png',
+      image: 'public/landscampingoutdoor.png',
     },
     {
       id: 'svc-irrigation',
       span: 'lg:col-span-6',
-      tag: '03',
+      tag: '02',
       title: lang === 'pt' ? 'Irrigação Inteligente' : 'Smart Irrigation',
       description: lang === 'pt'
         ? 'Projeto, instalação, atualização e reparo de sistemas conforme o solo, as plantas e a exposição solar, incluindo controladores, sensores de chuva, aspersores, válvulas e irrigação por gotejamento.'
@@ -52,6 +38,20 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         : ['Up to 35% water conservation', 'Smart Wi-Fi controllers & weather sensors', 'Precision zone calibration'],
       badge: lang === 'pt' ? 'Eficiência Hídrica' : 'Smart Irrigation',
       image: 'public/Irrigacaointeligente.png',
+    },
+    {
+      id: 'svc-pavers',
+      span: 'lg:col-span-6',
+      tag: '03',
+      title: lang === 'pt' ? 'Pavers e Pavimentação' : 'Pavers & Paving',
+      description: lang === 'pt'
+        ? 'Instalação de pavers em entradas de veículos, calçadas, pátios e áreas de convivência, com composição durável e acabamento profissional.'
+        : 'Paver installation for driveways, walkways, patios, and outdoor living areas, featuring durable base construction and professional craftsmanship.',
+      features: lang === 'pt'
+        ? ['Base compactada de alta resistência', 'Garantia estrutural de assentamento', 'Design personalizado para cada espaço']
+        : ['Compacted high-load base', 'Settling warranty protection', 'Custom pattern and border layouts'],
+      badge: lang === 'pt' ? 'Pavimentação' : 'Hardscape & Pavers',
+      image: 'public/Paverspavimentacao3.png',
     },
     {
       id: 'svc-drainage',
@@ -107,7 +107,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
         ? ['LEDs de baixo consumo e longa vida útil', 'Destaque arquitetônico e botânico', 'Maior segurança para sua família']
         : ['Low-voltage architectural LEDs', 'Pathway & botanical uplighting', 'Enhanced property security'],
       badge: lang === 'pt' ? 'Iluminação' : 'Accent Lighting',
-      image: 'public/Iluminacaom.png',
+      image: 'public/Iluminacao3.png',
     },
     {
       id: 'svc-retaining-walls',
