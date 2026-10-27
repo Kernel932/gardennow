@@ -16,7 +16,6 @@ import { ServiceAreaSection } from './components/ServiceAreaSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
-import { WhatsAppFab } from './components/WhatsAppFab';
 
 export default function App() {
   const [lang, setLang] = useState<Language>('pt'); // Defaulting to Portuguese as requested in prompt, easily switched to English
@@ -58,9 +57,6 @@ export default function App() {
 
       {/* Quiet Footer with Navigation Mirror & Legal */}
       <Footer lang={lang} />
-
-      {/* Pulsing Floating WhatsApp Widget with Quick Drawer */}
-      <WhatsAppFab lang={lang} />
     </div>
   );
 }

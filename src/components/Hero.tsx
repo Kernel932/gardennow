@@ -1,5 +1,4 @@
 import React from 'react';
-import { MessageCircle } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../i18n/translations';
 
@@ -36,50 +35,35 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
 
           {/* Callout */}
           <p 
-            className="text-white mb-6 tracking-tight flex items-center gap-2"
+            className="text-white mb-1.5 tracking-tight flex items-center gap-2"
             style={{ 
               color: '#ffffff',
               fontFamily: 'Arial, sans-serif',
               fontWeight: 'bold',
-              fontSize: '28.6px'
+              fontSize: '28.6px',
+              textShadow: '0 2px 10px rgba(0,0,0,0.5)'
             }}
           >
             <span>{t.heroCallout}</span>
           </p>
-
-          {/* CTAs */}
-          <div className="flex flex-wrap items-center gap-4 mb-10">
-            <a
-              href="#quote"
-              style={{ backgroundColor: '#007054' }}
-              className="inline-flex items-center justify-center gap-2.5 bg-[#007054] hover:bg-[#005a43] text-white px-8 py-4 rounded-full font-bold text-base shadow-xl hover:shadow-2xl transition-all hover:-translate-y-0.5"
-            >
-              <MessageCircle className="w-5 h-5 fill-white" />
-              <span>{t.heroCta1}</span>
-            </a>
-          </div>
+          <p 
+            className="text-[#a8d94b] mb-6 tracking-tight flex items-center gap-2"
+            style={{ 
+              color: '#a8d94b',
+              fontFamily: 'Arial, sans-serif',
+              fontWeight: 'bold',
+              fontSize: '28.6px',
+              textShadow: '0 2px 10px rgba(0,0,0,0.5)'
+            }}
+          >
+            <span>{t.heroCallPhone}</span>
+          </p>
 
           {/* Proof Metric Strips */}
-          <div className="pt-8 border-t border-white/15 grid grid-cols-3 gap-6 max-w-lg">
+          <div className="pt-8 border-t border-white/15 flex gap-10 max-w-lg">
             <div>
               <span className="block text-3xl sm:text-4xl font-extrabold text-[#a8d94b] font-display tabular-nums">
-                15+
-              </span>
-              <span className="text-xs sm:text-sm text-[#a9c6b3] font-medium leading-tight">
-                {t.stat1}
-              </span>
-            </div>
-            <div>
-              <span className="block text-3xl sm:text-4xl font-extrabold text-[#a8d94b] font-display tabular-nums">
-                2,400+
-              </span>
-              <span className="text-xs sm:text-sm text-[#a9c6b3] font-medium leading-tight">
-                {t.stat2}
-              </span>
-            </div>
-            <div>
-              <span className="block text-3xl sm:text-4xl font-extrabold text-[#a8d94b] font-display tabular-nums">
-                4.9★
+                5.0★
               </span>
               <span className="text-xs sm:text-sm text-[#a9c6b3] font-medium leading-tight">
                 {t.stat3}

@@ -48,7 +48,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ lang }
               style={{ width: '100%', maxWidth: '520px', height: '360px' }}
             >
               <img
-                src="public/instalgramasintetica.png"
+                src="public/gramasintetica2.png"
                 alt={lang === 'pt' ? 'Vantagens da Grama Sintética' : 'Synthetic Turf Advantages'}
                 className="w-full h-full object-cover"
               />

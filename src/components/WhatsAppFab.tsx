@@ -50,7 +50,7 @@ export const WhatsAppFab: React.FC<WhatsAppFabProps> = ({ lang }) => {
         <button
           type="button"
           onClick={() => setModalOpen(true)}
-          className="relative w-14 h-14 rounded-full bg-[#25d366] hover:bg-[#1eb857] text-white flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all animate-wa-pulse focus:outline-none focus:ring-4 focus:ring-[#25d366]/40 cursor-pointer"
+          className="relative w-14 h-14 rounded-full bg-[#25d366] hover:bg-[#1eb857] text-white flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all focus:outline-none focus:ring-4 focus:ring-[#25d366]/40 cursor-pointer"
           aria-label={t.fabTip}
         >
           <MessageCircle className="w-7 h-7 fill-white" />

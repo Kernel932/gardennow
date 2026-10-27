@@ -16,15 +16,25 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           {/* Col 1: Brand Wordmark */}
           <div className="lg:col-span-2 space-y-4">
-            <a href="#" className="flex items-center gap-2.5">
-              <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2b7a45] to-[#14311f] flex items-center justify-center text-white text-xl shadow-md">
-                🌿
-              </span>
-              <span className="text-2xl font-extrabold text-white font-display">
-                Garden Now
-              </span>
+            <a href="#" className="flex items-center gap-2.5" aria-label="Garden Now">
+              <span
+                id="footer-logo-box"
+                className="block shrink-0 overflow-hidden rounded-[20px] shadow-lg"
+                style={{
+                  width: '160px',
+                  height: '207px',
+                  borderRadius: '20px',
+                  backgroundImage: "url('public/LogoInsta2.png')",
+                  backgroundPosition: 'center center',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              />
             </a>
-            <p className="text-sm text-[#8faea0] leading-relaxed max-w-sm">
+            <p
+              className="text-sm text-[#8faea0] leading-relaxed text-center"
+              style={{ width: '160px', height: '65px', textAlign: 'center' }}
+            >
               {t.footAbout}
             </p>
             <div className="pt-2 flex items-center gap-4 text-xs text-[#8faea0]">
