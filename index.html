@@ -1344,6 +1344,14 @@ const initialLang = (function() {
   return (navigator.language && navigator.language.toLowerCase().startsWith('pt')) ? 'pt' : 'en';
 })();
 setLang(initialLang);
+if (window.location.hash) {
+  window.addEventListener('load', () => {
+    try {
+      const target = document.querySelector(window.location.hash);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    } catch (e) {}
+  }, { once: true });
+}
 </script>
 </body>
 </html>
