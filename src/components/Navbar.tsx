@@ -19,11 +19,12 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onOpenWhatsAppModal }) => 
   );
 
   const navLinks = [
-    { label: t.navHome, href: '#' },
+    { label: t.navHome, href: 'index.html' },
     { label: t.navServices, href: '#services-solutions' },
     { label: t.navContact, href: '#quote' },
     { label: t.navAreas, href: '#areas' },
     { label: t.navAbout, href: '#about' },
+    { label: t.navGallery, href: 'gallery.html' },
   ];
 
   return (

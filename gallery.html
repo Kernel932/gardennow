@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garden Now — Lawn Care &amp; Landscaping</title>
+<style>
+  :root{
+    --green-900:#14311f;
+    --green-700:#1e5e35;
+    --green-600:#2b7a45;
+    --green-500:#3f9a5a;
+    --lime:#a8d94b;
+    --sand:#f6f3ea;
+    --ink:#1c241f;
+    --muted:#5d6a60;
+    --white:#E8EFDF;
+    --site-bg:#E8EFDF;
+    --wa:#25D366;
+    --wa-dark:#1eb857;
+    --radius:16px;
+    --shadow:0 10px 30px rgba(20,49,31,.10);
+    --shadow-lg:0 24px 60px rgba(20,49,31,.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:#E8EFDF;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:14px 26px;border-radius:999px;font-weight:700;font-size:.95rem;
+    border:2px solid transparent;cursor:pointer;transition:.22s;
+    font-family:inherit;
+  }
+  .btn-primary{background:var(--green-600);color:#fff;}
+  .btn-primary:hover{background:var(--green-700);transform:translateY(-2px);box-shadow:var(--shadow);}
+  .btn-lime{background:var(--lime);color:var(--green-900);}
+  .btn-lime:hover{background:#bce85f;transform:translateY(-2px);box-shadow:var(--shadow);}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6);}
+  .btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#fff;}
+
+  /* ---------- WHATSAPP BUTTONS ---------- */
+  .wa-ico{width:20px;height:20px;flex:0 0 20px;fill:currentColor;}
+  .btn-wa{background:var(--wa);color:#fff;}
+  .btn-wa:hover{background:var(--wa-dark);transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,211,102,.38);}
+  .btn-wa-light{background:#fff;color:var(--green-900);}
+  .btn-wa-light:hover{background:#f2fbf5;transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.18);}
+  .btn-wa-light .wa-ico{fill:var(--wa);}
+
+  /* floating WhatsApp button */
+  .wa-fab{
+    position:fixed;right:22px;bottom:22px;z-index:80;
+    width:60px;height:60px;border-radius:50%;
+    background:var(--wa);color:#fff;display:grid;place-items:center;
+    box-shadow:0 12px 30px rgba(37,211,102,.5);transition:.22s;
+  }
+  .wa-fab:hover{transform:scale(1.08);}
+  .wa-fab svg{width:32px;height:32px;fill:#fff;}
+  .wa-fab .ring{position:absolute;inset:0;border-radius:50%;animation:waPulse 2.4s infinite;}
+  @keyframes waPulse{
+    0%{box-shadow:0 0 0 0 rgba(37,211,102,.55);}
+    70%{box-shadow:0 0 0 18px rgba(37,211,102,0);}
+    100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+  }
+  .wa-fab .tip{
+    position:absolute;right:74px;top:50%;transform:translateY(-50%);
+    background:var(--green-900);color:#fff;font-size:.8rem;font-weight:700;
+    padding:8px 14px;border-radius:9px;white-space:nowrap;
+    opacity:0;pointer-events:none;transition:.2s;
+  }
+  .wa-fab:hover .tip{opacity:1;}
+
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;
+    font-weight:800;color:var(--green-600);margin-bottom:12px;
+  }
+  h2.section-title{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.15;letter-spacing:-.02em;color:var(--green-900);}
+  .section-sub{color:var(--muted);max-width:620px;margin-top:14px;font-size:1.03rem;}
+  section{padding:88px 0;}
+  .center{text-align:center;}
+  .center .section-sub{margin-left:auto;margin-right:auto;}
+
+  /* ---------- TOP BAR ---------- */
+  .topbar{background:#4e9232;color:#cfe4d5;font-size:.83rem;padding:9px 0;}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;width:100%;max-width:100%;margin:0;padding:0 24px;}
+  .topbar .wrap > span:first-child{text-align:left;margin-right:auto;margin-left:0;justify-self:flex-start;}
+  .topbar strong{color:var(--lime);}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;background:rgba(232,239,223,.96);
+    backdrop-filter:blur(10px);border-bottom:1px solid #d3ded0;
+  }
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:16px;width:100%;max-width:100%;margin:0;padding:0 24px 0 0;background:url('public/backgroundbarra9.png') no-repeat left center / auto 100%;}
+  .nav-logo-wrap{display:flex;align-items:center;justify-content:flex-start;height:84px;max-height:84px;width:267px;min-width:267px;margin-left:0;margin-right:auto;padding-left:0;text-align:left;background:transparent;}
+  .logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.22rem;color:var(--green-900);letter-spacing:-.02em;}
+  .logo .mark{
+    width:38px;height:38px;border-radius:12px;
+    background:linear-gradient(140deg,var(--green-500),var(--green-700));
+    display:grid;place-items:center;color:#fff;font-size:1.15rem;
+    box-shadow:0 6px 16px rgba(43,122,69,.35);
+  }
+  .logo small{display:block;font-size:.62rem;font-weight:700;letter-spacing:.18em;color:var(--green-600);text-transform:uppercase;}
+
+  /* 30% larger logo in header */
+  header.nav .logo{gap:14px;font-size:1.58rem;}
+  header.nav .logo .mark{width:50px;height:50px;border-radius:15px;font-size:1.5rem;box-shadow:0 8px 20px rgba(43,122,69,.35);}
+  header.nav .logo small{font-size:.81rem;}
+  nav.links{display:flex;gap:26px;font-weight:600;font-size:.93rem;color:#33463a;}
+  nav.links a:hover{color:var(--green-600);}
+  .nav-right{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin-left:auto;}
+
+  /* language switcher */
+  .lang{
+    display:inline-flex;align-items:center;gap:2px;
+    background:#eef3ef;border:1.5px solid #d3ded7;
+    border-radius:999px;padding:3px;
+  }
+  .lang .globe{font-size:.9rem;padding:0 4px 0 8px;color:var(--green-600);line-height:1;}
+  .lang button{
+    font-family:inherit;font-size:.75rem;font-weight:800;letter-spacing:.06em;
+    padding:5px 13px;border-radius:999px;border:none;cursor:pointer;
+    background:transparent;color:#4a6352;transition:.18s;
+  }
+  .lang button:hover{color:var(--green-900);background:#e2eae4;}
+  .lang button.active{background:var(--green-600);color:#fff;box-shadow:0 3px 9px rgba(43,122,69,.35);}
+
+  .phone{font-weight:800;color:var(--green-700);font-size:.95rem;white-space:nowrap;}
+  .phone span{display:block;font-size:.66rem;font-weight:700;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;}
+  .burger{display:none;background:none;border:none;font-size:1.5rem;color:var(--green-900);cursor:pointer;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;color:#fff;padding:0;overflow:hidden;
+    background:
+      linear-gradient(110deg, rgba(6, 26, 13, 0.90) 0%, rgba(9, 36, 18, 0.80) 46%, rgba(14, 48, 24, 0.52) 78%, rgba(6, 22, 11, 0.88) 100%),
+      url('/jardim.jpg') center center / cover no-repeat;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+  }
+  .hero-inner{
+    max-width:840px;
+    padding:88px 0 96px;
+  }
+  .hero h1{font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.08;letter-spacing:-.03em;margin-bottom:20px;text-shadow:0 2px 14px rgba(0,0,0,.5);}
+  .hero h1 em{font-style:normal;color:var(--lime);}
+  .hero p.lead{color:#d6ebd9;font-size:1.1rem;max-width:540px;margin-bottom:30px;text-shadow:0 1px 8px rgba(0,0,0,.5);}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px;}
+  .hero-stats{display:flex;gap:40px;flex-wrap:wrap;padding-top:26px;border-top:1px solid rgba(255,255,255,.24);text-shadow:0 1px 6px rgba(0,0,0,.4);}
+  .hero-stats b{display:block;font-size:1.7rem;color:var(--lime);letter-spacing:-.02em;}
+  .hero-stats span{font-size:.82rem;color:#bfe0ca;font-weight:600;}
+
+  .lawn-card{
+    margin-top:26px;padding:12px 16px;background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);border:1.5px solid rgba(255,255,255,.25);
+    border-radius:16px;display:flex;align-items:center;gap:14px;
+    box-shadow:0 8px 24px rgba(0,0,0,.18);max-width:540px;
+  }
+  .lawn-card-img{
+    width:76px;height:76px;border-radius:12px;object-fit:cover;
+    box-shadow:0 4px 14px rgba(0,0,0,.3);border:2px solid rgba(255,255,255,.45);
+    flex-shrink:0;transition:.22s;
+  }
+  .lawn-card:hover .lawn-card-img{transform:scale(1.05);}
+  .lawn-card-info strong{display:block;font-size:.88rem;color:#fff;line-height:1.3;}
+  .lawn-card-info span{display:block;font-size:.76rem;color:var(--lime);font-weight:700;margin-top:3px;}
+
+  .quote-card{background:#fff;color:var(--ink);border-radius:22px;padding:30px;box-shadow:var(--shadow-lg);}
+  .quote-card h3{font-size:1.3rem;color:var(--green-900);letter-spacing:-.02em;margin-bottom:6px;display:flex;align-items:center;gap:9px;}
+  .quote-card h3 .wa-ico{fill:var(--wa);flex:0 0 22px;width:22px;height:22px;}
+  .quote-card .hint{font-size:.87rem;color:var(--muted);margin-bottom:20px;}
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#48604f;margin-bottom:6px;}
+  .field input,.field select,.field textarea{
+    width:100%;padding:12px 14px;border:1.5px solid #d8deda;border-radius:11px;
+    font-family:inherit;font-size:.95rem;color:var(--ink);background:#fbfcfb;transition:.18s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--green-500);background:#fff;box-shadow:0 0 0 4px rgba(63,154,90,.13);
+  }
+  .field textarea{resize:vertical;min-height:80px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .quote-card .btn{width:100%;justify-content:center;margin-top:6px;}
+  .form-note{font-size:.76rem;color:var(--muted);text-align:center;margin-top:12px;}
+  .form-ok{
+    display:none;background:#eefaf1;border:1.5px solid #b6e3c3;color:var(--green-700);
+    border-radius:12px;padding:16px;font-size:.9rem;font-weight:600;text-align:center;margin-top:14px;
+  }
+  .wa-out{display:none;width:100%;justify-content:center;margin-top:10px;}
+
+  /* ---------- TRUST BAR ---------- */
+  .trust{background:#E8EFDF;padding:34px 0;border-bottom:1px solid #d8e2cd;}
+  .trust .wrap{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;}
+  .trust p{font-weight:800;color:var(--green-900);font-size:.95rem;}
+  .badges{display:flex;gap:32px;flex-wrap:wrap;align-items:center;}
+  .badge{display:flex;align-items:center;gap:9px;font-weight:700;color:#4a6352;font-size:.9rem;}
+  .badge i{font-style:normal;font-size:1.15rem;}
+
+  /* ---------- SERVICE CARDS ---------- */
+  .grid-4{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:24px;margin-top:36px;align-items:stretch;}
+  .card{
+    background:#14311f;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:20px;
+    padding:28px 24px;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    position:relative;
+    overflow:hidden;
+    min-height:390px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 10px 28px rgba(0,0,0,.15);
+  }
+  .card:before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(6, 26, 13, 0.15) 0%, rgba(6, 26, 13, 0.74) 34%, rgba(6, 26, 13, 0.98) 100%);
+    transition:background .3s ease;
+    z-index:1;
+  }
+  .card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 36px rgba(0,0,0,.25);
+    border-color:rgba(168,217,75,.45);
+  }
+  .card:hover:before{
+    background:linear-gradient(180deg, rgba(6, 26, 13, 0.1) 0%, rgba(6, 26, 13, 0.65) 28%, rgba(6, 26, 13, 0.98) 100%);
+  }
+  .card-inner{
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    height:100%;
+  }
+  .card h3{
+    font-size:1.24rem;color:#ffffff;margin-bottom:10px;font-weight:800;letter-spacing:-.01em;line-height:1.25;
+    text-shadow:0 2px 8px rgba(0,0,0,0.8);
+  }
+  .card p{
+    font-size:.875rem;color:#e8f0e9;line-height:1.52;margin-bottom:16px;
+    text-shadow:0 1px 6px rgba(0,0,0,0.85);
+  }
+  .card a.more{
+    font-size:.88rem;font-weight:800;color:var(--lime);display:inline-flex;gap:6px;align-items:center;
+    text-shadow:0 1px 4px rgba(0,0,0,0.7);
+    transition:gap .2s ease, color .2s ease;
+    margin-top:auto;
+  }
+  .card a.more:hover{gap:10px;color:#ffffff;}
+  #svc-landscaping{
+    text-align:center;
+  }
+  #svc-landscaping:before,
+  #svc-landscaping:hover:before{
+    background:rgba(0, 0, 0, 0.10);
+  }
+  #svc-landscaping .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-landscaping a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-landscaping h3,
+  #svc-landscaping p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  #svc-pavers{
+    text-align:center;
+  }
+  #svc-pavers:before,
+  #svc-pavers:hover:before{
+    background:rgba(0, 0, 0, 0.10);
+  }
+  #svc-pavers .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-pavers a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-pavers h3,
+  #svc-pavers p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  #svc-irrigation{
+    text-align:center;
+  }
+  #svc-irrigation:before,
+  #svc-irrigation:hover:before{
+    background:rgba(0, 0, 0, 0.40);
+  }
+  #svc-irrigation .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-irrigation a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-irrigation h3,
+  #svc-irrigation p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  #svc-drainage{
+    text-align:center;
+  }
+  #svc-drainage:before,
+  #svc-drainage:hover:before{
+    background:rgba(0, 0, 0, 0.10);
+  }
+  #svc-drainage .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-drainage a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-drainage h3,
+  #svc-drainage p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  #svc-turf:before,
+  #svc-turf:hover:before{
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity:1;
+    display:block;
+  }
+  #svc-turf h3,
+  #svc-turf p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  #svc-structures{
+    text-align:center;
+  }
+  #svc-structures:before,
+  #svc-structures:hover:before{
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity:1;
+    display:block;
+  }
+  #svc-structures .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-structures a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-structures h3,
+  #svc-structures p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  #svc-lighting{
+    text-align:center;
+  }
+  #svc-lighting:before,
+  #svc-lighting:hover:before{
+    background:rgba(0, 0, 0, 0.10);
+  }
+  #svc-lighting .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-lighting a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-lighting h3,
+  #svc-lighting p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  #svc-retaining-walls{
+    text-align:center;
+  }
+  #svc-retaining-walls:before,
+  #svc-retaining-walls:hover:before{
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity:1;
+    display:block;
+  }
+  #svc-retaining-walls .card-inner{
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  #svc-retaining-walls a.more{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+  }
+  #svc-retaining-walls h3,
+  #svc-retaining-walls p{
+    text-shadow:0 2px 10px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);
+  }
+
+  /* ---------- SEGMENT SECTION ---------- */
+  .segments{background:#092f17;color:#fff;}
+  .segments .section-title{color:#fff;}
+  .segments .section-sub{color:#a9c6b3;}
+  .tabs{display:flex;gap:10px;margin:34px 0 26px;flex-wrap:wrap;}
+  .tab{
+    padding:11px 24px;border-radius:999px;font-weight:700;font-size:.9rem;
+    background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.18);
+    color:#d6e8dc;cursor:pointer;font-family:inherit;transition:.2s;
+  }
+  .tab.active{background:var(--lime);border-color:var(--lime);color:var(--green-900);}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block;animation:fade .35s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+  .panel-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
+  .panel-copy p{color:#bcd4c4;margin-bottom:20px;}
+  .checklist{list-style:none;display:grid;gap:13px;}
+  .checklist li{display:flex;gap:12px;align-items:flex-start;font-size:.95rem;color:#e2f0e7;}
+  .checklist li:before{
+    content:"✓";flex:0 0 24px;height:24px;border-radius:50%;
+    background:rgba(168,217,75,.18);color:var(--lime);
+    display:grid;place-items:center;font-size:.8rem;font-weight:900;
+  }
+  #turf-adv-image-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  /* ---------- SERVICE AREA ---------- */
+  .area-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-top:20px;}
+  .map-box{background:linear-gradient(140deg,#e8f4ea,#f7fbf7);border:1px solid #d8e6db;border-radius:var(--radius);padding:34px;}
+  .map-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;}
+  .town{
+    background:#fff;border:1px solid #e5efe7;border-radius:10px;padding:11px 8px;
+    text-align:center;font-size:.85rem;font-weight:700;color:#3d5a48;transition:.2s;
+  }
+  .town:hover{background:var(--green-600);color:#fff;border-color:var(--green-600);transform:scale(1.04);}
+  .town.mut{color:#9fb0a5;background:#f1f5f2;font-weight:600;}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testi{background-color:#b4e1b7;}
+  .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:46px;}
+  .tcard{background:#fff;border-radius:var(--radius);padding:30px;border:1px solid #e9e4d7;box-shadow:0 4px 14px rgba(20,49,31,.05);display:flex;flex-direction:column;}
+  .stars{color:#e8b529;letter-spacing:2px;margin-bottom:14px;font-size:1rem;}
+  .tcard p{font-size:.95rem;color:#41544a;flex:1;}
+  .who{display:flex;align-items:center;gap:12px;margin-top:20px;padding-top:18px;border-top:1px solid #eef1ee;}
+  .avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(140deg,var(--green-500),var(--green-700));color:#fff;display:grid;place-items:center;font-weight:800;font-size:.9rem;flex:0 0 42px;}
+  .who b{display:block;font-size:.92rem;color:var(--green-900);}
+  .who span{font-size:.8rem;color:var(--muted);}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:820px;margin:44px auto 0;}
+  details{background:#fff;border:1px solid #c9ddcf;border-radius:13px;padding:22px 24px;margin-bottom:14px;box-shadow:0 4px 14px rgba(20,49,31,.04);}
+  details[open]{border-color:#c9ddcf;}
+  summary{
+    font-weight:700;color:var(--green-900);font-size:1.05rem;
+    list-style:none;display:block;cursor:default;pointer-events:none;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary:after{display:none !important;content:none !important;}
+  details[open] summary:after{display:none !important;content:none !important;}
+  details p{margin-top:10px;color:var(--muted);font-size:.94rem;line-height:1.6;}
+  .transform-box{margin-left:auto !important;margin-right:auto !important;}
+
+  /* ---------- CTA BAND ---------- */
+  .cta-band{background:linear-gradient(115deg,var(--green-700),var(--green-500) 65%,#57ab6d);color:#fff;text-align:center;padding:76px 0;}
+  .cta-band h2{font-size:clamp(1.7rem,3.4vw,2.4rem);letter-spacing:-.02em;margin-bottom:14px;}
+  .cta-band p{color:#dcefe1;max-width:560px;margin:0 auto 28px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--green-900);color:#a9c6b3;padding:64px 0 28px;font-size:.9rem;}
+  .fcols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;}
+  footer h4{color:#fff;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;}
+  footer ul{list-style:none;display:grid;gap:10px;}
+  footer a:hover{color:var(--lime);}
+  footer .logo{color:#fff;margin-bottom:14px;}
+  footer .logo small{color:var(--lime);}
+  .wa-ico-inline{width:15px;height:15px;fill:var(--wa);vertical-align:-3px;display:inline-block;margin-right:2px;}
+  .fbar{
+    margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:#8aa896;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:1080px){nav.links{gap:18px;font-size:.88rem;}}
+  @media(max-width:980px){
+    section{padding:64px 0;}
+    .hero-inner{grid-template-columns:1fr;gap:44px;padding:60px 0 68px;}
+    .panel-grid,.area-grid{grid-template-columns:1fr;gap:34px;}
+    .panel-grid .map-box,
+    .tab-panel .map-box{
+      width:100% !important;
+      max-width:520px !important;
+      height:clamp(220px, 50vw, 360px) !important;
+      margin:0 auto;
+    }
+    .transform-box{
+      padding:34px 24px !important;
+    }
+    .fcols{grid-template-columns:1fr 1fr;}
+    nav.links{display:none;}
+    .burger{display:block;}
+    nav.links.open{
+      display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;
+      background:#fff;padding:22px 24px;gap:18px;border-bottom:1px solid #e6e9e6;box-shadow:var(--shadow);
+    }
+  }
+  @media(max-width:760px){.phone{display:none;}}
+  @media(max-width:620px){
+    .row2{grid-template-columns:1fr;}
+    .fcols{grid-template-columns:1fr;}
+    .hero-stats{gap:26px;}
+    .badges{gap:18px;}
+    .lang .globe{display:none;}
+    .lang button{padding:5px 10px;}
+    .nav-wa{padding:12px 14px;}
+    .nav-wa .wa-label{display:none;}
+    .wa-fab{width:54px;height:54px;right:16px;bottom:16px;}
+    .wa-fab svg{width:28px;height:28px;}
+    .wa-fab .tip{display:none;}
+    .segments{padding:44px 0;}
+    .tabs{display:flex;gap:8px;margin:22px 0 20px;width:100%;}
+    .tab{flex:1 1 auto;text-align:center;padding:11px 12px;font-size:0.84rem;min-width:0;letter-spacing:0.02em;}
+    .panel-grid{gap:24px;}
+    .panel-copy p{font-size:0.92rem;line-height:1.5;margin-bottom:16px;}
+    .checklist{gap:11px;}
+    .checklist li{font-size:0.88rem;line-height:1.45;gap:10px;}
+    .checklist li:before{flex:0 0 20px;height:20px;font-size:0.75rem;}
+    .panel-grid .map-box,
+    .tab-panel .map-box{
+      width:100% !important;
+      max-width:100% !important;
+      height:clamp(200px, 56vw, 290px) !important;
+      border-radius:14px;
+    }
+    .transform-box{
+      margin:32px auto 0 !important;
+      padding:28px 18px !important;
+      border-radius:16px !important;
+    }
+    .transform-box h3{
+      font-size:clamp(1.35rem, 6vw, 1.8rem) !important;
+    }
+    .transform-box p[data-i18n="transformSub"]{
+      font-size:0.95rem !important;
+    }
+    .transform-box p[data-i18n="transformFeatures"]{
+      font-size:0.8rem !important;
+      line-height:1.5 !important;
+    }
+    .transform-box a[data-i18n="transformBtn"]{
+      width:100%;
+      max-width:280px;
+      justify-content:center;
+      padding:13px 24px !important;
+      font-size:0.95rem !important;
+    }
+  }
+  @media(max-width:400px){
+    .tab{padding:9px 8px;font-size:0.76rem;}
+  }
+
+  /* ---------- GALLERY SHOWCASE (OUR WORK) ---------- */
+  .gallery-hero{
+    background:linear-gradient(135deg, #007D5D 0%, #004332 100%);
+    color:#fff;
+    padding:64px 0 56px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .gallery-kicker{
+    font-size:.78rem;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--lime);
+    margin-bottom:12px;
+  }
+  .gallery-hero h1{
+    font-size:clamp(2rem, 4vw, 3.1rem);
+    line-height:1.12;
+    letter-spacing:-.025em;
+    font-weight:800;
+    color:#fff;
+    max-width:780px;
+    margin:0 auto 16px;
+    text-wrap:balance;
+  }
+  .gallery-hero p.gallery-lead{
+    color:#dcefe1;
+    font-size:1.04rem;
+    line-height:1.65;
+    max-width:660px;
+    margin:0 auto;
+  }
+
+  .gallery-section{
+    background-color:#E8EFDF;
+    padding:5px 0 20px;
+  }
+  .gallery-filter-bar{
+    width:100%;
+    background:linear-gradient(135deg, #007D5D 0%, #004332 100%);
+    border-radius:0;
+    padding:8px 0;
+    margin-bottom:32px;
+    border-top:1px solid rgba(255,255,255,.14);
+    border-bottom:1px solid rgba(255,255,255,.14);
+  }
+  .gallery-toolbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .gallery-filters{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+    background:transparent;
+    padding:0;
+    border-radius:0;
+  }
+  .g-filter-btn{
+    font-family:inherit;
+    font-size:.86rem;
+    font-weight:700;
+    color:#E8EFDF;
+    background:transparent;
+    border:1px solid transparent;
+    padding:9px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    white-space:nowrap;
+    flex-shrink:0;
+    min-height:40px;
+    transition:background-color .16s cubic-bezier(0.16,1,0.3,1), color .16s cubic-bezier(0.16,1,0.3,1), border-color .16s cubic-bezier(0.16,1,0.3,1), transform .16s cubic-bezier(0.16,1,0.3,1);
+  }
+  .g-filter-btn:hover:not(.active){
+    color:#ffffff;
+    background:transparent;
+    border-color:transparent;
+  }
+  .g-filter-btn:focus-visible{
+    outline:2px solid var(--lime);
+    outline-offset:2px;
+  }
+  .g-filter-btn.active{
+    background:var(--lime);
+    border-color:var(--lime);
+    color:var(--green-900);
+    box-shadow:0 3px 10px rgba(0,0,0,.22);
+  }
+  .gallery-count{
+    font-size:.86rem;
+    font-weight:600;
+    color:#dcefe1;
+    font-variant-numeric:tabular-nums;
+    white-space:nowrap;
+  }
+
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    gap:20px;
+  }
+  .gallery-grid.is-filtered{
+    grid-template-columns:repeat(auto-fill, minmax(310px, 1fr));
+  }
+  .gallery-item{
+    position:relative;
+    border-radius:16px;
+    overflow:hidden;
+    background:#14311f;
+    cursor:pointer;
+    box-shadow:0 8px 24px rgba(20,49,31,.10);
+    grid-column:span 4;
+    height:300px;
+    padding:0;
+    border:none;
+    text-align:left;
+    display:block;
+    width:100%;
+    transition:transform .18s cubic-bezier(0.16,1,0.3,1), box-shadow .18s cubic-bezier(0.16,1,0.3,1);
+  }
+  .gallery-grid:not(.is-filtered) .gallery-item.span-7{
+    grid-column:span 7;
+    height:360px;
+  }
+  .gallery-grid:not(.is-filtered) .gallery-item.span-5{
+    grid-column:span 5;
+    height:360px;
+  }
+  .gallery-grid.is-filtered .gallery-item{
+    grid-column:auto;
+    height:320px;
+  }
+  .gallery-item[hidden]{
+    display:none !important;
+  }
+  .gallery-item:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 36px rgba(20,49,31,.18);
+  }
+  .gallery-item:focus-visible{
+    outline:3px solid var(--green-600);
+    outline-offset:3px;
+  }
+  .gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+    transition:transform .2s cubic-bezier(0.16,1,0.3,1), opacity .2s ease;
+  }
+  .gallery-item:hover img{
+    transform:scale(1.04);
+  }
+  .gallery-scrim{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(6, 26, 13, 0.88) 0%, rgba(6, 26, 13, 0.32) 46%, rgba(6, 26, 13, 0) 100%);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:22px 22px 20px;
+    opacity:.94;
+    transition:opacity .18s cubic-bezier(0.16,1,0.3,1);
+  }
+  .gallery-item:hover .gallery-scrim{
+    opacity:1;
+  }
+  .gallery-meta{
+    font-size:.76rem;
+    font-weight:600;
+    color:#cfe6d6;
+    letter-spacing:.02em;
+    margin-bottom:4px;
+    display:flex;
+    align-items:center;
+    gap:7px;
+  }
+  .gallery-title{
+    font-size:1.08rem;
+    font-weight:700;
+    color:#fff;
+    line-height:1.28;
+    letter-spacing:-.01em;
+  }
+  .gallery-zoom-affordance{
+    position:absolute;
+    top:14px;
+    right:14px;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:rgba(10, 32, 18, 0.72);
+    backdrop-filter:blur(6px);
+    color:#fff;
+    display:grid;
+    place-items:center;
+    opacity:0;
+    transform:scale(0.92);
+    transition:opacity .16s cubic-bezier(0.16,1,0.3,1), transform .16s cubic-bezier(0.16,1,0.3,1);
+  }
+  .gallery-item:hover .gallery-zoom-affordance,
+  .gallery-item:focus-visible .gallery-zoom-affordance{
+    opacity:1;
+    transform:scale(1);
+  }
+  .gallery-zoom-affordance svg{
+    width:18px;
+    height:18px;
+    stroke:currentColor;
+    stroke-width:2;
+    fill:none;
+  }
+
+  /* ---------- FULLSCREEN LIGHTBOX ---------- */
+  .lightbox{
+    position:fixed;
+    inset:0;
+    z-index:120;
+    background:rgba(6, 18, 10, 0.94);
+    backdrop-filter:blur(10px);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:20px 24px 24px;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .18s cubic-bezier(0.16,1,0.3,1);
+  }
+  .lightbox.open{
+    opacity:1;
+    pointer-events:auto;
+  }
+  .lightbox-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    max-width:1240px;
+    width:100%;
+    margin:0 auto;
+    color:#dcefe1;
+  }
+  .lightbox-counter{
+    font-size:.9rem;
+    font-weight:700;
+    font-variant-numeric:tabular-nums;
+    letter-spacing:.04em;
+  }
+  .lightbox-close{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.22);
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    font-size:1.3rem;
+    line-height:1;
+    cursor:pointer;
+    display:grid;
+    place-items:center;
+    transition:background-color .16s ease, transform .16s ease;
+  }
+  .lightbox-close:hover{
+    background:rgba(255,255,255,.2);
+    transform:scale(1.04);
+  }
+  .lightbox-close:focus-visible,
+  .lightbox-nav:focus-visible{
+    outline:2px solid var(--lime);
+    outline-offset:2px;
+  }
+  .lightbox-stage{
+    position:relative;
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    max-width:1240px;
+    width:100%;
+    margin:12px auto;
+    min-height:0;
+  }
+  .lightbox-img{
+    max-width:min(1060px, 84vw);
+    max-height:74vh;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    border-radius:12px;
+    box-shadow:0 24px 60px rgba(0,0,0,.55);
+    user-select:none;
+  }
+  .lightbox-nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.22);
+    background:rgba(14, 38, 22, 0.78);
+    color:#fff;
+    font-size:1.5rem;
+    cursor:pointer;
+    display:grid;
+    place-items:center;
+    transition:background-color .16s ease, transform .16s ease;
+  }
+  .lightbox-nav:hover{
+    background:var(--green-600);
+    transform:translateY(-50%) scale(1.05);
+  }
+  .lightbox-prev{left:0;}
+  .lightbox-next{right:0;}
+  .lightbox-caption{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto;
+  }
+  .lightbox-caption h3{
+    color:#fff;
+    font-size:1.12rem;
+    font-weight:700;
+    margin-bottom:4px;
+  }
+  .lightbox-caption p{
+    color:#b5d0be;
+    font-size:.85rem;
+  }
+
+  @media(max-width:980px){
+    .gallery-grid,
+    .gallery-grid:not(.is-filtered){
+      grid-template-columns:repeat(2, 1fr);
+    }
+    .gallery-item,
+    .gallery-grid:not(.is-filtered) .gallery-item.span-7,
+    .gallery-grid:not(.is-filtered) .gallery-item.span-5{
+      grid-column:span 1;
+      height:270px;
+    }
+  }
+  @media(max-width:620px){
+    .gallery-hero{padding:46px 0 40px;}
+    .gallery-section{padding:5px 0 12px;}
+    .gallery-grid,
+    .gallery-grid:not(.is-filtered),
+    .gallery-grid.is-filtered{
+      grid-template-columns:1fr;
+      gap:16px;
+    }
+    .gallery-item,
+    .gallery-grid:not(.is-filtered) .gallery-item.span-7,
+    .gallery-grid:not(.is-filtered) .gallery-item.span-5,
+    .gallery-grid.is-filtered .gallery-item{
+      height:260px;
+    }
+    .gallery-zoom-affordance{opacity:1;transform:scale(1);}
+    .lightbox{padding:14px 14px 18px;}
+    .lightbox-img{max-width:94vw;max-height:68vh;}
+    .lightbox-nav{width:42px;height:42px;background:rgba(14,38,22,0.88);}
+    .lightbox-prev{left:4px;}
+    .lightbox-next{right:4px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .gallery-item, .gallery-item img, .g-filter-btn, .lightbox{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar" style="background: linear-gradient(90deg, #007D5D 0%, #004332 100%);">
+  <div class="wrap" style="width:100%;max-width:100%;margin:0;padding:0 24px;display:flex;justify-content:space-between;align-items:center;">
+    <span data-i18n="topBar" style="font-size:16px;color:#E8EFDF;font-family:'Futura Md BT','Futura',sans-serif;text-align:left;margin-left:0;margin-right:auto;justify-self:flex-start;">Paisagismo, Hardscape, Áreas Externas e Iluminação</span>
+    <span data-i18n="topBarPhone" style="color:#E8EFDF;font-family:'Futura Md BT','Futura',sans-serif;">Free on-site assessment · Call <strong style="color:#ffdc00;">(407) 914-1712</strong></span>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap" style="background-color: #e8efdf; background: #e8efdf url('public/backgroundbarra9.png') no-repeat left center / auto 100%; width: 100%;">
+    <div class="nav-logo-wrap" style="background:transparent;">
+      <img src="public/LogoGarden7.png" alt="Garden Now" width="267" height="84" style="display:block;max-width:100%;height:auto;background:transparent;background-color:transparent;">
+    </div>
+    <nav class="links" id="navLinks">
+      <a href="index.html" data-i18n="navHome">Início</a>
+      <a href="#services-solutions" data-i18n="navServices">Serviços</a>
+      <a href="#quote" data-i18n="navContact">Contato</a>
+      <a href="#areas" data-i18n="navAreas">Service Area</a>
+      <a href="#about" data-i18n="navAbout">Sobre-nós</a>
+      <a href="gallery.html" data-i18n="navGallery">Galeria</a>
+    </nav>
+    <div class="nav-right">
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang" role="group" aria-label="Language / Idioma">
+        <span class="globe" aria-hidden="true">🌐</span>
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- OUR WORK / PHOTO GALLERY -->
+<section class="gallery-hero" style="height: 250px; padding: 0; display: flex; align-items: center; justify-content: center;" aria-labelledby="galleryPageHeading">
+  <div class="wrap" style="width: 100%;">
+    <p class="gallery-kicker" data-i18n="galKicker">Portfólio de Projetos</p>
+    <h1 id="galleryPageHeading" style="font-size: 35px;" data-i18n="galTitle">Nossos Projetos em Orlando e Região</h1>
+    <p class="gallery-lead" data-i18n="galSub">Confira registros reais de pavimentação com pavers, paisagismo, grama sintética, áreas de convivência e iluminação externa executados pela equipe Garden Now Landscaping.</p>
+  </div>
+</section>
+
+<section id="gallery-showcase" class="gallery-section" aria-label="Galeria de fotos">
+  <div class="gallery-filter-bar">
+    <div class="wrap gallery-toolbar">
+      <div class="gallery-filters" role="group" aria-label="Filtrar projetos por categoria">
+        <button type="button" class="g-filter-btn active" data-filter="all" data-i18n="galFilterAll">Todos os Projetos</button>
+        <button type="button" class="g-filter-btn" data-filter="pavers" data-i18n="galFilterPavers">Pavers e Hardscape</button>
+        <button type="button" class="g-filter-btn" data-filter="landscaping" data-i18n="galFilterLand">Paisagismo e Grama</button>
+        <button type="button" class="g-filter-btn" data-filter="lighting" data-i18n="galFilterLight">Iluminação Externa</button>
+      </div>
+      <span class="gallery-count" id="galleryCount">8 / 8</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Work 01 -->
+      <button type="button" class="gallery-item span-7" data-category="pavers" data-title-key="galW1Title" data-cat-key="galCatPavers">
+        <img src="gallery/work01.jpeg" alt="Entrada residencial pavimentada com pavers" loading="eager" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatPavers">Pavers e Hardscape</span></span>
+          <span class="gallery-title" data-i18n="galW1Title">Entrada Residencial em Pavers Multitons</span>
+        </span>
+      </button>
+
+      <!-- Work 02 -->
+      <button type="button" class="gallery-item span-5" data-category="landscaping" data-title-key="galW2Title" data-cat-key="galCatLand">
+        <img src="gallery/work02.jpeg" alt="Paisagismo residencial com gramado e palmeira" loading="eager" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLand">Paisagismo e Grama</span></span>
+          <span class="gallery-title" data-i18n="galW2Title">Paisagismo Frontal e Renovação de Gramado</span>
+        </span>
+      </button>
+
+      <!-- Work 03 -->
+      <button type="button" class="gallery-item" data-category="pavers" data-title-key="galW3Title" data-cat-key="galCatPavers">
+        <img src="gallery/work03.jpeg" alt="Deck de piscina e pátio lateral em pavers" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatPavers">Pavers e Hardscape</span></span>
+          <span class="gallery-title" data-i18n="galW3Title">Pátio de Piscina e Corredor em Pavers</span>
+        </span>
+      </button>
+
+      <!-- Work 04 -->
+      <button type="button" class="gallery-item" data-category="pavers" data-title-key="galW4Title" data-cat-key="galCatPavers">
+        <img src="gallery/work04.jpeg" alt="Fire pit circular em pedra com banco curvo" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatPavers">Pavers e Hardscape</span></span>
+          <span class="gallery-title" data-i18n="galW4Title">Espaço Fire Pit e Muro Assento em Pedra</span>
+        </span>
+      </button>
+
+      <!-- Work 08 -->
+      <button type="button" class="gallery-item" data-category="lighting" data-title-key="galW8Title" data-cat-key="galCatLight">
+        <img src="gallery/work08.jpeg" alt="Colunas de entrada iluminadas ao anoitecer" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLight">Iluminação Externa</span></span>
+          <span class="gallery-title" data-i18n="galW8Title">Iluminação de Entrada e Fachada Residencial</span>
+        </span>
+      </button>
+
+      <!-- Work 05 -->
+      <button type="button" class="gallery-item" data-category="lighting" data-title-key="galW5Title" data-cat-key="galCatLight">
+        <img src="gallery/work05.jpeg" alt="Iluminação arquitetônica noturna e acesso em pavers" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLight">Iluminação Externa</span></span>
+          <span class="gallery-title" data-i18n="galW5Title">Iluminação de Destaque em Palmeiras e Acesso</span>
+        </span>
+      </button>
+
+      <!-- Work 06 -->
+      <button type="button" class="gallery-item" data-category="landscaping" data-title-key="galW6Title" data-cat-key="galCatLand">
+        <img src="gallery/work06.jpeg" alt="Grama sintética com canteiros de pedras brancas e palmeiras" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLand">Paisagismo e Grama</span></span>
+          <span class="gallery-title" data-i18n="galW6Title">Grama Sintética Premium e Palmeiras Tropicais</span>
+        </span>
+      </button>
+
+      <!-- Work 07 -->
+      <button type="button" class="gallery-item" data-category="lighting" data-title-key="galW7Title" data-cat-key="galCatLight">
+        <img src="gallery/work07.jpeg" alt="Iluminação cênica de jardim e fachada ao entardecer" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLight">Iluminação Externa</span></span>
+          <span class="gallery-title" data-i18n="galW7Title">Projeto Luminotécnico de Jardim e Árvores</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Visualizador de foto" aria-hidden="true">
+  <div class="lightbox-top">
+    <span class="lightbox-counter" id="lbCounter">01 / 08</span>
+    <button type="button" class="lightbox-close" id="lbClose" aria-label="Fechar">✕</button>
+  </div>
+  <div class="lightbox-stage" id="lbStage">
+    <button type="button" class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Foto anterior">‹</button>
+    <img class="lightbox-img" id="lbImg" src="gallery/work01.jpeg" alt="" referrerpolicy="no-referrer">
+    <button type="button" class="lightbox-nav lightbox-next" id="lbNext" aria-label="Próxima foto">›</button>
+  </div>
+  <div class="lightbox-caption">
+    <h3 id="lbTitle"></h3>
+    <p id="lbMeta"></p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq" style="background-color: #E8EFDF;">
+  <div class="wrap center">
+    <!-- TRANSFORM YOUR OUTDOOR SPACE AREA -->
+    <div class="transform-box" style="width: 100%; max-width: 820px; margin: 44px auto 0; background: linear-gradient(135deg, #007D5D 0%, #004332 100%); border-radius: 20px; padding: 40px 32px; text-align: center; color: #fff; box-shadow: 0 12px 30px rgba(0, 67, 50, 0.15); box-sizing: border-box;">
+      <h3 style="font-size: clamp(1.6rem, 3.2vw, 2.3rem); font-weight: 800; letter-spacing: -0.01em; color: #fff; margin-bottom: 12px; text-transform: uppercase;" data-i18n="transformTitle">TRANSFORME SEU ESPAÇO EXTERNO</h3>
+      <p style="font-size: 1.05rem; color: #dcefe1; max-width: 580px; margin: 0 auto 16px; line-height: 1.6;" data-i18n="transformSub">Conte-nos sobre seu projeto e descubra a solução ideal para sua propriedade.</p>
+      <p style="font-size: 0.9rem; font-weight: 700; color: #a8d94b; letter-spacing: 0.03em; margin: 0 auto 24px; text-transform: uppercase;" data-i18n="transformFeatures">Solicite uma avaliação gratuita • Ligue para nós • Envie uma mensagem</p>
+      <a href="https://wa.me/16145550192?text=Ol%C3%A1!%20Gostaria%20de%20transformar%20meu%20espa%C3%A7o%20externo." target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 10px; background-color: #a8d94b; color: #14311f; font-weight: 800; font-size: 1rem; padding: 14px 32px; border-radius: 9999px; text-decoration: none; transition: transform 0.2s, background-color 0.2s;" data-i18n="transformBtn">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer style="background: linear-gradient(135deg, #007D5D 0%, #004332 100%);">
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <a href="#" class="logo" aria-label="Garden Now"><span id="footer-logo-box" style="width: 160px; height: 207px; border-radius: 20px; overflow: hidden; display: block; flex-shrink: 0; box-sizing: border-box; background: url('public/LogoInsta2.png') center center / cover no-repeat; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);"></span></a>
+        <p style="width: 160px; height: 65px; text-align: center;" data-i18n="footAbout">Paisagismo, Elementos Estruturais, Áreas Externas e Iluminação</p>
+      </div>
+      <div>
+        <h4 data-i18n="footServices">Services</h4>
+        <ul>
+          <li><a href="#svc-landscaping" data-i18n="footS1">Paisagismo e Reformas Externas</a></li>
+          <li><a href="#svc-pavers" data-i18n="footS2">Pavers e Pavimentação</a></li>
+          <li><a href="#svc-irrigation" data-i18n="footS3">Irrigação Inteligente</a></li>
+          <li><a href="#svc-drainage" data-i18n="footS4">Soluções de Drenagem</a></li>
+          <li><a href="#svc-turf" data-i18n="footS5">Instalação de Grama Sintética</a></li>
+          <li><a href="#svc-structures" data-i18n="footS6">Telas, Calhas e Estruturas Externas</a></li>
+          <li><a href="#svc-lighting" data-i18n="footS7">Iluminação de Jardim e Destaque</a></li>
+          <li><a href="#svc-retaining-walls" data-i18n="footS8">Muros de Contenção</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footCompany">Company</h4>
+        <ul>
+          <li><a href="#" data-i18n="navHome">Início</a></li>
+          <li><a href="#services-solutions" data-i18n="navServices">Serviços</a></li>
+          <li><a href="#quote" data-i18n="navContact">Contato</a></li>
+          <li><a href="#areas" data-i18n="navAreas">Área de Atendimento</a></li>
+          <li><a href="#about" data-i18n="navAbout">Sobre-nós</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footContact">Contact</h4>
+        <ul>
+          <li>
+            <a href="https://wa.me/14079141712" class="wa-link" target="_blank" rel="noopener">
+              <svg class="wa-ico-inline" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+              <span data-i18n="footWa">WhatsApp</span>
+            </a>
+          </li>
+          <li><a href="tel:4079141712">(407) 914-1712</a></li>
+          <li><a href="mailto:gardennowlandscape@gmail.com">gardennowlandscape@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbar">
+      <span data-i18n="footRights">© 2026 Garden Now Grounds Care. All rights reserved.</span>
+      <span>Privacy · Terms · Accessibility</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============ CONFIG ============ */
+const WA_NUMBER = '14079141712'; // <-- troque pelo seu número, formato internacional sem "+"
+
+/* ============ i18n dictionary ============ */
+const I18N = {
+  en: {
+    topBar:"Landscaping, Hardscape, Outdoor Living and Lighting",
+    topBarPhone:'Free on-site assessment · Call <strong style="color:#ffdc00;">(407) 914-1712</strong>',
+    logoTag:"Landscaping",
+    navHome:"Home",
+    navServices:"Services", navContact:"Contact Us", navRes:"Residential", navCom:"Commercial",
+    navAreas:"Service Area", navAbout:"About Us", navGallery:"Gallery", navFaq:"FAQs",
+    navWa:"WhatsApp", fabTip:"Chat on WhatsApp",
+    waText:"Hi! I'd like a quote for my property.",
+    waFormIntro:"New request from the website:",
+    phoneHours:"Mon–Sat 7am–6pm",
+    heroEyebrow:"Irrigation & landscape . Orlando Metro",
+    heroTitle:'Beautiful outdoor spaces. <em>Designed to last.</em>',
+    heroLead:"We design and install landscaping, irrigation, drainage, synthetic turf, and outdoor improvements for homes and businesses in Orlando, Florida.",
+    heroCallout:"Request an assessment !!",
+    heroCallPhone:"Call (407) 914-1712",
+    heroCta1:"Call (407) 914-1712", heroCta2:"See What We Do",
+    stat1:"Years in business", stat2:"Properties serviced", stat3:"Average rating",
+    lawnTag:"Lush striped turf with uniform precision cut",
+    lawnSub:"100% focused on grass health, density & clean stripes",
+    formTitle:"Message us on WhatsApp",
+    formHint:"Fill this in and we'll open WhatsApp with your message ready to send.",
+    lblName:"Name", lblPhone:"Phone", lblEmail:"Email", lblProp:"Property",
+    lblService:"Service", lblMsg:"Tell us briefly about the service",
+    phName:"Jane Rivera", phPhone:"(407) 914-1712", phEmail:"you@email.com",
+    phMsg:"Corner lot, about a quarter acre, need weekly mowing…",
+    optResidential:"Owned", optCommercial:"Rented",
+    svcMaintenance:"Lawn & Grounds Maintenance",
+    svcDesign:"Landscape Design & Installation",
+    svcIrrigation:"Irrigation", svcLighting:"Landscape Lighting",
+    svcBeds:"Flower & Garden Beds",
+    svcHardscape:"Hardscape / Patios", svcSnow:"Snow & Ice",
+    formSubmit:"Send on WhatsApp", formNote:"No obligation. We never sell your information.",
+    formOk:"✓ Opening WhatsApp… if nothing happens, tap the button below.",
+    formSent:"Opening WhatsApp ✓",
+    waOut:"Open WhatsApp in a new tab",
+    trustText:"Built on a simple promise: show up on time, do it right, leave it clean.",
+    badge1:"Licensed & Insured", badge2:"Eco-Conscious Products",
+    badge3:"Satisfaction Guaranteed", badge4:"Locally Owned",
+    svcEyebrow:"What We Do",
+    svcTitle:"From planning to execution, we take care of every detail to transform your property's outdoor space.",
+    svcSub:"At Garden Now Landscaping, we bring your outdoor spaces to life, creating environments that are more beautiful, practical, and valuable. We offer complete solutions in landscaping, synthetic turf installation, irrigation systems, drainage, outdoor lighting, pavers, and much more. Every project is carried out with attention to detail, careful planning, and a commitment to service quality.",
+    svcSolutionsTitle:"Solutions to transform, protect, and enhance your property",
+    card1h:"Landscaping & Outdoor Renovations",
+    card1p:"Comprehensive planning and outdoor space transformation featuring curated plant selection, custom garden beds, natural sod or artificial turf, decorative stones, and tailored landscape elements.",
+    card2h:"Pavers & Paving",
+    card2p:"Paver installation for driveways, walkways, patios, and outdoor living areas, featuring durable base construction and professional craftsmanship.",
+    card3h:"Smart Irrigation",
+    card3p:"Design, installation, upgrades, and repair tailored to soil type, plant varieties, and sun exposure—including smart timers, rain sensors, rotary heads, valves, and precision drip irrigation.",
+    card4h:"Drainage Solutions",
+    card4p:"Subsurface and surface solutions to eliminate flooding and erosion, including French drains, piping, catch basins, channel drains, dry wells, roof drainage, and flooded zone grading.",
+    card5h:"Synthetic Turf Installation",
+    card5p:"Professional installation for lawns, backyards, pool surrounds, HOAs, pet areas, and sports spaces, delivering beauty, convenience, and low maintenance.",
+    card6h:"Screens, Gutters & Outdoor Structures",
+    card6p:"Installation and improvements for screen enclosures, plus gutters and structures to properly divert rainwater and provide greater comfort and protection.",
+    card7h:"Landscape & Accent Lighting",
+    card7p:"Custom outdoor lighting designs to highlight plants, walkways, entryways, and gathering areas—combining safety, functionality, and nighttime elegance.",
+    card8h:"Retaining Walls",
+    card8p:"Engineered wall construction to stabilize soil, manage grade changes, prevent erosion, and maximize usable outdoor living spaces.",
+    cardMore:"Learn more →",
+    segEyebrow:"Who We Serve",
+    segTitle:"Irrigation, Drainage & Property Protection",
+    segSub:"Beyond visual transformation, Garden Now Landscaping provides engineered solutions to keep your landscape healthy, manage water flow, and protect your property in all seasons.",
+    tabRes:"IRRIGATION", tabCom:"DRAINAGE",
+    resP:"Protect, enhance, and enjoy your property with a custom-engineered solution tailored to your space.",
+    resL1:"Irrigation design and installation tailored to soil type, plant varieties, and sun exposure.",
+    resL2:"Smart irrigation featuring modern controllers, rain sensors, and water-saving conservation technology.",
+    resL3:"Comprehensive repair of leaks, broken rotor heads, water pressure issues, valves, and controllers.",
+    resL4:"Targeted drip irrigation for garden beds, specimen trees, and shrubs, delivering water right to the roots.",
+    resL5:"Seasonal system tune-ups and inspections, including spray nozzle calibration and weather-based controller programming.",
+    resPlanTitle:"Typical residential plan",
+    resPlan1b:"Weekly season", resPlan1s:"Apr – Oct, mowing + edges + blow-off",
+    resPlan2b:"Monthly detail", resPlan2s:"Bed weeding, pruning, mulch touch-ups",
+    resPlan3b:"Twice a year", resPlan3s:"Deep clean-ups & fertilizing program",
+    comP:"Protect, enhance, and enjoy your property with a custom-engineered solution tailored to your space.",
+    comL1:"Subsurface drainage featuring French drains and piping to manage excess groundwater.",
+    comL2:"Surface drainage with catch basins and channel grates for swift stormwater runoff.",
+    comL3:"Dry wells and soakaway pits engineered for gradual ground absorption based on local conditions.",
+    comL4:"Roof runoff drainage connecting downspouts to direct water safely away from foundations.",
+    comL5:"Grading and reshaping of waterlogged spots to enhance runoff and eliminate standing water.",
+    comPlanTitle:"Why property managers stay",
+    comPlan1b:"Documented visits", comPlan1s:"Photos and service logs after every stop",
+    comPlan2b:"Fixed monthly billing", comPlan2s:"One invoice, no change orders for routine work",
+    comPlan3b:"24/7 winter line", comPlan3s:"Storm response during snow events",
+    areaEyebrow:"Service Area",
+    areaTitle:"Serving Orlando and Surrounding Areas.",
+    areaSub:"Winter Garden • Windermere • Downtown Orlando • Lake Nona • Hunter’s Creek",
+    areaCta1:"Message on WhatsApp", areaCta2:"Call (407) 914-1712",
+    testiEyebrow:"Reviews", testiTitle:"Synthetic Turf Installation",
+    turfIntro:"Transform your outdoor living space with premium synthetic turf: a beautiful, resilient, and practical solution for a vibrant green lawn all year round, without the constant maintenance of natural grass. Ideal for residential properties, commercial facilities, HOAs, recreation areas, pet play spaces, and athletic greens.",
+    turfAdvantagesTitle:"Advantages of Synthetic Turf",
+    turfAdv1:"Low maintenance: significantly reduces mowing, watering, and fertilizing requirements.",
+    turfAdv2:"Year-round beauty with a vibrant, uniform green aesthetic and advanced UV resistance.",
+    turfAdv3:"Substantial water conservation compared to traditionally irrigated natural turf.",
+    turfAdv4:"Exceptional durability for high-traffic zones, outdoor entertainment, and active use.",
+    turfAdv5:"Versatile applications for lawns, pool surrounds, dedicated pet areas, and custom sports turf.",
+    turfProcessTitle:"How the Installation Process Works",
+    turfStep1:"Site Assessment - Area analysis and definition of the best custom solution.",
+    turfStep2:"Ground Preparation - Removal of existing turf, precise grading, and sub-base compaction.",
+    turfStep3:"Installation - Precision cutting, positioning, seam fastening, and finishing.",
+    turfStep4:"Final Inspection - Verification of aesthetic finishing, stability, and drainage efficiency.",
+    turfCtaTitle:"Want a greener, low-maintenance outdoor space? Request your free assessment today.",
+    turfCtaBtn:"Request Free Assessment",
+    testi1p:'"Same crew every week, always on time, and they actually edge the walkway instead of just blowing clippings at it. It\'s a small thing that makes a big difference."',
+    testi1s:"Ashford · Weekly mowing",
+    testi2p:'"They designed and installed our front beds and a paver patio. Quote was clear, timeline held, and they cleaned up better than they found it."',
+    testi2s:"Glenwood · Landscape & hardscape",
+    testi3p:'"Managing six properties, I needed one reliable vendor. Their reports after each visit mean I stop chasing people for proof the work happened."',
+    testi3s:"Bexley · Commercial portfolio",
+    faqEyebrow:"Questions", faqTitle:"A simple and professional process",
+    faqSub:"Straight answers before you ever send a message.",
+    faq1q:"01 - Contact, Visit & Consultation",
+    faq1a:"We visit your home or business to get to know the space, understand your needs, and discuss your preferences and expectations.",
+    faq2q:"02 - Custom Planning",
+    faq2a:"We organize the collected information and prepare a customized proposal, considering your goals, the characteristics of the space, and the available budget.",
+    faq3q:"03 - We approve the plan",
+    faq3a:"We present the proposal with the planned services, costs, and estimated timeline. Upon your approval, we finalize the necessary details to begin the work.",
+    faq4q:"04 - We transform the space",
+    faq4a:"We put the plan into action, executing every step with professionalism, attention to detail, and commitment to the agreed timeline to transform your outdoor space.",
+    faq5q:"Can you take over messy beds and overgrown yards?",
+    faq5a:"That's most of our first visits. We start with a one-time clean-up and reset, then move you onto a regular schedule that keeps it that way.",
+    ctaTitle:"Ready for a yard you don't think about?",
+    ctaText:"Free on-site assessment. No contracts, no pressure — just message us.",
+    ctaBtn:"Chat on WhatsApp",
+    transformTitle:"TRANSFORM YOUR OUTDOOR SPACE",
+    transformSub:"Tell us about your project and discover the ideal solution for your property.",
+    transformFeatures:"Request a Free Assessment • Call Us • Send a Message",
+    transformBtn:"Chat on WhatsApp",
+    footAbout:"Landscaping, Hardscape, Outdoor Living and Lighting",
+    footServices:"Services",
+    footS1:"Landscaping & Outdoor Renovations",
+    footS2:"Pavers & Paving",
+    footS3:"Smart Irrigation",
+    footS4:"Drainage Solutions",
+    footS5:"Synthetic Turf Installation",
+    footS6:"Screens, Gutters & Outdoor Structures",
+    footS7:"Landscape & Accent Lighting",
+    footS8:"Retaining Walls",
+    footCompany:"Company", footContact:"Contact", footWa:"WhatsApp",
+    footRights:"© 2026 Garden Now Grounds Care. All rights reserved.",
+    galKicker:"Our Work",
+    galTitle:"Our Completed Projects in Greater Orlando",
+    galSub:"Browse real installations of custom paver driveways, poolside patios, stone fire pits, landscaping, synthetic turf, and architectural outdoor lighting crafted by Garden Now Landscaping.",
+    galFilterAll:"All Projects",
+    galFilterPavers:"Pavers & Hardscape",
+    galFilterLand:"Landscaping & Turf",
+    galFilterLight:"Outdoor Lighting",
+    galCatPavers:"Pavers & Hardscape",
+    galCatLand:"Landscaping & Turf",
+    galCatLight:"Outdoor Lighting",
+    galShowing:"projects shown",
+    galW1Title:"Custom Multi-Tone Paver Driveway",
+    galW2Title:"Estate Front Lawn & Palm Landscaping",
+    galW3Title:"Poolside Patio & Walkway Pavers",
+    galW4Title:"Custom Stone Fire Pit & Seating Wall",
+    galW5Title:"Evening Palm & Driveway Accent Lighting",
+    galW6Title:"Premium Synthetic Turf & Tropical Palms",
+    galW7Title:"Architectural Landscape & Tree Uplighting",
+    galW8Title:"Illuminated Stone Entryway Columns"
+  },
+  pt: {
+    topBar:"Paisagismo, Hardscape, Áreas Externas e Iluminação",
+    topBarPhone:'Avaliação gratuita no local · Ligue <strong style="color:#ffdc00;">(407) 914-1712</strong>',
+    logoTag:"Landscaping",
+    navHome:"Início",
+    navServices:"Serviços", navContact:"Contato", navRes:"Residencial", navCom:"Comercial",
+    navAreas:"Área de Atendimento", navAbout:"Sobre-nós", navGallery:"Galeria", navFaq:"Perguntas",
+    navWa:"WhatsApp", fabTip:"Fale no WhatsApp",
+    waText:"Olá! Gostaria de um orçamento para o meu imóvel.",
+    waFormIntro:"Nova solicitação pelo site:",
+    phoneHours:"Seg–Sáb 7h–18h",
+    heroEyebrow:"Irrigation & landscape . Orlando Metro",
+    heroTitle:'Belos espaços ao ar livre. <em>Feitos para durar.</em>',
+    heroLead:"Projetamos e instalamos paisagismo, irrigação, drenagem, grama sintética e melhorias para áreas externas em residências e empresas em Orlando, Flórida.",
+    heroCallout:"Solicite uma avaliação !!",
+    heroCallPhone:"Ligue (407) 914-1712",
+    heroCta1:"Call (407) 914-1712", heroCta2:"Ver o que fazemos",
+    stat1:"Anos de mercado", stat2:"Imóveis atendidos", stat3:"Avaliação média",
+    lawnTag:"Gramado denso com corte listrado e uniforme",
+    lawnSub:"Foco total na saúde, densidade e acabamento da grama",
+    formTitle:"Fale conosco no WhatsApp",
+    formHint:"Preencha e abriremos o WhatsApp com sua mensagem pronta para enviar.",
+    lblName:"Nome", lblPhone:"Telefone", lblEmail:"E-mail", lblProp:"Tipo de imóvel",
+    lblService:"Serviço", lblMsg:"Nos conte brevemente sobre o Serviço",
+    phName:"Ana Ribeiro", phPhone:"(11) 90000-0000", phEmail:"voce@email.com",
+    phMsg:"Terreno de esquina, cerca de 1.000 m², preciso de corte semanal…",
+    optResidential:"Próprio", optCommercial:"Alugado",
+    svcMaintenance:"Manutenção de Grama & Jardim",
+    svcDesign:"Projeto & Instalação de Paisagismo",
+    svcIrrigation:"Irrigação", svcLighting:"Iluminação",
+    svcBeds:"Canteiros & Flores",
+    svcHardscape:"Pedras / Pisos Externos", svcSnow:"Neve & Gelo",
+    formSubmit:"Enviar no WhatsApp", formNote:"Sem compromisso. Nunca vendemos seus dados.",
+    formOk:"✓ Abrindo o WhatsApp… se nada acontecer, toque no botão abaixo.",
+    formSent:"Abrindo WhatsApp ✓",
+    waOut:"Abrir o WhatsApp em nova aba",
+    trustText:"Uma promessa simples: chegar na hora, fazer bem feito, deixar tudo limpo.",
+    badge1:"Licenciada e Segurada", badge2:"Produtos Eco-Conscientes",
+    badge3:"Satisfação Garantida", badge4:"Empresa Local",
+    svcEyebrow:"O que fazemos",
+    svcTitle:"Do planejamento à execução, cuidamos de cada detalhe para transformar o espaço externo da sua propriedade.",
+    svcSub:"Na Garden Now Landscaping, damos vida aos seus espaços externos, criando ambientes mais bonitos, práticos e valorizados. Oferecemos soluções completas em paisagismo, instalação de grama sintética, sistemas de irrigação, drenagem, iluminação externa, pavers e muito mais. Cada projeto é realizado com atenção aos detalhes, planejamento cuidadoso e compromisso com a qualidade do serviço.",
+    svcSolutionsTitle:"Soluções para transformar, proteger e valorizar seu imóvel",
+    card1h:"Paisagismo e reformas externas",
+    card1p:"Planejamento e transformação de áreas externas com seleção de plantas, composição de canteiros, gramados naturais ou sintéticos, pedras decorativas e outros elementos paisagísticos.",
+    card2h:"Pavers e pavimentação",
+    card2p:"Instalação de pavers em entradas de veículos, calçadas, pátios e áreas de convivência, com composição durável e acabamento profissional.",
+    card3h:"Irrigação inteligente",
+    card3p:"Projeto, instalação, atualização e reparo de sistemas conforme o solo, as plantas e a exposição solar, incluindo controladores, sensores de chuva, aspersores, válvulas e irrigação por gotejamento.",
+    card4h:"Soluções de drenagem",
+    card4p:"Soluções subterrâneas e superficiais para controlar alagamentos e erosão, incluindo drenos franceses, tubulações, caixas coletoras, canaletas, poços de infiltração, drenagem de telhados e correção de áreas alagadas.",
+    card5h:"Instalação de grama sintética",
+    card5p:"Instalação profissional para jardins, quintais, piscinas, condomínios, áreas para animais de estimação e espaços esportivos, com beleza, praticidade e baixa manutenção.",
+    card6h:"Telas, calhas e estruturas externas",
+    card6p:"Instalação e melhorias em áreas teladas, além de calhas e estruturas para direcionar a água da chuva e proporcionar mais conforto e proteção.",
+    card7h:"Iluminação de jardim",
+    card7p:"Projetos de iluminação externa para valorizar plantas, caminhos, entradas e áreas de convivência, unindo segurança, funcionalidade e beleza.",
+    card8h:"Muros de contenção",
+    card8p:"Construção de estruturas para estabilizar o terreno, controlar desníveis e aproveitar melhor os espaços externos.",
+    cardMore:"Saiba mais →",
+    segEyebrow:"Para quem atendemos",
+    segTitle:"Irrigação, drenagem e proteção do imóvel",
+    segSub:"Além da transformação visual, a Garden Now Landscaping oferece soluções técnicas para manter o paisagismo saudável, controlar a água e proteger a propriedade em todas as estações.",
+    tabRes:"IRRIGAÇÃO", tabCom:"DRENAGEM",
+    resP:"Proteja, valorize e aproveite melhor sua propriedade com uma solução planejada para o seu espaço.",
+    resL1:"Projeto e instalação de irrigação conforme o solo, as plantas e a exposição solar.",
+    resL2:"Irrigação inteligente com controladores, sensores de chuva e tecnologia para reduzir o desperdício.",
+    resL3:"Reparo de vazamentos, aspersores, problemas de pressão, válvulas e controladores.",
+    resL4:"Irrigação por gotejamento para canteiros, árvores e arbustos, direcionando a água às raízes.",
+    resL5:"Inspeção e ajustes sazonais, com regulagem de aspersores e programação dos controladores conforme o clima.",
+    resPlanTitle:"Plano residencial típico",
+    resPlan1b:"Temporada semanal", resPlan1s:"Abr – Out, corte + bordas + limpeza",
+    resPlan2b:"Detalhe mensal", resPlan2s:"Capina dos canteiros, poda e reforço de cobertura",
+    resPlan3b:"Duas vezes ao ano", resPlan3s:"Limpeza profunda e programa de adubação",
+    comP:"Proteja, valorize e aproveite melhor sua propriedade com uma solução planejada para o seu espaço.",
+    comL1:"Drenagem subterrânea com drenos franceses e tubulações para controlar o excesso de água no solo.",
+    comL2:"Drenagem superficial com caixas coletoras e canaletas para escoamento da água da chuva.",
+    comL3:"Poços de infiltração para absorção gradual da água, conforme as condições locais.",
+    comL4:"Drenagem de telhados para direcionar a água das calhas para longe das fundações.",
+    comL5:"Correção de áreas alagadas para melhorar o escoamento e eliminar água parada.",
+    comPlanTitle:"Por que os gestores ficam",
+    comPlan1b:"Visitas documentadas", comPlan1s:"Fotos e registros após cada atendimento",
+    comPlan2b:"Fatura mensal fixa", comPlan2s:"Uma nota, sem custos extras para serviços de rotina",
+    comPlan3b:"Plantão de inverno 24/7", comPlan3s:"Resposta a tempestades durante nevascas",
+    areaEyebrow:"Área de Atendimento",
+    areaTitle:"Atendemos Orlando e Região.",
+    areaSub:"Winter Garden • Windermere • Downtown Orlando • Lake Nona • Hunter’s Creek",
+    areaCta1:"Falar no WhatsApp", areaCta2:"Ligue (407) 914-1712",
+    testiEyebrow:"Avaliações", testiTitle:"Instalação de grama sintética",
+    turfIntro:"Transforme seu espaço externo com grama sintética de alta qualidade: uma alternativa bonita, resistente e prática para quem deseja um gramado verde durante todo o ano, sem a manutenção constante da grama natural. A solução é indicada para residências, empresas, condomínios, áreas de lazer, espaços para animais de estimação e áreas esportivas.",
+    turfAdvantagesTitle:"Vantagens da grama sintética",
+    turfAdv1:"Baixa manutenção: reduz a necessidade de corte, irrigação e fertilização.",
+    turfAdv2:"Beleza durante todo o ano, com aparência verde e uniforme e resistência aos raios UV.",
+    turfAdv3:"Economia de água em comparação com gramados naturais irrigados.",
+    turfAdv4:"Durabilidade para áreas de circulação, lazer e uso frequente.",
+    turfAdv5:"Versatilidade para jardins, piscinas, áreas para animais de estimação e espaços esportivos.",
+    turfProcessTitle:"Como é o Processo de instalação?",
+    turfStep1:"Avaliação do local - Análise da área e definição da melhor solução.",
+    turfStep2:"Preparação do terreno - Remoção da vegetação existente, nivelamento e compactação da base.",
+    turfStep3:"Instalação - Corte, posicionamento, fixação e acabamento das emendas.",
+    turfStep4:"Inspeção final - Verificação do acabamento, da estabilidade e da drenagem.",
+    turfCtaTitle:"Quer um espaço mais verde e fácil de manter? Solicite sua avaliação gratuita hoje mesmo.",
+    turfCtaBtn:"Solicitar Avaliação Gratuita",
+    testi1p:'"Mesma equipe toda semana, sempre pontual, e eles realmente fazem a borda do caminho em vez de só soprar os restos. É um detalhe que faz muita diferença."',
+    testi1s:"Ashford · Corte semanal",
+    testi2p:'"Projetaram e instalaram nossos canteiros e um piso externo. Orçamento claro, prazo cumprido e deixaram tudo mais limpo do que encontraram."',
+    testi2s:"Glenwood · Paisagismo e pedras",
+    testi3p:'"Administrando seis imóveis, eu precisava de um fornecedor confiável. Os relatórios após cada visita acabaram com a correria atrás de comprovação."',
+    testi3s:"Bexley · Portfólio comercial",
+    faqEyebrow:"Dúvidas", faqTitle:"Um processo simples e profissional",
+    faqSub:"Respostas diretas antes mesmo de você enviar mensagem.",
+    faq1q:"01-Contato, Visita e Consultoria",
+    faq1a:"Vamos até sua residência ou empreendimento para conhecer o espaço, entender suas necessidades e conversar sobre suas preferências e expectativas.",
+    faq2q:"02- Planejamento Personalizado",
+    faq2a:"Organizamos as informações coletadas e elaboramos uma proposta personalizada, considerando seus objetivos, as características do espaço e o orçamento disponível.",
+    faq3q:"03-Aprovamos o plano",
+    faq3a:"Apresentamos a proposta com os serviços previstos, os custos e o prazo estimado. Após sua aprovação, definimos os detalhes necessários para iniciar o trabalho.",
+    faq4q:"04-Transformamos o espaço",
+    faq4a:"Colocamos o planejamento em prática, executando cada etapa com profissionalismo, atenção aos detalhes e compromisso com o prazo combinado, para transformar seu espaço externo.",
+    faq5q:"Vocês assumem canteiros bagunçados e quintais abandonados?",
+    faq5a:"É a maioria das nossas primeiras visitas. Começamos com uma limpeza e recuperação única, e depois passamos para uma agenda regular que mantém tudo em ordem.",
+    ctaTitle:"Pronto para ter um jardim do qual você não precisa pensar?",
+    ctaText:"Avaliação gratuita no local. Sem contrato e sem pressão — é só chamar no WhatsApp.",
+    ctaBtn:"Falar no WhatsApp",
+    transformTitle:"TRANSFORME SEU ESPAÇO EXTERNO",
+    transformSub:"Conte-nos sobre seu projeto e descubra a solução ideal para sua propriedade.",
+    transformFeatures:"Solicite uma avaliação gratuita • Ligue para nós • Envie uma mensagem",
+    transformBtn:"Falar no WhatsApp",
+    footAbout:"Paisagismo, Elementos Estruturais, Áreas Externas e Iluminação",
+    footServices:"Serviços",
+    footS1:"Paisagismo e Reformas Externas",
+    footS2:"Pavers e Pavimentação",
+    footS3:"Irrigação Inteligente",
+    footS4:"Soluções de Drenagem",
+    footS5:"Instalação de Grama Sintética",
+    footS6:"Telas, Calhas e Estruturas Externas",
+    footS7:"Iluminação de Jardim e Destaque",
+    footS8:"Muros de Contenção",
+    footCompany:"Empresa", footContact:"Contato", footWa:"WhatsApp",
+    footRights:"© 2026 Garden Now Cuidado de Jardins. Todos os direitos reservados.",
+    galKicker:"Portfólio de Projetos",
+    galTitle:"Nossos Projetos em Orlando e Região",
+    galSub:"Confira registros reais de pavimentação com pavers, paisagismo, grama sintética, áreas de convivência e iluminação externa executados pela equipe Garden Now Landscaping.",
+    galFilterAll:"Todos os Projetos",
+    galFilterPavers:"Pavers e Hardscape",
+    galFilterLand:"Paisagismo e Grama",
+    galFilterLight:"Iluminação Externa",
+    galCatPavers:"Pavers e Hardscape",
+    galCatLand:"Paisagismo e Grama",
+    galCatLight:"Iluminação Externa",
+    galShowing:"projetos exibidos",
+    galW1Title:"Entrada Residencial em Pavers Multitons",
+    galW2Title:"Paisagismo Frontal e Renovação de Gramado",
+    galW3Title:"Pátio de Piscina e Corredor em Pavers",
+    galW4Title:"Espaço Fire Pit e Muro Assento em Pedra",
+    galW5Title:"Iluminação de Destaque em Palmeiras e Acesso",
+    galW6Title:"Grama Sintética Premium e Palmeiras Tropicais",
+    galW7Title:"Projeto Luminotécnico de Jardim e Árvores",
+    galW8Title:"Iluminação de Entrada e Fachada Residencial"
+  }
+};
+
+let waSent = false;
+
+/* ============ language switching ============ */
+function setLang(lang){
+  try { localStorage.setItem('site_lang', lang); } catch(e){}
+  const dict = I18N[lang] || I18N.en;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-ph');
+    if(dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
+  });
+  // update every WhatsApp link with the right prefilled message
+  document.querySelectorAll('.wa-link').forEach(a=>{
+    a.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(dict.waText);
+  });
+  document.documentElement.lang = (lang === 'pt') ? 'pt-BR' : 'en';
+  document.querySelectorAll('.lang-btn').forEach(b=>{
+    b.classList.toggle('active', b.dataset.lang === lang);
+    b.setAttribute('aria-pressed', b.dataset.lang === lang);
+  });
+  const sl = document.getElementById('submitLabel');
+  if(sl) sl.textContent = waSent ? dict.formSent : dict.formSubmit;
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=> setLang(btn.dataset.lang));
+});
+
+/* ---------- mobile nav ---------- */
+const burger = document.getElementById('burger');
+const links = document.getElementById('navLinks');
+burger.addEventListener('click', () => links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+/* ---------- tabs ---------- */
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.tab).classList.add('active');
+  });
+});
+
+/* ---------- form → WhatsApp message ---------- */
+const quoteFormEl = document.getElementById('quoteForm');
+if (quoteFormEl) quoteFormEl.addEventListener('submit', e => {
+  e.preventDefault();
+  const lang = document.documentElement.lang.startsWith('pt') ? 'pt' : 'en';
+  const d = I18N[lang];
+  const val = id => ((document.getElementById(id).value) || '').trim();
+  const msg = [
+    d.waFormIntro,
+    d.lblName + ': ' + (val('fname') || '-'),
+    d.lblPhone + ': ' + (val('fphone') || '-'),
+    d.lblEmail + ': ' + (val('femail') || '-'),
+    d.lblProp + ': ' + document.getElementById('ftype').value,
+    d.lblService + ': ' + document.getElementById('fsvc').value,
+    val('fmsg') ? d.lblMsg + ' ' + val('fmsg') : ''
+  ].filter(Boolean).join('\n');
+
+  const url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+  waSent = true;
+
+  const out = document.getElementById('waOut');
+  out.href = url;
+  out.style.display = 'inline-flex';
+  document.getElementById('formOk').style.display = 'block';
+  document.getElementById('submitLabel').textContent = d.formSent;
+
+  try { window.open(url, '_blank'); } catch(err){ /* sandbox blocks popups */ }
+});
+
+/* initial language */
+const initialLang = (function() {
+  try {
+    const saved = localStorage.getItem('site_lang');
+    if (saved && I18N[saved]) return saved;
+  } catch(e){}
+  return (navigator.language && navigator.language.toLowerCase().startsWith('pt')) ? 'pt' : 'en';
+})();
+
+/* ---------- gallery filter & lightbox ---------- */
+(function(){
+  const grid = document.getElementById('galleryGrid');
+  const countEl = document.getElementById('galleryCount');
+  const filterBtns = Array.from(document.querySelectorAll('.g-filter-btn'));
+  const allItems = Array.from(document.querySelectorAll('.gallery-item'));
+  const lb = document.getElementById('galleryLightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbTitle = document.getElementById('lbTitle');
+  const lbMeta = document.getElementById('lbMeta');
+  const lbCounter = document.getElementById('lbCounter');
+  const lbClose = document.getElementById('lbClose');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+  const lbStage = document.getElementById('lbStage');
+
+  let activeFilter = 'all';
+  let visibleItems = allItems.slice();
+  let currentIndex = 0;
+
+  function getCurrentDict() {
+    const lang = document.documentElement.lang && document.documentElement.lang.startsWith('pt') ? 'pt' : 'en';
+    return I18N[lang] || I18N.en;
+  }
+
+  function updateCount() {
+    if (!countEl) return;
+    const dict = getCurrentDict();
+    countEl.textContent = visibleItems.length + ' / ' + allItems.length + ' ' + (dict.galShowing || '');
+  }
+
+  function applyFilter(filter) {
+    activeFilter = filter;
+    filterBtns.forEach(btn => {
+      const isAct = btn.dataset.filter === filter;
+      btn.classList.toggle('active', isAct);
+      btn.setAttribute('aria-pressed', isAct ? 'true' : 'false');
+    });
+    if (grid) {
+      grid.classList.toggle('is-filtered', filter !== 'all');
+    }
+    visibleItems = [];
+    allItems.forEach(item => {
+      const match = filter === 'all' || item.dataset.category === filter;
+      item.hidden = !match;
+      if (match) visibleItems.push(item);
+    });
+    updateCount();
+  }
+
+  function renderLightboxSlide() {
+    if (!visibleItems.length) return;
+    const item = visibleItems[currentIndex];
+    const img = item.querySelector('img');
+    const dict = getCurrentDict();
+    const titleKey = item.dataset.titleKey;
+    const catKey = item.dataset.catKey;
+
+    lbImg.src = img.currentSrc || img.getAttribute('src');
+    lbImg.alt = img.alt || '';
+    lbTitle.textContent = (titleKey && dict[titleKey]) ? dict[titleKey] : '';
+    lbMeta.textContent = (catKey && dict[catKey]) ? dict[catKey] : '';
+    const pad = n => String(n).padStart(2, '0');
+    lbCounter.textContent = pad(currentIndex + 1) + ' / ' + pad(visibleItems.length);
+  }
+
+  function openLightbox(item) {
+    const idx = visibleItems.indexOf(item);
+    currentIndex = idx >= 0 ? idx : 0;
+    renderLightboxSlide();
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+
+  function closeLightbox() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (visibleItems[currentIndex]) visibleItems[currentIndex].focus();
+  }
+
+  function stepSlide(delta) {
+    if (!visibleItems.length) return;
+    currentIndex = (currentIndex + delta + visibleItems.length) % visibleItems.length;
+    renderLightboxSlide();
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+  });
+
+  allItems.forEach(item => {
+    item.addEventListener('click', () => openLightbox(item));
+  });
+
+  lbClose.addEventListener('click', closeLightbox);
+  lbPrev.addEventListener('click', e => { e.stopPropagation(); stepSlide(-1); });
+  lbNext.addEventListener('click', e => { e.stopPropagation(); stepSlide(1); });
+  lbStage.addEventListener('click', e => {
+    if (e.target === lbStage) closeLightbox();
+  });
+  lb.addEventListener('click', e => {
+    if (e.target === lb) closeLightbox();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') stepSlide(-1);
+    if (e.key === 'ArrowRight') stepSlide(1);
+  });
+
+  // Refresh count & open lightbox labels whenever language changes
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      updateCount();
+      if (lb.classList.contains('open')) renderLightboxSlide();
+    });
+  });
+
+  window.__refreshGalleryI18n = function() {
+    updateCount();
+    if (lb.classList.contains('open')) renderLightboxSlide();
+  };
+})();
+
+setLang(initialLang);
+if (window.__refreshGalleryI18n) window.__refreshGalleryI18n();
+</script>
+</body>
+</html>
