@@ -495,7 +495,7 @@
 
   /* ---------- FOOTER ---------- */
   footer{background:var(--green-900);color:#a9c6b3;padding:64px 0 28px;font-size:.9rem;}
-  .fcols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;}
+  .fcols{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
   footer h4{color:#fff;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;}
   footer ul{list-style:none;display:grid;gap:10px;}
   footer a:hover{color:var(--lime);}
@@ -531,7 +531,7 @@
       background:#fff;padding:22px 24px;gap:18px;border-bottom:1px solid #e6e9e6;box-shadow:var(--shadow);
     }
   }
-  @media(max-width:760px){.phone{display:none;}}
+  @media(max-width:760px){.phone{display:none;}.topbar .wrap > span:nth-of-type(1){font-size:12px !important;}.nav-logo-wrap{width:213.6px;min-width:213.6px;}.nav-logo-wrap > img{width:213.6px !important;height:auto !important;}}
   @media(max-width:620px){
     .row2{grid-template-columns:1fr;}
     .fcols{grid-template-columns:1fr;}
@@ -966,7 +966,7 @@
 <div class="topbar" style="background: linear-gradient(90deg, #007D5D 0%, #004332 100%);">
   <div class="wrap" style="width:100%;max-width:100%;margin:0;padding:0 24px;display:flex;justify-content:space-between;align-items:center;">
     <span data-i18n="topBar" style="font-size:16px;color:#E8EFDF;font-family:'Futura Md BT','Futura',sans-serif;text-align:left;margin-left:0;margin-right:auto;justify-self:flex-start;">Paisagismo, Hardscape, Áreas Externas e Iluminação</span>
-    <span data-i18n="topBarPhone" style="color:#E8EFDF;font-family:'Futura Md BT','Futura',sans-serif;">Free on-site assessment · Call <strong style="color:#ffdc00;">(407) 914-1712</strong></span>
+    <span data-i18n="topBarPhone" style="color:#E8EFDF;font-family:'Futura Md BT','Futura',sans-serif;">Avaliação no local · Ligue <strong style="color:#ffdc00;">(407) 914-1712</strong></span>
   </div>
 </div>
 
@@ -1015,7 +1015,7 @@
         <button type="button" class="g-filter-btn" data-filter="landscaping" data-i18n="galFilterLand">Paisagismo e Grama</button>
         <button type="button" class="g-filter-btn" data-filter="lighting" data-i18n="galFilterLight">Iluminação Externa</button>
       </div>
-      <span class="gallery-count" id="galleryCount">8 / 8</span>
+      <span class="gallery-count" id="galleryCount">24 / 24</span>
     </div>
   </div>
 
@@ -1042,18 +1042,6 @@
         <span class="gallery-scrim">
           <span class="gallery-meta"><span data-i18n="galCatLand">Paisagismo e Grama</span></span>
           <span class="gallery-title" data-i18n="galW2Title">Paisagismo Frontal e Renovação de Gramado</span>
-        </span>
-      </button>
-
-      <!-- Work 03 -->
-      <button type="button" class="gallery-item" data-category="pavers" data-title-key="galW3Title" data-cat-key="galCatPavers">
-        <img src="gallery/work03.jpeg" alt="Deck de piscina e pátio lateral em pavers" loading="lazy" referrerpolicy="no-referrer">
-        <span class="gallery-zoom-affordance" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-        <span class="gallery-scrim">
-          <span class="gallery-meta"><span data-i18n="galCatPavers">Pavers e Hardscape</span></span>
-          <span class="gallery-title" data-i18n="galW3Title">Pátio de Piscina e Corredor em Pavers</span>
         </span>
       </button>
 
@@ -1116,6 +1104,210 @@
           <span class="gallery-title" data-i18n="galW7Title">Projeto Luminotécnico de Jardim e Árvores</span>
         </span>
       </button>
+
+      <!-- Work 29 -->
+      <button type="button" class="gallery-item" data-category="landscaping" data-title-key="galW29Title" data-cat-key="galCatLand">
+        <img src="gallery/work29.jpeg" alt="Paisagismo de alto padrão à beira do lago com palmeiras imperiais, piscina e grama sintética" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLand">Paisagismo e Grama</span></span>
+          <span class="gallery-title" data-i18n="galW29Title">Paisagismo Tropical à Beira do Lago com Grama Sintética</span>
+        </span>
+      </button>
+
+      <!-- Work 16 -->
+      <button type="button" class="gallery-item" data-category="pavers" data-title-key="galW16Title" data-cat-key="galCatPavers">
+        <img src="gallery/work16.jpeg" alt="Deck de piscina e spa revestido em pavers claros estilo travertino" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatPavers">Pavers e Hardscape</span></span>
+          <span class="gallery-title" data-i18n="galW16Title">Deck de Piscina e Spa em Pavers Claros</span>
+        </span>
+      </button>
+
+      <!-- Work 24 -->
+      <button type="button" class="gallery-item" data-category="lighting" data-title-key="galW24Title" data-cat-key="galCatLight">
+        <img src="gallery/work24.jpeg" alt="Projetor direcional de iluminação externa em LED aquecido sobre pedras brancas" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLight">Iluminação Externa</span></span>
+          <span class="gallery-title" data-i18n="galW24Title">Iluminação Focal em LED de Baixa Voltagem</span>
+        </span>
+      </button>
+
+      <!-- Work 23 -->
+      <button type="button" class="gallery-item" data-category="pavers" data-title-key="galW23Title" data-cat-key="galCatPavers">
+        <img src="gallery/work23.jpeg" alt="Área gourmet externa em pavers com churrasqueira em alvenaria, piscina e fire pit" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatPavers">Pavers e Hardscape</span></span>
+          <span class="gallery-title" data-i18n="galW23Title">Área Gourmet Completa, Deck e Fire Pit em Pavers</span>
+        </span>
+      </button>
+
+      <!-- Work 13 -->
+      <button type="button" class="gallery-item" data-category="landscaping" data-title-key="galW13Title" data-cat-key="galCatLand">
+        <img src="gallery/work13.jpeg" alt="Paisagismo residencial de esquina com palmeiras e gramado verde" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLand">Paisagismo e Grama</span></span>
+          <span class="gallery-title" data-i18n="galW13Title">Jardim Residencial com Palmeiras e Gramado Natural</span>
+        </span>
+      </button>
+
+      <!-- Work 30 -->
+      <button type="button" class="gallery-item" data-category="pavers" data-title-key="galW30Title" data-cat-key="galCatPavers">
+        <img src="gallery/work30.jpeg" alt="Área de piscina com estrutura telada, cascatas em pedra e deck em pavers" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatPavers">Pavers e Hardscape</span></span>
+          <span class="gallery-title" data-i18n="galW30Title">Deck de Piscina Telado com Cascatas em Pedra</span>
+        </span>
+      </button>
+
+      <!-- Work 14 -->
+      <button type="button" class="gallery-item" data-category="landscaping" data-title-key="galW14Title" data-cat-key="galCatLand">
+        <img src="gallery/work14.jpeg" alt="Quintal residencial revestido com grama sintética de alta densidade" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLand">Paisagismo e Grama</span></span>
+          <span class="gallery-title" data-i18n="galW14Title">Quintal Completo em Grama Sintética Residencial</span>
+        </span>
+      </button>
+
+      <!-- Work 18 -->
+      <button type="button" class="gallery-item" data-category="pavers" data-title-key="galW18Title" data-cat-key="galCatPavers">
+        <img src="gallery/work18.jpeg" alt="Passarela dupla de pisantes em pavers com pedras brancas junto à cerca" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatPavers">Pavers e Hardscape</span></span>
+          <span class="gallery-title" data-i18n="galW18Title">Passarela em Pisantes Duplos e Pavers Cinza</span>
+        </span>
+      </button>
+
+      <!-- Work 31 -->
+      <button type="button" class="gallery-item" data-category="lighting" data-title-key="galW31Title" data-cat-key="galCatLight">
+        <img src="gallery/work31.jpeg" alt="Iluminação noturna de área de piscina com cordões de luzes quentes e pátio em pavers" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLight">Iluminação Externa</span></span>
+          <span class="gallery-title" data-i18n="galW31Title">Iluminação Festiva e Cênica para Área de Piscina</span>
+        </span>
+      </button>
+
+      <!-- Work 15 -->
+      <button type="button" class="gallery-item" data-category="pavers" data-title-key="galW15Title" data-cat-key="galCatPavers">
+        <img src="gallery/work15.jpeg" alt="Pátio externo e corredor lateral em pavers multitons junto à piscina" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatPavers">Pavers e Hardscape</span></span>
+          <span class="gallery-title" data-i18n="galW15Title">Pátio Amplo e Corredor Lateral em Pavers</span>
+        </span>
+      </button>
+
+      <!-- Work 12 -->
+      <button type="button" class="gallery-item" data-category="landscaping" data-title-key="galW12Title" data-cat-key="galCatLand">
+        <img src="gallery/work12.jpeg" alt="Amplo gramado frontal e arbustos podados em residência de alto padrão" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLand">Paisagismo e Grama</span></span>
+          <span class="gallery-title" data-i18n="galW12Title">Paisagismo Clássico e Gramado de Grande Porte</span>
+        </span>
+      </button>
+
+      <!-- Work 19 -->
+      <button type="button" class="gallery-item" data-category="landscaping" data-title-key="galW19Title" data-cat-key="galCatLand">
+        <img src="gallery/work19.jpeg" alt="Seleção de seixos e pedras decorativas naturais para canteiros" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLand">Paisagismo e Grama</span></span>
+          <span class="gallery-title" data-i18n="galW19Title">Composição de Pedras e Seixos Decorativos</span>
+        </span>
+      </button>
+
+      <!-- Work 09 -->
+      <button type="button" class="gallery-item" data-category="landscaping" data-title-key="galW9Title" data-cat-key="galCatLand">
+        <img src="gallery/work09.jpeg" alt="Acabamento lateral com grama sintética e borda de pedras brancas" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLand">Paisagismo e Grama</span></span>
+          <span class="gallery-title" data-i18n="galW9Title">Grama Sintética com Borda em Pedras Brancas</span>
+        </span>
+      </button>
+
+      <!-- Work 26 -->
+      <button type="button" class="gallery-item" data-category="landscaping" data-title-key="galW26Title" data-cat-key="galCatLand">
+        <img src="gallery/work26.jpeg" alt="Plantio de palmeira tropical com manta de contenção e grama sintética ao fundo" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLand">Paisagismo e Grama</span></span>
+          <span class="gallery-title" data-i18n="galW26Title">Preparação de Canteiro com Palmeira e Manta Protetora</span>
+        </span>
+      </button>
+
+      <!-- Work 27 -->
+      <button type="button" class="gallery-item" data-category="landscaping" data-title-key="galW27Title" data-cat-key="galCatLand">
+        <img src="gallery/work27.jpeg" alt="Integração entre pátio telado em pavers e gramado sintético residencial" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLand">Paisagismo e Grama</span></span>
+          <span class="gallery-title" data-i18n="galW27Title">Integração de Grama Sintética com Lanai Telado</span>
+        </span>
+      </button>
+
+      <!-- Work 17 -->
+      <button type="button" class="gallery-item" data-category="pavers" data-title-key="galW17Title" data-cat-key="galCatPavers">
+        <img src="gallery/work17.jpeg" alt="Corredor lateral com pisantes quadrados sobre brita branca decorativa" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatPavers">Pavers e Hardscape</span></span>
+          <span class="gallery-title" data-i18n="galW17Title">Caminho Lateral com Pisantes e Pedra Branca</span>
+        </span>
+      </button>
+
+      <!-- Work 28 -->
+      <button type="button" class="gallery-item" data-category="landscaping" data-title-key="galW28Title" data-cat-key="galCatLand">
+        <img src="gallery/work28.jpeg" alt="Gramado sintético com canteiro de arbustos e drenagem lateral em pedras brancas" loading="lazy" referrerpolicy="no-referrer">
+        <span class="gallery-zoom-affordance" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="gallery-scrim">
+          <span class="gallery-meta"><span data-i18n="galCatLand">Paisagismo e Grama</span></span>
+          <span class="gallery-title" data-i18n="galW28Title">Jardim em Grama Sintética, Canteiro e Drenagem Lateral</span>
+        </span>
+      </button>
     </div>
   </div>
 </section>
@@ -1123,7 +1315,7 @@
 <!-- LIGHTBOX MODAL -->
 <div class="lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Visualizador de foto" aria-hidden="true">
   <div class="lightbox-top">
-    <span class="lightbox-counter" id="lbCounter">01 / 08</span>
+    <span class="lightbox-counter" id="lbCounter">01 / 24</span>
     <button type="button" class="lightbox-close" id="lbClose" aria-label="Fechar">✕</button>
   </div>
   <div class="lightbox-stage" id="lbStage">
@@ -1156,10 +1348,6 @@
   <div class="wrap">
     <div class="fcols">
       <div>
-        <a href="#" class="logo" aria-label="Garden Now"><span id="footer-logo-box" style="width: 160px; height: 207px; border-radius: 20px; overflow: hidden; display: block; flex-shrink: 0; box-sizing: border-box; background: url('public/LogoInsta2.png') center center / cover no-repeat; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);"></span></a>
-        <p style="width: 160px; height: 65px; text-align: center;" data-i18n="footAbout">Paisagismo, Elementos Estruturais, Áreas Externas e Iluminação</p>
-      </div>
-      <div>
         <h4 data-i18n="footServices">Services</h4>
         <ul>
           <li><a href="#svc-landscaping" data-i18n="footS1">Paisagismo e Reformas Externas</a></li>
@@ -1170,16 +1358,6 @@
           <li><a href="#svc-structures" data-i18n="footS6">Telas, Calhas e Estruturas Externas</a></li>
           <li><a href="#svc-lighting" data-i18n="footS7">Iluminação de Jardim e Destaque</a></li>
           <li><a href="#svc-retaining-walls" data-i18n="footS8">Muros de Contenção</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 data-i18n="footCompany">Company</h4>
-        <ul>
-          <li><a href="#" data-i18n="navHome">Início</a></li>
-          <li><a href="#services-solutions" data-i18n="navServices">Serviços</a></li>
-          <li><a href="#quote" data-i18n="navContact">Contato</a></li>
-          <li><a href="#areas" data-i18n="navAreas">Área de Atendimento</a></li>
-          <li><a href="#about" data-i18n="navAbout">Sobre-nós</a></li>
         </ul>
       </div>
       <div>
@@ -1211,7 +1389,7 @@ const WA_NUMBER = '14079141712'; // <-- troque pelo seu número, formato interna
 const I18N = {
   en: {
     topBar:"Landscaping, Hardscape, Outdoor Living and Lighting",
-    topBarPhone:'Free on-site assessment · Call <strong style="color:#ffdc00;">(407) 914-1712</strong>',
+    topBarPhone:'On-site assessment · Call <strong style="color:#ffdc00;">(407) 914-1712</strong>',
     logoTag:"Landscaping",
     navHome:"Home",
     navServices:"Services", navContact:"Contact Us", navRes:"Residential", navCom:"Commercial",
@@ -1362,16 +1540,32 @@ const I18N = {
     galShowing:"projects shown",
     galW1Title:"Custom Multi-Tone Paver Driveway",
     galW2Title:"Estate Front Lawn & Palm Landscaping",
-    galW3Title:"Poolside Patio & Walkway Pavers",
     galW4Title:"Custom Stone Fire Pit & Seating Wall",
     galW5Title:"Evening Palm & Driveway Accent Lighting",
     galW6Title:"Premium Synthetic Turf & Tropical Palms",
     galW7Title:"Architectural Landscape & Tree Uplighting",
-    galW8Title:"Illuminated Stone Entryway Columns"
+    galW8Title:"Illuminated Stone Entryway Columns",
+    galW9Title:"Synthetic Turf & White Stone Border Detail",
+    galW12Title:"Estate Front Lawn & Manicured Hedges",
+    galW13Title:"Signature Palm & Corner Lawn Landscaping",
+    galW14Title:"Full Backyard Synthetic Turf Installation",
+    galW15Title:"Expansive Multi-Tone Poolside Paver Patio",
+    galW16Title:"Travertine-Style Pool Deck & Raised Spa Pavers",
+    galW17Title:"Side-Yard Stepping Stones & Crushed Rock Path",
+    galW18Title:"Staggered Paver Walkway & Gravel Bed",
+    galW19Title:"Curated Decorative Landscape Stones & Pebbles",
+    galW23Title:"Outdoor Kitchen Island, Fire Pit & Pool Deck",
+    galW24Title:"Warm LED Architectural Spot Uplighting",
+    galW26Title:"Tropical Palm Planting & Weed-Barrier Prep",
+    galW27Title:"Lanai-Side Synthetic Turf & Perimeter Trim",
+    galW28Title:"Synthetic Lawn, Corner Planting Bed & Rock Drain",
+    galW29Title:"Lakefront Palm Design, Geometric Pavers & Turf",
+    galW30Title:"Screened Pool Deck Pavers & Stone Water Features",
+    galW31Title:"Evening Bistro String & Pool Patio Lighting"
   },
   pt: {
     topBar:"Paisagismo, Hardscape, Áreas Externas e Iluminação",
-    topBarPhone:'Avaliação gratuita no local · Ligue <strong style="color:#ffdc00;">(407) 914-1712</strong>',
+    topBarPhone:'Avaliação no local · Ligue <strong style="color:#ffdc00;">(407) 914-1712</strong>',
     logoTag:"Landscaping",
     navHome:"Início",
     navServices:"Serviços", navContact:"Contato", navRes:"Residencial", navCom:"Comercial",
@@ -1522,12 +1716,28 @@ const I18N = {
     galShowing:"projetos exibidos",
     galW1Title:"Entrada Residencial em Pavers Multitons",
     galW2Title:"Paisagismo Frontal e Renovação de Gramado",
-    galW3Title:"Pátio de Piscina e Corredor em Pavers",
     galW4Title:"Espaço Fire Pit e Muro Assento em Pedra",
     galW5Title:"Iluminação de Destaque em Palmeiras e Acesso",
     galW6Title:"Grama Sintética Premium e Palmeiras Tropicais",
     galW7Title:"Projeto Luminotécnico de Jardim e Árvores",
-    galW8Title:"Iluminação de Entrada e Fachada Residencial"
+    galW8Title:"Iluminação de Entrada e Fachada Residencial",
+    galW9Title:"Grama Sintética com Borda em Pedras Brancas",
+    galW12Title:"Paisagismo Clássico e Gramado de Grande Porte",
+    galW13Title:"Jardim Residencial com Palmeiras e Gramado Natural",
+    galW14Title:"Quintal Completo em Grama Sintética Residencial",
+    galW15Title:"Pátio Amplo e Corredor Lateral em Pavers",
+    galW16Title:"Deck de Piscina e Spa em Pavers Claros",
+    galW17Title:"Caminho Lateral com Pisantes e Pedra Branca",
+    galW18Title:"Passarela em Pisantes Duplos e Pavers Cinza",
+    galW19Title:"Composição de Pedras e Seixos Decorativos",
+    galW23Title:"Área Gourmet Completa, Deck e Fire Pit em Pavers",
+    galW24Title:"Iluminação Focal em LED de Baixa Voltagem",
+    galW26Title:"Preparação de Canteiro com Palmeira e Manta Protetora",
+    galW27Title:"Integração de Grama Sintética com Lanai Telado",
+    galW28Title:"Jardim em Grama Sintética, Canteiro e Drenagem Lateral",
+    galW29Title:"Paisagismo Tropical à Beira do Lago com Grama Sintética",
+    galW30Title:"Deck de Piscina Telado com Cascatas em Pedra",
+    galW31Title:"Iluminação Festiva e Cênica para Área de Piscina"
   }
 };
 
