@@ -41,6 +41,16 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
           ))}
         </div>
 
+        <div className="mt-8 text-center">
+          <a
+            href="gallery.html"
+            className="inline-flex items-center justify-center gap-2 bg-[#D8492E] hover:bg-[#c23d24] text-white font-bold px-8 py-3.5 rounded-full text-base transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
+            style={{ backgroundColor: '#D8492E' }}
+          >
+            <span>{t.faqGalleryBtn}</span>
+          </a>
+        </div>
+
         {/* Transform Your Outdoor Space Area */}
         <div
           className="mt-8 sm:mt-11 w-full max-w-[820px] mx-auto rounded-2xl sm:rounded-[20px] bg-gradient-to-br from-[#007D5D] to-[#004332] px-5 py-7 sm:px-8 sm:py-10 text-center text-white shadow-xl shadow-[#004332]/15 border border-[#007D5D]/40"

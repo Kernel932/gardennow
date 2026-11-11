@@ -21,7 +21,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
     >
       <div className="relative max-w-5xl mx-auto px-6 py-4 sm:px-8">
         <div className="flex flex-col justify-center max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] font-display mb-6 [text-wrap:balance]">
+          <h1 className="text-[31.6px] sm:text-5xl lg:text-6xl w-[340px] max-w-full mx-auto sm:mx-0 sm:w-auto font-extrabold tracking-tight leading-[1.1] font-display mb-6 [text-wrap:balance]">
             {t.heroTitlePrefix}
             <span className="text-[#a8d94b] underline decoration-[#a8d94b]/40 decoration-wavy decoration-2">
               {t.heroTitleHighlight}
@@ -29,7 +29,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
             {t.heroTitleSuffix}
           </h1>
 
-          <p className="text-lg sm:text-xl text-white leading-relaxed max-w-2xl mb-4 font-normal" style={{ color: '#ffffff' }}>
+          <p className="text-lg sm:text-xl text-white leading-relaxed w-[340px] max-w-full mx-auto sm:mx-0 sm:w-auto sm:max-w-2xl mb-4 font-normal" style={{ color: '#ffffff' }}>
             {t.heroLead}
           </p>
 

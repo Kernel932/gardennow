@@ -88,11 +88,16 @@ export const SegmentsSection: React.FC<SegmentsSectionProps> = ({ lang }) => {
                 </div>
               </div>
 
-              <div className="lg:col-span-5 bg-white/5 border border-white/15 rounded-3xl p-1.5 backdrop-blur-sm overflow-hidden h-[360px] max-w-[520px] w-full">
+              <div className="lg:col-span-5 relative bg-white/5 border border-white/15 rounded-3xl p-1.5 backdrop-blur-sm overflow-hidden h-[360px] max-w-[520px] w-full">
                 <img
-                  src="public/Irrigacao3.png"
+                  src="public/Irrigação.png"
                   alt="Irrigação Inteligente"
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="irrigation-slide-a absolute inset-0 w-full h-full object-cover rounded-2xl p-1.5"
+                />
+                <img
+                  src="public/Irrigaçãob.png"
+                  alt="Irrigação Inteligente"
+                  className="irrigation-slide-b absolute inset-0 w-full h-full object-cover rounded-2xl p-1.5"
                 />
               </div>
             </div>

@@ -43,7 +43,7 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ lang }) 
                 <MapPin className="w-3.5 h-3.5" />
                 <span>{t.areaEyebrow}</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#14311f] font-display">
+              <h2 className="text-[26px] font-extrabold tracking-tight text-[#14311f] font-display" style={{ fontSize: '26px' }}>
                 {t.areaTitle}
               </h2>
               <p className="mt-4 text-[18px] max-w-[793px] text-[#5d6a60] leading-relaxed">

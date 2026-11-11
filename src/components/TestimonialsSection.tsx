@@ -25,12 +25,6 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ lang }
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start pt-4">
             <div>
-              <h3
-                className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-display text-left"
-                style={{ color: '#ffffff', textAlign: 'left' }}
-              >
-                {t.turfAdvantagesTitle}
-              </h3>
               <ul className="space-y-3.5 pt-4">
                 {[t.turfAdv1, t.turfAdv2, t.turfAdv3, t.turfAdv4, t.turfAdv5].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-[#e2f0e7]">
@@ -77,8 +71,8 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ lang }
           </ol>
           <div className="pt-8 mt-10 border-t border-white/15 text-left">
             <h3
-              className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-display text-left mb-5 max-w-3xl leading-snug"
-              style={{ color: '#ffffff', textAlign: 'left' }}
+              className="text-[29.6px] font-extrabold tracking-tight text-white font-display text-left mb-5 max-w-3xl leading-snug"
+              style={{ color: '#ffffff', textAlign: 'left', fontSize: '29.6px' }}
             >
               {t.turfCtaTitle}
             </h3>

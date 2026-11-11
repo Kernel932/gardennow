@@ -12,11 +12,11 @@ export const TopBar: React.FC<TopBarProps> = ({ lang, onLanguageChange }) => {
   const t = translations[lang];
 
   return (
-    <div className="text-white text-xs py-2 px-4 sm:px-6 border-b border-[#00382a] w-full" style={{ background: 'linear-gradient(90deg, #007D5D 0%, #004332 100%)' }}>
+    <div className="text-white text-xs py-1 md:py-2 px-4 sm:px-6 border-b border-[#00382a] w-full max-h-[32px] md:max-h-none flex items-center box-border" style={{ background: 'linear-gradient(90deg, #007D5D 0%, #004332 100%)' }}>
       <div className="w-full max-w-full mx-0 flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-4 flex-wrap mr-auto justify-start text-left">
           <span 
-            className="flex items-center gap-1.5 font-medium text-left mr-auto justify-start text-[#E8EFDF] text-[16px]"
+            className="hidden md:flex items-center gap-1.5 font-medium text-left mr-auto justify-start text-[#E8EFDF] text-[16px]"
             style={{ textAlign: 'left', marginLeft: 0, marginRight: 'auto', color: '#E8EFDF', fontFamily: "'Futura Md BT', 'Futura', sans-serif", fontSize: '16px' }}
           >
             <ShieldCheck className="w-3.5 h-3.5 text-[#E8EFDF]" />
@@ -28,13 +28,13 @@ export const TopBar: React.FC<TopBarProps> = ({ lang, onLanguageChange }) => {
           </span>
         </div>
 
-        <div className="flex items-center gap-4 flex-wrap">
+        <div className="flex items-center justify-center md:justify-end gap-4 flex-wrap w-full md:w-auto">
           <a
             href="tel:5550147788"
-            className="flex items-center gap-1.5 text-white hover:text-[#a8d94b] transition-colors font-semibold"
+            className="flex items-center justify-center gap-1.5 text-white hover:text-[#a8d94b] transition-colors font-semibold text-center"
           >
             <Phone className="w-3.5 h-3.5 text-[#a8d94b]" />
-            <span style={{ color: '#E8EFDF', fontFamily: "'Futura Md BT', 'Futura', sans-serif" }}>{t.topBarPhone} <strong className="text-[#ffdc00]" style={{ color: '#ffdc00' }}>{DISPLAY_PHONE}</strong></span>
+            <span className="text-center" style={{ color: '#E8EFDF', fontFamily: "'Futura Md BT', 'Futura', sans-serif" }}>{t.topBarPhone} <strong className="text-[#ffdc00]" style={{ color: '#ffdc00' }}>{DISPLAY_PHONE}</strong></span>
           </a>
 
           {/* Language Switcher */}
