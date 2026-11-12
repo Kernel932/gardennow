@@ -34,7 +34,7 @@ export const TopBar: React.FC<TopBarProps> = ({ lang, onLanguageChange }) => {
             className="flex items-center justify-center gap-1.5 text-white hover:text-[#a8d94b] transition-colors font-semibold text-center"
           >
             <Phone className="w-3.5 h-3.5 text-[#a8d94b]" />
-            <span className="text-center" style={{ color: '#E8EFDF', fontFamily: "'Futura Md BT', 'Futura', sans-serif" }}>{t.topBarPhone} <strong className="text-[#ffdc00]" style={{ color: '#ffdc00' }}>{DISPLAY_PHONE}</strong></span>
+            <span className="text-center" style={{ color: '#E8EFDF', fontFamily: "'Futura Md BT', 'Futura', sans-serif" }}>{t.topBarPhone} <strong style={{ color: '#d8492e' }}>{DISPLAY_PHONE}</strong></span>
           </a>
 
           {/* Language Switcher */}

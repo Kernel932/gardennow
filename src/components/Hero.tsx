@@ -19,9 +19,18 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="relative max-w-5xl mx-auto px-6 py-4 sm:px-8">
+      <div className="relative max-w-5xl mx-auto px-6 pt-[20px] pb-4 sm:px-8" style={{ paddingTop: '20px' }}>
         <div className="flex flex-col justify-center max-w-3xl">
-          <h1 className="text-[31.6px] sm:text-5xl lg:text-6xl w-[340px] max-w-full mx-auto sm:mx-0 sm:w-auto font-extrabold tracking-tight leading-[1.1] font-display mb-6 [text-wrap:balance]">
+          <p 
+            className="block sm:hidden text-center text-white font-semibold mb-[20px] tracking-wide"
+            style={{ fontSize: '12px', color: '#ffffff', marginBottom: '20px' }}
+          >
+            {t.topBar}
+          </p>
+          <h1 
+            className="text-[31.6px] sm:text-5xl lg:text-6xl w-[340px] max-w-full mx-auto sm:mx-0 sm:w-auto font-extrabold tracking-tight leading-[1.1] font-display mb-[25px] [text-wrap:balance]"
+            style={{ marginBottom: '25px' }}
+          >
             {t.heroTitlePrefix}
             <span className="text-[#a8d94b] underline decoration-[#a8d94b]/40 decoration-wavy decoration-2">
               {t.heroTitleHighlight}

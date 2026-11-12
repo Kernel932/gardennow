@@ -189,7 +189,7 @@ export const translations = {
 
     transformTitle: "TRANSFORM YOUR OUTDOOR SPACE",
     transformSub: "Tell us about your project and discover the ideal solution for your property.",
-    transformFeatures: "Request a Free Assessment • Call Us • Send a Message",
+    transformFeatures: "Request an Assessment • Call Us • Send a Message",
     transformBtn: "Chat on WhatsApp",
     
     footAbout: "Landscaping, Hardscape, Outdoor Living and Lighting",
@@ -402,7 +402,7 @@ export const translations = {
 
     transformTitle: "TRANSFORME SEU ESPAÇO EXTERNO",
     transformSub: "Conte-nos sobre seu projeto e descubra a solução ideal para sua propriedade.",
-    transformFeatures: "Solicite uma avaliação gratuita • Ligue para nós • Envie uma mensagem",
+    transformFeatures: "Solicite uma avaliação • Ligue para nós • Envie uma mensagem",
     transformBtn: "Falar no WhatsApp",
     
     footAbout: "Paisagismo, Elementos Estruturais, Áreas Externas e Iluminação",

@@ -129,13 +129,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang }) => {
     <section id="services" className="py-20 bg-[#E8EFDF] border-b border-[#d4decb]" style={{ backgroundColor: '#E8EFDF' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#14311f] font-display">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight font-display" style={{ color: '#d8492e' }}>
             {t.svcTitle}
           </h2>
           <p id="about" className="mt-4 text-base sm:text-lg text-[#5d6a60] scroll-mt-28">
             {t.svcSub}
           </p>
-          <h3 id="services-solutions" className="mt-8 text-2xl sm:text-3xl font-extrabold tracking-tight text-[#14311f] font-display scroll-mt-28">
+          <h3 id="services-solutions" className="mt-8 text-2xl sm:text-3xl font-extrabold tracking-tight font-display scroll-mt-28" style={{ color: '#d8492e' }}>
             {t.svcSolutionsTitle}
           </h3>
         </div>
