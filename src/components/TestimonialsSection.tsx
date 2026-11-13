@@ -78,13 +78,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ lang }
             </h3>
             <div className="flex flex-wrap gap-4 pt-1">
               <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                  lang === 'pt'
-                    ? 'Olá! Gostaria de solicitar uma avaliação gratuita para instalação de grama sintética.'
-                    : 'Hi! I would like to request a free on-site assessment for synthetic turf installation.'
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#hero-callout"
                 className="inline-flex items-center gap-2 bg-[#25d366] hover:bg-[#1eb857] text-white px-6 py-3.5 rounded-full font-bold text-sm shadow-md transition-all hover:-translate-y-0.5"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />

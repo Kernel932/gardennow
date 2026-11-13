@@ -44,13 +44,14 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
 
           {/* Callout */}
           <p 
-            className="text-white mb-1.5 tracking-tight flex items-center gap-2"
+            id="hero-callout"
+            className="text-white mb-1.5 tracking-tight flex items-center gap-2 text-[25px] sm:text-[28.6px]"
             style={{ 
               color: '#ffffff',
               fontFamily: 'Arial, sans-serif',
               fontWeight: 'bold',
-              fontSize: '28.6px',
-              textShadow: '0 2px 10px rgba(0,0,0,0.5)'
+              textShadow: '0 2px 10px rgba(0,0,0,0.5)',
+              scrollMarginTop: '120px'
             }}
           >
             <span>{t.heroCallout}</span>

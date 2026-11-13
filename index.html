@@ -132,6 +132,14 @@
   }
   .lang button:hover{color:var(--green-900);background:#e2eae4;}
   .lang button.active{background:var(--green-600);color:#fff;box-shadow:0 3px 9px rgba(43,122,69,.35);}
+  .lang button[data-lang="en"]{padding:2px;border:2px solid transparent;background:transparent;display:inline-flex;align-items:center;justify-content:center;box-shadow:none;}
+  .lang button[data-lang="en"]:hover{background:transparent;}
+  .lang button[data-lang="en"].active{background:transparent;border-color:#d8492e;box-shadow:none;}
+  .lang button[data-lang="en"] img{width:28px;height:18px;object-fit:cover;border-radius:999px;display:block;}
+  .lang button[data-lang="pt"]{padding:2px;border:2px solid transparent;background:transparent;display:inline-flex;align-items:center;justify-content:center;box-shadow:none;}
+  .lang button[data-lang="pt"]:hover{background:transparent;}
+  .lang button[data-lang="pt"].active{background:transparent;border-color:#14311f;box-shadow:none;}
+  .lang button[data-lang="pt"] img{width:28px;height:18px;object-fit:cover;border-radius:999px;display:block;}
 
   .phone{font-weight:800;color:var(--green-700);font-size:.95rem;white-space:nowrap;}
   .phone span{display:block;font-size:.66rem;font-weight:700;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;}
@@ -531,7 +539,7 @@
       background:#fff;padding:22px 24px;gap:18px;border-bottom:1px solid #e6e9e6;box-shadow:var(--shadow);
     }
   }
-  @media(max-width:760px){.phone{display:none;}.topbar{max-height:32px !important;padding:4px 0 !important;box-sizing:border-box;display:flex;align-items:center;}.topbar .wrap{max-height:32px !important;justify-content:center !important;text-align:center !important;line-height:1.2 !important;}.topbar .wrap > span:nth-of-type(1){display:none !important;}.topbar .wrap > span:nth-of-type(2){width:100% !important;text-align:center !important;margin:0 auto !important;display:block !important;font-size:0.75rem !important;}.nav-logo-wrap{width:213.6px;min-width:213.6px;}.nav-logo-wrap > img{width:213.6px !important;height:auto !important;}.hero-mobile-tagline{display:block !important;font-size:12px !important;color:#ffffff !important;margin-bottom:20px !important;text-align:center !important;}.hero-inner,.hero-inner *{text-align:center !important;}.hero-inner h1{font-size:31.6px !important;width:340px !important;max-width:100% !important;margin-left:auto !important;margin-right:auto !important;margin-bottom:25px !important;}.hero-inner p.lead{width:340px !important;max-width:100% !important;margin-left:auto;margin-right:auto;}.hero-inner .hero-stats{justify-content:center;}.hero-inner > div > p:nth-of-type(2){font-size:24px !important;}}
+  @media(max-width:760px){.phone{display:none;}.topbar{max-height:32px !important;padding:4px 0 !important;box-sizing:border-box;display:flex;align-items:center;}.topbar .wrap{max-height:32px !important;justify-content:center !important;text-align:center !important;line-height:1.2 !important;}.topbar .wrap > span:nth-of-type(1){display:none !important;}.topbar .wrap > span:nth-of-type(2){width:100% !important;text-align:center !important;margin:0 auto !important;display:block !important;font-size:0.75rem !important;}.nav-logo-wrap{width:213.6px;min-width:213.6px;}.nav-logo-wrap > img{width:213.6px !important;height:auto !important;}.hero-mobile-tagline{display:block !important;font-size:12px !important;color:#ffffff !important;margin-bottom:20px !important;text-align:center !important;}.hero-inner,.hero-inner *{text-align:center !important;}.hero-inner h1{font-size:31.6px !important;width:340px !important;max-width:100% !important;margin-left:auto !important;margin-right:auto !important;margin-bottom:25px !important;}.hero-inner p.lead{width:340px !important;max-width:100% !important;margin-left:auto;margin-right:auto;}.hero-inner p#hero-callout{font-size:25px !important;}.hero-inner .hero-stats{justify-content:center;}.hero-inner > div > p:nth-of-type(2){font-size:24px !important;}}
   @media(max-width:620px){
     .row2{grid-template-columns:1fr;}
     .fcols{grid-template-columns:1fr;}
@@ -631,8 +639,8 @@
       <!-- LANGUAGE SWITCHER -->
       <div class="lang" role="group" aria-label="Language / Idioma">
         <span class="globe" aria-hidden="true">🌐</span>
-        <button type="button" class="lang-btn active" data-lang="en">EN</button>
-        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+        <button type="button" class="lang-btn active" data-lang="en" aria-label="English"><img src="public/iconeUSA.png" alt="EN"></button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-label="Português"><img src="public/iconeBRL.png" alt="PT"></button>
       </div>
 
       <button class="burger" id="burger" aria-label="Menu">☰</button>
@@ -647,7 +655,7 @@
       <p class="hero-mobile-tagline" data-i18n="topBar" style="display:none; font-size:12px; color:#ffffff; font-weight:600; margin-bottom:20px; font-family:'Futura Md BT','Futura',sans-serif; letter-spacing:0.01em;">Paisagismo, Hardscape, Áreas Externas e Iluminação</p>
       <h1 data-i18n="heroTitle" style="margin-bottom: 25px;">Beautiful outdoor spaces. <em>Designed to last.</em></h1>
       <p class="lead" data-i18n="heroLead" style="color: #ffffff;">We design and install landscaping, irrigation, drainage, synthetic turf, and outdoor improvements for homes and businesses in Orlando, Florida.</p>
-      <p class="hero-callout" data-i18n="heroCallout" style="font-family: Arial, sans-serif; font-weight: bold; font-size: 28.6px; color: #ffffff; margin-top: 18px; margin-bottom: 6px; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Solicite uma avaliação !!</p>
+      <p id="hero-callout" class="hero-callout" data-i18n="heroCallout" style="font-family: Arial, sans-serif; font-weight: bold; font-size: 28.6px; color: #ffffff; margin-top: 18px; margin-bottom: 6px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); scroll-margin-top: 120px;">Solicite uma avaliação !!</p>
       <p class="hero-callout" data-i18n="heroCallPhone" style="font-family: Arial, sans-serif; font-weight: bold; font-size: 23px; color: #a8d94b; margin-top: 4px; margin-bottom: 24px; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Ligue (407) 914-1712</p>
       <div class="hero-stats">
         <div><b>5.0★</b><span data-i18n="stat3">Avaliação</span></div>
@@ -875,7 +883,7 @@
     <div class="turf-cta" style="margin-top: 44px; padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, 0.15); text-align: left;">
       <h3 class="section-title" data-i18n="turfCtaTitle" style="color: #ffffff; text-align: left; font-size: 29.6px; font-weight: 800; font-family: 'Cabinet Grotesk', system-ui, sans-serif; letter-spacing: -0.02em; margin-bottom: 20px; max-width: 860px; line-height: 1.35;">Gostou? Fale conosco!</h3>
       <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-        <a href="https://wa.me/14079141712?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20para%20instala%C3%A7%C3%A3o%20de%20grama%20sint%C3%A9tica." target="_blank" rel="noopener" class="btn btn-primary wa-link" data-i18n="turfCtaBtn" style="background-color: #D8492E; background:#D8492E; color:#fff; border-color:#D8492E; font-weight: 700; padding: 12px 26px; border-radius: 9999px; display: inline-flex; align-items: center; gap: 8px;">Solicitar Avaliação</a>
+        <a href="#hero-callout" class="btn btn-primary" data-i18n="turfCtaBtn" style="background-color: #D8492E; background:#D8492E; color:#fff; border-color:#D8492E; font-weight: 700; padding: 12px 26px; border-radius: 9999px; display: inline-flex; align-items: center; gap: 8px;">Solicitar Avaliação</a>
       </div>
     </div>
   </div>
@@ -1083,7 +1091,7 @@ const I18N = {
     transformTitle:"TRANSFORM YOUR OUTDOOR SPACE",
     transformSub:"Tell us about your project and discover the ideal solution for your property.",
     transformFeatures:"Request an Assessment • Call Us • Send a Message",
-    transformBtn:"Chat on WhatsApp",
+    transformBtn:"Talk to Us",
     footAbout:"Landscaping, Hardscape, Outdoor Living and Lighting",
     footServices:"Services",
     footS1:"Landscaping & Outdoor Renovations",
@@ -1225,7 +1233,7 @@ const I18N = {
     transformTitle:"TRANSFORME SEU ESPAÇO EXTERNO",
     transformSub:"Conte-nos sobre seu projeto e descubra a solução ideal para sua propriedade.",
     transformFeatures:"Solicite uma avaliação • Ligue para nós • Envie uma mensagem",
-    transformBtn:"Falar no WhatsApp",
+    transformBtn:"Fale com a Gente",
     footAbout:"Paisagismo, Elementos Estruturais, Áreas Externas e Iluminação",
     footServices:"Serviços",
     footS1:"Paisagismo e Reformas Externas",

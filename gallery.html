@@ -132,6 +132,14 @@
   }
   .lang button:hover{color:var(--green-900);background:#e2eae4;}
   .lang button.active{background:var(--green-600);color:#fff;box-shadow:0 3px 9px rgba(43,122,69,.35);}
+  .lang button[data-lang="en"]{padding:2px;border:2px solid transparent;background:transparent;display:inline-flex;align-items:center;justify-content:center;box-shadow:none;}
+  .lang button[data-lang="en"]:hover{background:transparent;}
+  .lang button[data-lang="en"].active{background:transparent;border-color:#d8492e;box-shadow:none;}
+  .lang button[data-lang="en"] img{width:28px;height:18px;object-fit:cover;border-radius:999px;display:block;}
+  .lang button[data-lang="pt"]{padding:2px;border:2px solid transparent;background:transparent;display:inline-flex;align-items:center;justify-content:center;box-shadow:none;}
+  .lang button[data-lang="pt"]:hover{background:transparent;}
+  .lang button[data-lang="pt"].active{background:transparent;border-color:#14311f;box-shadow:none;}
+  .lang button[data-lang="pt"] img{width:28px;height:18px;object-fit:cover;border-radius:999px;display:block;}
 
   .phone{font-weight:800;color:var(--green-700);font-size:.95rem;white-space:nowrap;}
   .phone span{display:block;font-size:.66rem;font-weight:700;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;}
@@ -531,7 +539,7 @@
       background:#fff;padding:22px 24px;gap:18px;border-bottom:1px solid #e6e9e6;box-shadow:var(--shadow);
     }
   }
-  @media(max-width:760px){.phone{display:none;}.topbar{max-height:32px !important;padding:4px 0 !important;box-sizing:border-box;display:flex;align-items:center;}.topbar .wrap{max-height:32px !important;justify-content:center !important;text-align:center !important;line-height:1.2 !important;}.topbar .wrap > span:nth-of-type(1){display:none !important;}.topbar .wrap > span:nth-of-type(2){width:100% !important;text-align:center !important;margin:0 auto !important;display:block !important;font-size:0.75rem !important;}.nav-logo-wrap{width:213.6px;min-width:213.6px;}.nav-logo-wrap > img{width:213.6px !important;height:auto !important;}h1#galleryPageHeading{font-size:33px !important;}.gallery-hero p.gallery-lead{font-size:13.64px !important;}}
+  @media(max-width:760px){.phone{display:none;}.topbar{max-height:32px !important;padding:4px 0 !important;box-sizing:border-box;display:flex;align-items:center;}.topbar .wrap{max-height:32px !important;justify-content:center !important;text-align:center !important;line-height:1.2 !important;}.topbar .wrap > span:nth-of-type(1){display:none !important;}.topbar .wrap > span:nth-of-type(2){width:100% !important;text-align:center !important;margin:0 auto !important;display:block !important;font-size:0.75rem !important;}.nav-logo-wrap{width:213.6px;min-width:213.6px;}.nav-logo-wrap > img{width:213.6px !important;height:auto !important;}.gallery-hero p.gallery-kicker{font-size:25px !important;}h1#galleryPageHeading{font-size:25px !important;}.gallery-hero p.gallery-lead{font-size:13.64px !important;}}
   @media(max-width:620px){
     .row2{grid-template-columns:1fr;}
     .fcols{grid-template-columns:1fr;}
@@ -989,8 +997,8 @@
       <!-- LANGUAGE SWITCHER -->
       <div class="lang" role="group" aria-label="Language / Idioma">
         <span class="globe" aria-hidden="true">🌐</span>
-        <button type="button" class="lang-btn active" data-lang="en">EN</button>
-        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+        <button type="button" class="lang-btn active" data-lang="en" aria-label="English"><img src="public/iconeUSA.png" alt="EN"></button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-label="Português"><img src="public/iconeBRL.png" alt="PT"></button>
       </div>
 
       <button class="burger" id="burger" aria-label="Menu">☰</button>
@@ -1001,7 +1009,7 @@
 <!-- OUR WORK / PHOTO GALLERY -->
 <section class="gallery-hero" style="height: 250px; padding: 0; display: flex; align-items: center; justify-content: center;" aria-labelledby="galleryPageHeading">
   <div class="wrap" style="width: 100%;">
-    <p class="gallery-kicker" data-i18n="galKicker">Portfólio de Projetos</p>
+    <p class="gallery-kicker" data-i18n="galKicker" style="font-size: 31.48px;">Portfólio de Projetos</p>
     <h1 id="galleryPageHeading" style="font-size: 35px;" data-i18n="galTitle">Nossos Projetos em Orlando e Região</h1>
     <p class="gallery-lead" data-i18n="galSub">Confira registros reais de pavimentação com pavers, paisagismo, grama sintética, áreas de convivência e iluminação externa executados pela equipe Garden Now Landscaping.</p>
   </div>
@@ -1422,7 +1430,7 @@
       <h3 style="font-size: clamp(1.6rem, 3.2vw, 2.3rem); font-weight: 800; letter-spacing: -0.01em; color: #fff; margin-bottom: 12px; text-transform: uppercase;" data-i18n="transformTitle">TRANSFORME SEU ESPAÇO EXTERNO</h3>
       <p style="font-size: 1.05rem; color: #dcefe1; max-width: 580px; margin: 0 auto 16px; line-height: 1.6;" data-i18n="transformSub">Conte-nos sobre seu projeto e descubra a solução ideal para sua propriedade.</p>
       <p style="font-size: 0.9rem; font-weight: 700; color: #a8d94b; letter-spacing: 0.03em; margin: 0 auto 24px; text-transform: uppercase;" data-i18n="transformFeatures">Solicite uma avaliação • Ligue para nós • Envie uma mensagem</p>
-      <a href="https://wa.me/16145550192?text=Ol%C3%A1!%20Gostaria%20de%20transformar%20meu%20espa%C3%A7o%20externo." target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 10px; background-color: #a8d94b; color: #14311f; font-weight: 800; font-size: 1rem; padding: 14px 32px; border-radius: 9999px; text-decoration: none; transition: transform 0.2s, background-color 0.2s;" data-i18n="transformBtn">Falar no WhatsApp</a>
+      <a href="index.html#hero-callout" style="display: inline-flex; align-items: center; gap: 10px; background-color: #d8492e; color: #ffffff; font-weight: 800; font-size: 1rem; padding: 14px 32px; border-radius: 9999px; text-decoration: none; transition: transform 0.2s, background-color 0.2s;" data-i18n="transformBtn">Fale com a Gente</a>
     </div>
   </div>
 </section>
@@ -1474,7 +1482,7 @@ const WA_NUMBER = '14079141712'; // <-- troque pelo seu número, formato interna
 const I18N = {
   en: {
     topBar:"Landscaping, Hardscape, Outdoor Living and Lighting",
-    topBarPhone:'On-site assessment · Call <strong style="color:#d8492e;">(407) 914-1712</strong>',
+    topBarPhone:'On-site assessment · Call <strong style="color:#ffdc00;">(407) 914-1712</strong>',
     logoTag:"Landscaping",
     navHome:"Home",
     navServices:"Services", navContact:"Contact Us", navRes:"Residential", navCom:"Commercial",
@@ -1600,7 +1608,7 @@ const I18N = {
     transformTitle:"TRANSFORM YOUR OUTDOOR SPACE",
     transformSub:"Tell us about your project and discover the ideal solution for your property.",
     transformFeatures:"Request an Assessment • Call Us • Send a Message",
-    transformBtn:"Chat on WhatsApp",
+    transformBtn:"Talk to Us",
     footAbout:"Landscaping, Hardscape, Outdoor Living and Lighting",
     footServices:"Services",
     footS1:"Landscaping & Outdoor Renovations",
@@ -1658,7 +1666,7 @@ const I18N = {
   },
   pt: {
     topBar:"Paisagismo, Hardscape, Áreas Externas e Iluminação",
-    topBarPhone:'Avaliação no local · Ligue <strong style="color:#d8492e;">(407) 914-1712</strong>',
+    topBarPhone:'Avaliação no local · Ligue <strong style="color:#ffdc00;">(407) 914-1712</strong>',
     logoTag:"Landscaping",
     navHome:"Início",
     navServices:"Serviços", navContact:"Contato", navRes:"Residencial", navCom:"Comercial",
@@ -1784,7 +1792,7 @@ const I18N = {
     transformTitle:"TRANSFORME SEU ESPAÇO EXTERNO",
     transformSub:"Conte-nos sobre seu projeto e descubra a solução ideal para sua propriedade.",
     transformFeatures:"Solicite uma avaliação • Ligue para nós • Envie uma mensagem",
-    transformBtn:"Falar no WhatsApp",
+    transformBtn:"Fale com a Gente",
     footAbout:"Paisagismo, Elementos Estruturais, Áreas Externas e Iluminação",
     footServices:"Serviços",
     footS1:"Paisagismo e Reformas Externas",
