@@ -120,7 +120,7 @@
 
   /* language switcher */
   .lang{
-    display:inline-flex;align-items:center;gap:2px;
+    display:inline-flex;align-items:center;gap:2px;width:120px;
     background:#eef3ef;border:1.5px solid #d3ded7;
     border-radius:999px;padding:3px;
   }
@@ -134,12 +134,16 @@
   .lang button.active{background:var(--green-600);color:#fff;box-shadow:0 3px 9px rgba(43,122,69,.35);}
   .lang button[data-lang="en"]{padding:2px;border:2px solid transparent;background:transparent;display:inline-flex;align-items:center;justify-content:center;box-shadow:none;}
   .lang button[data-lang="en"]:hover{background:transparent;}
-  .lang button[data-lang="en"].active{background:transparent;border-color:#d8492e;box-shadow:none;}
+  .lang button[data-lang="en"].active{background:transparent;border-color:#161add;box-shadow:none;}
   .lang button[data-lang="en"] img{width:28px;height:18px;object-fit:cover;border-radius:999px;display:block;}
   .lang button[data-lang="pt"]{padding:2px;border:2px solid transparent;background:transparent;display:inline-flex;align-items:center;justify-content:center;box-shadow:none;}
   .lang button[data-lang="pt"]:hover{background:transparent;}
-  .lang button[data-lang="pt"].active{background:transparent;border-color:#14311f;box-shadow:none;}
+  .lang button[data-lang="pt"].active{background:transparent;border-color:#098923;box-shadow:none;}
   .lang button[data-lang="pt"] img{width:28px;height:18px;object-fit:cover;border-radius:999px;display:block;}
+  .lang button[data-lang="es"]{padding:2px;border:2px solid transparent;background:transparent;display:inline-flex;align-items:center;justify-content:center;box-shadow:none;}
+  .lang button[data-lang="es"]:hover{background:transparent;}
+  .lang button[data-lang="es"].active{background:transparent;border-color:#d8492e;box-shadow:none;}
+  .lang button[data-lang="es"] img{width:28px;height:18px;object-fit:cover;border-radius:999px;display:block;}
 
   .phone{font-weight:800;color:var(--green-700);font-size:.95rem;white-space:nowrap;}
   .phone span{display:block;font-size:.66rem;font-weight:700;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;}
@@ -539,7 +543,7 @@
       background:#fff;padding:22px 24px;gap:18px;border-bottom:1px solid #e6e9e6;box-shadow:var(--shadow);
     }
   }
-  @media(max-width:760px){.phone{display:none;}.topbar{max-height:32px !important;padding:4px 0 !important;box-sizing:border-box;display:flex;align-items:center;}.topbar .wrap{max-height:32px !important;justify-content:center !important;text-align:center !important;line-height:1.2 !important;}.topbar .wrap > span:nth-of-type(1){display:none !important;}.topbar .wrap > span:nth-of-type(2){width:100% !important;text-align:center !important;margin:0 auto !important;display:block !important;font-size:0.75rem !important;}.nav-logo-wrap{width:213.6px;min-width:213.6px;}.nav-logo-wrap > img{width:213.6px !important;height:auto !important;}.gallery-hero p.gallery-kicker{font-size:25px !important;}h1#galleryPageHeading{font-size:25px !important;}.gallery-hero p.gallery-lead{font-size:13.64px !important;}}
+  @media(max-width:760px){.phone{display:none;}.topbar{max-height:32px !important;padding:4px 0 !important;box-sizing:border-box;display:flex;align-items:center;}.topbar .wrap{max-height:32px !important;justify-content:center !important;text-align:center !important;line-height:1.2 !important;}.topbar .wrap > span:nth-of-type(1){display:none !important;}.topbar .wrap > span:nth-of-type(2){width:100% !important;text-align:center !important;margin:0 auto !important;display:block !important;font-size:0.75rem !important;}.nav .wrap{padding:0 12px 0 0 !important;gap:8px !important;}.nav-logo-wrap{width:clamp(174.64px, 50.94vw, 228px) !important;min-width:0 !important;flex-shrink:1 !important;}.nav-logo-wrap > img{width:100% !important;height:auto !important;}.nav-right{gap:8px !important;flex-shrink:0 !important;}.lang{width:auto !important;padding:2px !important;gap:2px !important;}.lang button[data-lang="es"],.lang button[data-lang="en"],.lang button[data-lang="pt"]{padding:2px !important;}.lang button[data-lang="es"] img,.lang button[data-lang="en"] img,.lang button[data-lang="pt"] img{width:24px !important;height:15px !important;}.burger{padding:4px !important;line-height:1 !important;flex-shrink:0 !important;}.gallery-hero p.gallery-kicker{font-size:25px !important;}h1#galleryPageHeading{font-size:25px !important;}.gallery-hero p.gallery-lead{font-size:13.64px !important;}}
   @media(max-width:620px){
     .row2{grid-template-columns:1fr;}
     .fcols{grid-template-columns:1fr;}
@@ -996,7 +1000,7 @@
     <div class="nav-right">
       <!-- LANGUAGE SWITCHER -->
       <div class="lang" role="group" aria-label="Language / Idioma">
-        <span class="globe" aria-hidden="true">🌐</span>
+        <button type="button" class="lang-btn" data-lang="es" aria-label="Español"><img src="public/iconeESP.png" alt="ES"></button>
         <button type="button" class="lang-btn active" data-lang="en" aria-label="English"><img src="public/iconeUSA.png" alt="EN"></button>
         <button type="button" class="lang-btn" data-lang="pt" aria-label="Português"><img src="public/iconeBRL.png" alt="PT"></button>
       </div>
@@ -1847,6 +1851,190 @@ const I18N = {
     galW37Title:"Calçada Frontal em Pavers Integrada ao Acesso Principal",
     galW38Title:"Passarela de Entrada Principal em Pavers Multitons",
     galW39Title:"Entrada de Garagem Finalizada em Pavers com Bordas Travadas"
+  },
+  es: {
+    topBar:"Paisajismo, Hardscape, Áreas Exteriores e Iluminación",
+    topBarPhone:'Evaluación en el lugar · Llame al <strong style="color:#ffdc00;">(407) 914-1712</strong>',
+    logoTag:"Landscaping",
+    navHome:"Inicio",
+    navServices:"Servicios", navContact:"Contacto", navRes:"Residencial", navCom:"Comercial",
+    navAreas:"Área de Servicio", navAbout:"Sobre Nosotros", navGallery:"Galería", navFaq:"Preguntas",
+    navWa:"WhatsApp", fabTip:"Chatea en WhatsApp",
+    waText:"¡Hola! Me gustaría solicitar un presupuesto para mi propiedad.",
+    waFormIntro:"Nueva solicitud desde el sitio web:",
+    phoneHours:"Lun–Sáb 7am–6pm",
+    heroEyebrow:"Irrigation & landscape . Orlando Metro",
+    heroTitle:'Hermosos espacios al aire libre. <em>Diseñados para durar.</em>',
+    heroLead:"Diseñamos e instalamos paisajismo, irrigación, drenaje, césped sintético y mejoras para áreas exteriores en hogares y negocios en Orlando, Florida.",
+    heroCallout:"¡Solicite una evaluación!",
+    heroCallPhone:"Llame al (407) 914-1712",
+    heroCta1:"Call (407) 914-1712", heroCta2:"Ver lo que hacemos",
+    stat1:"Años en el mercado", stat2:"Propiedades atendidas", stat3:"Calificación",
+    lawnTag:"Césped denso con corte rayado y uniforme",
+    lawnSub:"Enfoque total en la salud, densidad y acabado del césped",
+    formTitle:"Escríbenos por WhatsApp",
+    formHint:"Completa este formulario y abriremos WhatsApp con tu mensaje listo para enviar.",
+    lblName:"Nombre", lblPhone:"Teléfono", lblEmail:"Correo electrónico", lblProp:"Tipo de propiedad",
+    lblService:"Servicio", lblMsg:"Cuéntanos brevemente sobre el servicio",
+    phName:"Ana Rivera", phPhone:"(407) 914-1712", phEmail:"tu@email.com",
+    phMsg:"Terreno en esquina, cerca de un cuarto de acre, necesito corte semanal…",
+    optResidential:"Propia", optCommercial:"Alquilada",
+    svcMaintenance:"Mantenimiento de Césped y Jardín",
+    svcDesign:"Diseño e Instalación de Paisajismo",
+    svcIrrigation:"Irrigación", svcLighting:"Iluminación",
+    svcBeds:"Jardineras y Flores",
+    svcHardscape:"Piedras / Pisos Exteriores", svcSnow:"Nieve y Hielo",
+    formSubmit:"Enviar por WhatsApp", formNote:"Sin compromiso. Nunca vendemos tus datos.",
+    formOk:"✓ Abriendo WhatsApp… si no ocurre nada, toca el botón de abajo.",
+    formSent:"Abriendo WhatsApp ✓",
+    waOut:"Abrir WhatsApp en una nueva pestaña",
+    trustText:"Una promesa simple: llegar a tiempo, hacerlo bien y dejarlo todo limpio.",
+    badge1:"Con Licencia y Seguro", badge2:"Productos Eco-Conscientes",
+    badge3:"Satisfacción Garantizada", badge4:"Empresa Local",
+    svcEyebrow:"Lo que hacemos",
+    svcTitle:"Desde la planificación hasta la ejecución, cuidamos cada detalle para transformar el espacio exterior de su propiedad.",
+    svcSub:"En Garden Now Landscaping, damos vida a sus espacios exteriores, creando ambientes más hermosos, prácticos y valorizados. Ofrecemos soluciones completas en paisajismo, instalación de césped sintético, sistemas de irrigación, drenaje, iluminación exterior, pavers y mucho más. Cada proyecto se realiza con atención al detalle, planificación cuidadosa y compromiso con la calidad del servicio.",
+    svcSolutionsTitle:"Soluciones para transformar, proteger y valorizar su propiedad",
+    card1h:"Paisajismo y renovaciones exteriores",
+    card1p:"Planificación y transformación de áreas exteriores con selección de plantas, diseño de jardineras, césped natural o sintético, piedras decorativas y otros elementos paisajísticos.",
+    card2h:"Pavers y pavimentación",
+    card2p:"Instalación de pavers en entradas de vehículos, aceras, patios y áreas de convivencia, con una base duradera y acabado profesional.",
+    card3h:"Irrigación inteligente",
+    card3p:"Diseño, instalación, actualización y reparación de sistemas según el suelo, las plantas y la exposición solar, incluyendo controladores, sensores de lluvia, aspersores, válvulas e irrigación por goteo.",
+    card4h:"Soluciones de drenaje",
+    card4p:"Soluciones subterráneas y superficiales para controlar inundaciones y erosión, incluyendo drenajes franceses, tuberías, cajas colectoras, canaletas, pozos de infiltración, drenaje de techos y corrección de áreas inundadas.",
+    card5h:"Instalación de césped sintético",
+    card5p:"Instalación profesional para jardines, patios, piscinas, condominios, áreas para mascotas y espacios deportivos, con belleza, practicidad y bajo mantenimiento.",
+    card6h:"Mallas, canaletas y estructuras exteriores",
+    card6p:"Instalación y mejoras en áreas cercadas con malla, además de canaletas y estructuras para desviar el agua de lluvia y brindar mayor confort y protección.",
+    card7h:"Iluminación de jardín",
+    card7p:"Proyectos de iluminación exterior para realzar plantas, senderos, entradas y áreas de convivencia, uniendo seguridad, funcionalidad y belleza.",
+    card8h:"Muros de contención",
+    card8p:"Construcción de estructuras para estabilizar el terreno, controlar desniveles y aprovechar mejor los espacios exteriores.",
+    cardMore:"Más información →",
+    segEyebrow:"A quién servimos",
+    segTitle:"Irrigación, drenaje y protección de la propiedad",
+    segSub:"Además de la transformación visual, Garden Now Landscaping ofrece soluciones técnicas especializadas.",
+    tabRes:"IRRIGACIÓN", tabCom:"DRENAJE",
+    resP:"Proteja, valorice y aproveche mejor su propiedad con una solución planificada para su espacio.",
+    resL1:"Diseño e instalación de irrigación según el suelo, las plantas y la exposición solar.",
+    resL2:"Irrigación inteligente con controladores, sensores de lluvia y tecnología para reducir el desperdicio.",
+    resL3:"Reparación de fugas, aspersores, problemas de presión, válvulas y controladores.",
+    resL4:"Irrigación por goteo para jardineras, árboles y arbustos, dirigiendo el agua hacia las raíces.",
+    resL5:"Inspección y ajustes estacionales, con calibración de aspersores y programación de controladores según el clima.",
+    resPlanTitle:"Plan residencial típico",
+    resPlan1b:"Temporada semanal", resPlan1s:"Abr – Oct, corte + bordes + limpieza",
+    resPlan2b:"Detalle mensual", resPlan2s:"Deshierbe de jardineras, poda y refuerzo de cobertura",
+    resPlan3b:"Dos veces al año", resPlan3s:"Limpieza profunda y programa de fertilización",
+    comP:"Proteja, valorice y aproveche mejor su propiedad con una solución planificada para su espacio.",
+    comL1:"Drenaje subterráneo con drenajes franceses y tuberías para controlar el exceso de agua en el suelo.",
+    comL2:"Drenaje superficial con cajas colectoras y canaletas para el escurrimiento del agua de lluvia.",
+    comL3:"Pozos de infiltración para absorción gradual del agua, según las condiciones locales.",
+    comL4:"Drenaje de techos para dirigir el agua de las canaletas lejos de los cimientos.",
+    comL5:"Corrección de áreas inundadas para mejorar el escurrimiento y eliminar el agua estancada.",
+    comPlanTitle:"Por qué los administradores se quedan",
+    comPlan1b:"Visitas documentadas", comPlan1s:"Fotos y registros después de cada servicio",
+    comPlan2b:"Factura mensual fija", comPlan2s:"Una sola factura, sin costos extra para servicios de rutina",
+    comPlan3b:"Guardia de invierno 24/7", comPlan3s:"Respuesta a tormentas durante nevadas",
+    areaEyebrow:"Área de Servicio",
+    areaTitle:"Atendemos Orlando y Alrededores.",
+    areaSub:"Winter Garden • Windermere • Downtown Orlando • Lake Nona • Hunter’s Creek • Doctor Phillips",
+    areaCta1:"Hablar por WhatsApp", areaCta2:"Llame al (407) 914-1712",
+    testiEyebrow:"Reseñas", testiTitle:"Ventajas de la instalación de césped sintético.",
+    turfIntro:"Transforme su espacio exterior con césped sintético de alta calidad: una alternativa hermosa, resistente y práctica.",
+    turfAdvantagesTitle:"Ventajas del césped sintético",
+    turfAdv1:"Bajo mantenimiento: reduce la necesidad de corte, riego y fertilización.",
+    turfAdv2:"Belleza durante todo el año, con apariencia verde y uniforme y resistencia a los rayos UV.",
+    turfAdv3:"Ahorro de agua en comparación con céspedes naturales irrigados.",
+    turfAdv4:"Durabilidad para áreas de circulación, recreación y uso frecuente.",
+    turfAdv5:"Versatilidad para jardines, piscinas, áreas para mascotas y espacios deportivos.",
+    turfProcessTitle:"¿Cómo es el proceso de instalación?",
+    turfStep1:"Evaluación del lugar - Análisis del área y definición de la mejor solución.",
+    turfStep2:"Preparación del terreno - Remoción de la vegetación existente, nivelación y compactación de la base.",
+    turfStep3:"Instalación - Corte, posicionamiento, fijación y acabado de las uniones.",
+    turfStep4:"Inspección final - Verificación del acabado, la estabilidad y el drenaje.",
+    turfCtaTitle:"¿Le gustó? ¡Contáctenos!",
+    turfCtaBtn:"Solicitar Evaluación Gratuita",
+    testi1p:'"El mismo equipo cada semana, siempre puntual, y realmente perfilan el borde del camino en lugar de solo soplar los restos. Es un detalle que marca una gran diferencia."',
+    testi1s:"Ashford · Corte semanal",
+    testi2p:'"Diseñaron e instalaron nuestras jardineras y un piso exterior. Presupuesto claro, plazo cumplido y dejaron todo más limpio de lo que lo encontraron."',
+    testi2s:"Glenwood · Paisajismo y piedras",
+    testi3p:'"Administrando seis propiedades, necesitaba un proveedor confiable. Los informes después de cada visita acabaron con tener que pedir comprobantes."',
+    testi3s:"Bexley · Portafolio comercial",
+    faqEyebrow:"Preguntas", faqTitle:"¡Un proceso profesional, ejecutado por especialistas!",
+    faqSub:"Respuestas claras antes de que envíes un mensaje.",
+    faq1q:"01-Contacto, Visita y Consultoría",
+    faq1a:"Vamos hasta su residencia o empresa para conocer el espacio, entender sus necesidades y conversar sobre sus preferencias y expectativas.",
+    faq2q:"02- Planificación Personalizada",
+    faq2a:"Organizamos la información recopilada y elaboramos una propuesta personalizada, considerando sus objetivos, las características del espacio y el presupuesto disponible.",
+    faq3q:"03-Aprobación del Plan",
+    faq3a:"Presentamos la propuesta con los servicios previstos, los costos y el plazo estimado. Tras su aprobación, definimos los detalles necesarios para iniciar el trabajo.",
+    faq4q:"04-Transformamos el espacio",
+    faq4a:"Ponemos la planificación en práctica con atención al detalle y compromiso con el plazo acordado.",
+    faqGalleryBtn:"Vea nuestra galería de trabajos",
+    faq5q:"¿Se hacen cargo de jardineras descuidadas y patios abandonados?",
+    faq5a:"Es la mayoría de nuestras primeras visitas. Empezamos con una limpieza y recuperación única, y luego pasamos a una programación regular que mantiene todo en orden.",
+    ctaTitle:"¿Listo para tener un jardín del que no tengas que preocuparte?",
+    ctaText:"Evaluación gratuita en el lugar. Sin contratos y sin presión — solo escríbenos por WhatsApp.",
+    ctaBtn:"Hablar por WhatsApp",
+    transformTitle:"TRANSFORMA TU ESPACIO EXTERIOR",
+    transformSub:"Cuéntanos sobre tu proyecto y descubre la solución ideal para tu propiedad.",
+    transformFeatures:"Solicita una evaluación • Llámanos • Envía un mensaje",
+    transformBtn:"Habla con Nosotros",
+    footAbout:"Paisajismo, Hardscape, Áreas Exteriores e Iluminación",
+    footServices:"Servicios",
+    footS1:"Paisajismo y Renovaciones Exteriores",
+    footS2:"Pavers y Pavimentación",
+    footS3:"Irrigación Inteligente",
+    footS4:"Soluciones de Drenaje",
+    footS5:"Instalación de Césped Sintético",
+    footS6:"Mallas, Canaletas y Estructuras Exteriores",
+    footS7:"Iluminación de Jardín y Realce",
+    footS8:"Muros de Contención",
+    footCompany:"Empresa", footContact:"Contacto", footWa:"WhatsApp",
+    footRights:"© 2026 Garden Now Cuidado de Jardines. Todos los derechos reservados.",
+    galKicker:"Portafolio de Proyectos",
+    galTitle:"Nuestros Proyectos en Orlando y Alrededores",
+    galSub:"Consulta registros reales de pavimentación con pavers, paisajismo, césped sintético, áreas de convivencia e iluminación exterior realizados por el equipo de Garden Now Landscaping.",
+    galFilterAll:"Todos los Proyectos",
+    galFilterPavers:"Pavers y Hardscape",
+    galFilterLand:"Paisajismo y Césped",
+    galFilterLight:"Iluminación Exterior",
+    galCatPavers:"Pavers y Hardscape",
+    galCatLand:"Paisajismo y Césped",
+    galCatLight:"Iluminación Exterior",
+    galShowing:"proyectos mostrados",
+    galW1Title:"Entrada Residencial en Pavers Multitono",
+    galW2Title:"Paisajismo Frontal y Renovación de Césped",
+    galW4Title:"Espacio Fire Pit y Muro Asiento en Piedra",
+    galW5Title:"Iluminación de Realce en Palmeras y Acceso",
+    galW6Title:"Césped Sintético Premium y Palmeras Tropicales",
+    galW7Title:"Proyecto Luminotécnico de Jardín y Árboles",
+    galW8Title:"Iluminación de Entrada y Fachada Residencial",
+    galW9Title:"Césped Sintético con Borde en Piedras Blancas",
+    galW12Title:"Paisajismo Clásico y Césped de Gran Tamaño",
+    galW13Title:"Jardín Residencial con Palmeras y Césped Natural",
+    galW14Title:"Patio Trasero Completo en Césped Sintético Residencial",
+    galW15Title:"Patio Amplio y Pasillo Lateral en Pavers",
+    galW16Title:"Deck de Piscina y Spa en Pavers Claros",
+    galW17Title:"Camino Lateral con Pisantes y Piedra Blanca",
+    galW18Title:"Pasarela en Pisantes Dobles y Pavers Grises",
+    galW19Title:"Composición de Piedras y Cantos Rodados Decorativos",
+    galW23Title:"Área Gourmet Completa, Deck y Fire Pit en Pavers",
+    galW24Title:"Iluminación Focal en LED de Bajo Voltaje",
+    galW26Title:"Preparación de Jardinera con Palmera y Malla Protectora",
+    galW27Title:"Integración de Césped Sintético con Lanai Cerrado",
+    galW28Title:"Jardín en Césped Sintético, Jardinera y Drenaje Lateral",
+    galW29Title:"Paisajismo Tropical frente al Lago con Césped Sintético",
+    galW30Title:"Deck de Piscina Cerrado con Cascadas en Piedra",
+    galW31Title:"Iluminación Festiva y Escénica para Área de Piscina",
+    galW32Title:"Nivelación y Compactación de Base para Pavers",
+    galW33Title:"Logística y Entrega de Pallets de Pavers en la Obra",
+    galW34Title:"Excavación y Preparación Estructural de Entrada de Vehículos",
+    galW35Title:"Preparación Final de Base y Pallets Listos para Colocación",
+    galW37Title:"Acera Frontal en Pavers Integrada al Acceso Principal",
+    galW38Title:"Pasarela de Entrada Principal en Pavers Multitono",
+    galW39Title:"Entrada de Garaje Finalizada en Pavers con Bordes Trabados"
   }
 };
 
@@ -1868,7 +2056,7 @@ function setLang(lang){
   document.querySelectorAll('.wa-link').forEach(a=>{
     a.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(dict.waText);
   });
-  document.documentElement.lang = (lang === 'pt') ? 'pt-BR' : 'en';
+  document.documentElement.lang = (lang === 'pt') ? 'pt-BR' : (lang === 'es') ? 'es' : 'en';
   document.querySelectorAll('.lang-btn').forEach(b=>{
     b.classList.toggle('active', b.dataset.lang === lang);
     b.setAttribute('aria-pressed', b.dataset.lang === lang);
@@ -1901,7 +2089,8 @@ document.querySelectorAll('.tab').forEach(tab => {
 const quoteFormEl = document.getElementById('quoteForm');
 if (quoteFormEl) quoteFormEl.addEventListener('submit', e => {
   e.preventDefault();
-  const lang = document.documentElement.lang.startsWith('pt') ? 'pt' : 'en';
+  const docLang = document.documentElement.lang || '';
+  const lang = docLang.startsWith('pt') ? 'pt' : docLang.startsWith('es') ? 'es' : 'en';
   const d = I18N[lang];
   const val = id => ((document.getElementById(id).value) || '').trim();
   const msg = [
@@ -1932,7 +2121,10 @@ const initialLang = (function() {
     const saved = localStorage.getItem('site_lang');
     if (saved && I18N[saved]) return saved;
   } catch(e){}
-  return (navigator.language && navigator.language.toLowerCase().startsWith('pt')) ? 'pt' : 'en';
+  const navLang = (navigator.language || '').toLowerCase();
+  if (navLang.startsWith('pt')) return 'pt';
+  if (navLang.startsWith('es')) return 'es';
+  return 'en';
 })();
 
 /* ---------- gallery filter & lightbox ---------- */
@@ -1956,7 +2148,8 @@ const initialLang = (function() {
   let currentIndex = 0;
 
   function getCurrentDict() {
-    const lang = document.documentElement.lang && document.documentElement.lang.startsWith('pt') ? 'pt' : 'en';
+    const docLang = document.documentElement.lang || '';
+    const lang = docLang.startsWith('pt') ? 'pt' : docLang.startsWith('es') ? 'es' : 'en';
     return I18N[lang] || I18N.en;
   }
 
